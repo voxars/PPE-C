@@ -1,0 +1,86 @@
+/*------------------------------------------------------------
+*        Script SQLSERVER 
+------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------
+-- Table: participant
+------------------------------------------------------------*/
+CREATE TABLE participant(
+	id            INT  NOT NULL ,
+	nom           VARCHAR (50) NOT NULL ,
+	prenom        VARCHAR (50) NOT NULL ,
+	type          VARCHAR (50) NOT NULL ,
+	adresse       VARCHAR (50) NOT NULL ,
+	mail          VARCHAR (50) NOT NULL ,
+	numPortable   INT  NOT NULL  ,
+	CONSTRAINT participant_PK PRIMARY KEY (id)
+);
+
+
+/*------------------------------------------------------------
+-- Table: atelier
+------------------------------------------------------------*/
+CREATE TABLE atelier(
+	id               INT  NOT NULL ,
+	libelle          VARCHAR (50) NOT NULL ,
+	capaciteMax      INT  NOT NULL ,
+	debut            TIME (2) NOT NULL ,
+	fin              TIME (2) NOT NULL ,
+	id_participant   INT  NOT NULL  ,
+	CONSTRAINT atelier_PK PRIMARY KEY (id)
+
+	,CONSTRAINT atelier_participant_FK FOREIGN KEY (id_participant) REFERENCES participant(id)
+);
+
+
+/*------------------------------------------------------------
+-- Table: intervention
+------------------------------------------------------------*/
+CREATE TABLE intervention(
+	id                INT  NOT NULL ,
+	typeDemiJournee   VARCHAR (50) NOT NULL  ,
+	CONSTRAINT intervention_PK PRIMARY KEY (id)
+);
+
+
+/*------------------------------------------------------------
+-- Table: theme
+------------------------------------------------------------*/
+CREATE TABLE theme(
+	id           INT  NOT NULL ,
+	libelle      VARCHAR (50) NOT NULL ,
+	id_atelier   INT  NOT NULL  ,
+	CONSTRAINT theme_PK PRIMARY KEY (id)
+
+	,CONSTRAINT theme_atelier_FK FOREIGN KEY (id_atelier) REFERENCES atelier(id)
+);
+
+
+/*------------------------------------------------------------
+-- Table: benevole
+------------------------------------------------------------*/
+CREATE TABLE benevole(
+	id               INT  NOT NULL ,
+	id_participant   INT  NOT NULL  ,
+	CONSTRAINT benevole_PK PRIMARY KEY (id,id_participant)
+
+	,CONSTRAINT benevole_intervention_FK FOREIGN KEY (id) REFERENCES intervention(id)
+	,CONSTRAINT benevole_participant0_FK FOREIGN KEY (id_participant) REFERENCES participant(id)
+);
+
+
+/*------------------------------------------------------------
+-- Table: intervenant
+------------------------------------------------------------*/
+CREATE TABLE intervenant(
+	id           INT  NOT NULL ,
+	id_atelier   INT  NOT NULL  ,
+	CONSTRAINT intervenant_PK PRIMARY KEY (id,id_atelier)
+
+	,CONSTRAINT intervenant_participant_FK FOREIGN KEY (id) REFERENCES participant(id)
+	,CONSTRAINT intervenant_atelier0_FK FOREIGN KEY (id_atelier) REFERENCES atelier(id)
+);
+
+
+
