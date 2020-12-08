@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Travail\\PPE-C#\\PPE-C\\PPE-C\\PPE-C.csproj": {}
+    "C:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE-C\\PPE-C.csproj": {}
   },
   "projects": {
-    "D:\\Travail\\PPE-C#\\PPE-C\\PPE-C\\PPE-C.csproj": {
+    "C:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE-C\\PPE-C.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Travail\\PPE-C#\\PPE-C\\PPE-C\\PPE-C.csproj",
+        "projectUniqueName": "C:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE-C\\PPE-C.csproj",
         "projectName": "PPE-C",
-        "projectPath": "D:\\Travail\\PPE-C#\\PPE-C\\PPE-C\\PPE-C.csproj",
-        "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-        "outputPath": "D:\\Travail\\PPE-C#\\PPE-C\\PPE-C\\obj\\",
+        "projectPath": "C:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE-C\\PPE-C.csproj",
+        "packagesPath": "C:\\Users\\Léo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE-C\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Léo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -56,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
