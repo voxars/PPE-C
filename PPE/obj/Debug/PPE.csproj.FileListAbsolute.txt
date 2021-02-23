@@ -7,3 +7,4 @@ D:\Travail\PPE-C\PPE\obj\Debug\PPE.csproj.GenerateResource.cache
 D:\Travail\PPE-C\PPE\obj\Debug\PPE.csproj.CoreCompileInputs.cache
 D:\Travail\PPE-C\PPE\obj\Debug\PPE.exe
 D:\Travail\PPE-C\PPE\obj\Debug\PPE.pdb
+D:\Travail\PPE-C\PPE\obj\Debug\PPE.main.resources

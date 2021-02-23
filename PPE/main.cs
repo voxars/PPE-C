@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PPE.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace PPE
         public main()
         {
             InitializeComponent();
+           
+        }
+
+        private void tabInscription_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabAtelier_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
