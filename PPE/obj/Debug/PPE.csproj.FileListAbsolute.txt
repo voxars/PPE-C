@@ -7,3 +7,13 @@ D:\Travail\PPE-C\PPE\obj\Debug\PPE.csproj.GenerateResource.cache
 D:\Travail\PPE-C\PPE\obj\Debug\PPE.csproj.CoreCompileInputs.cache
 D:\Travail\PPE-C\PPE\obj\Debug\PPE.exe
 D:\Travail\PPE-C\PPE\obj\Debug\PPE.pdb
+C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\bin\Debug\PPE.exe.config
+C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\bin\Debug\PPE.exe
+C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\bin\Debug\PPE.pdb
+C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\obj\Debug\PPE.csprojAssemblyReference.cache
+C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\obj\Debug\PPE.Properties.Resources.resources
+C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\obj\Debug\PPE.csproj.GenerateResource.cache
+C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\obj\Debug\PPE.csproj.CoreCompileInputs.cache
+C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\obj\Debug\PPE.exe
+C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\obj\Debug\PPE.pdb
+C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\obj\Debug\PPE.main.resources
