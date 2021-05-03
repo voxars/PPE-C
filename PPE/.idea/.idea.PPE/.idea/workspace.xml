@@ -5,10 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efb9377d-9703-46e1-89c1-11e37051c14c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DAOFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAOFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAOFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PPE.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PPE.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/PPE.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PPE.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/PPE.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PPE.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/main.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +37,11 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/DAOFactory.cs" />
+      <option value="$PROJECT_DIR$/main.cs" />
+      <option value="$PROJECT_DIR$/Program.cs" />
+      <option value="$PROJECT_DIR$/LoginForm.Designer.cs" />
+      <option value="$PROJECT_DIR$/Login.cs" />
+      <option value="$PROJECT_DIR$/LoginForm.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lgrAhptgbJ9pu0oY3RoRYhnwOY" />
@@ -33,6 +54,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -64,13 +89,17 @@
       <option name="presentableId" value="Default" />
       <updated>1608029446446</updated>
       <workItem from="1608029457132" duration="565000" />
+      <workItem from="1620047923069" duration="15000" />
+      <workItem from="1620047961454" duration="5943000" />
+      <workItem from="1620055108195" duration="45000" />
+      <workItem from="1620055411307" duration="312000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -82,6 +111,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
