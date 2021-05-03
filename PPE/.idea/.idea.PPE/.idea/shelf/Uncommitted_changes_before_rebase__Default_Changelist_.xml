@@ -1,0 +1,39 @@
+﻿<changelist name="Uncommitted_changes_before_rebase_[Default_Changelist]" date="1620056119472" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="obj/Debug/PPE.pdb" />
+    <option name="AFTER_PATH" value="obj/Debug/PPE.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/PPE.pdb" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="bin/Debug/PPE.pdb" />
+    <option name="AFTER_PATH" value="bin/Debug/PPE.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/PPE1.pdb" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="obj/Debug/PPE.csproj.CoreCompileInputs.cache" />
+    <option name="AFTER_PATH" value="obj/Debug/PPE.csproj.CoreCompileInputs.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/PPE.csproj.CoreCompileInputs.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="obj/Debug/PPE.exe" />
+    <option name="AFTER_PATH" value="obj/Debug/PPE.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/PPE.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="obj/Debug/PPE.csprojAssemblyReference.cache" />
+    <option name="AFTER_PATH" value="obj/Debug/PPE.csprojAssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/PPE.csprojAssemblyReference.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="bin/Debug/PPE.exe" />
+    <option name="AFTER_PATH" value="bin/Debug/PPE.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/PPE1.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="obj/Debug/PPE.csproj.GenerateResource.cache" />
+    <option name="AFTER_PATH" value="obj/Debug/PPE.csproj.GenerateResource.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/PPE.csproj.GenerateResource.cache" />
+  </binary>
+</changelist>
