@@ -50,7 +50,7 @@ namespace PPE
             Atelier unAtelier;
 
             unAtelier = monAtelier.LesAteliers.ElementAt(i);
-            lblAtelier.Text = unAtelier.Libelle;
+            lblNomAtelier.Text = unAtelier.Libelle;
             lblHoraireDebut.Text = unAtelier.Debut.ToString();
             lblHoraireFin.Text = unAtelier.Fin.ToString();
         }
