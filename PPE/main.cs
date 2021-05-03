@@ -13,6 +13,7 @@ namespace PPE
 {
     public partial class main : Form
     {
+        private Atelier monAtelier;
         public main()
         {
             InitializeComponent();
@@ -38,5 +39,43 @@ namespace PPE
         {
             throw new System.NotImplementedException();
         }
+
+        private void initialiserAtelier()
+        {
+            monAtelier = new Atelier(10, "test", 50, , 21);
+
+            monAtelier.LesAteliers = Atelier.listeAtelier();
+        }
+
+
+        private void horaireAtelierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void main_Load(object sender, EventArgs e)
+        {
+            initialiserAtelier();
+        }
+        private void tabPageHoraire_Enter(object sender, EventArgs e)
+        {
+            foreach (Atelier unCompte in monAtelier.LesAteliers)
+            {
+                cbxAtelier.Items.Add(unCompte.Libelle);
+            }
+        }
+
+
+        private void cbxAtelier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = cbxAtelier.SelectedIndex;
+            Atelier unAtelier;
+
+            unAtelier = monAtelier.LesAteliers.ElementAt(i);
+            lblAtelier.Text = unAtelier.Libelle;
+            lblHoraireDebut.Text = unAtelier.Debut.ToString();
+            lblHoraireFin.Text = unAtelier.Fin.ToString();
+        }
+
     }
 }
