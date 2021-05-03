@@ -126,6 +126,14 @@ namespace PPE
             
             DAOParticipants.AjoutParticipant(nom,prenom,type,adresse,mail,portable,login,password);
             MessageBox.Show("Participant ajouter");
+            txbAdresse.Clear();
+            txbLogin.Clear();
+            txbMail.Clear();
+            txbNom.Clear();
+            txbPass.Clear();
+            txbPrenom.Clear();
+            txbTel.Clear();
+            
         }
     }
 }
