@@ -20,7 +20,7 @@ namespace PPE
 
         private void initialiserAtelier()
         {
-            monAtelier = new Atelier(10, "test", 50, , 21);
+            monAtelier = new Atelier(10, "test", 50, "21:20", "21:30");
 
             monAtelier.LesAteliers = Atelier.listeAtelier();
         }
