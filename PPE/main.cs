@@ -34,12 +34,7 @@ namespace PPE
         {
             throw new System.NotImplementedException();
         }
-
-        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
+        
         private void initialiserAtelier()
         {
             monAtelier = new Atelier(10, "test", 50, "21:20", "21:30");
@@ -77,5 +72,60 @@ namespace PPE
             lblHoraireFin.Text = unAtelier.Fin.ToString();
         }
 
+
+        private void txbNom_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txbPrenom_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void cbbType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txbAdresse_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txbMail_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txbTel_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txbLogin_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txbPass_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void tabPageStands_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void tabPageInscription_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnAjouterParticipant_Click(object sender, EventArgs e)
+        {
+            string nom = txbNom.Text;
+            string prenom = txbPrenom.Text;
+            string type = cbbType.SelectedText;
+            string adresse = txbAdresse.Text;
+            string mail = txbMail.Text;
+            int portable =  Convert.ToInt32(txbTel.Text.Trim());
+            string login = txbLogin.Text;
+            string password = txbPass.Text;
+            
+            DAOParticipants.AjoutParticipant(nom,prenom,type,adresse,mail,portable,login,password);
+            MessageBox.Show("Participant ajouter");
+        }
     }
 }
