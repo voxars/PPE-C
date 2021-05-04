@@ -24,176 +24,195 @@ namespace PPE
         #region Code généré par le Concepteur Windows Form
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+        /// le contenu de cette méthode avec l'éditeur de code.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabInscription = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabControl3 = new System.Windows.Forms.TabControl();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
-            this.tabInscription.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.tabControl3.SuspendLayout();
+            this.tabControlAtelier = new System.Windows.Forms.TabControl();
+            this.tabPageHoraire = new System.Windows.Forms.TabPage();
+            this.lblHoraireFin = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblHoraireDebut = new System.Windows.Forms.Label();
+            this.lblHoraire1 = new System.Windows.Forms.Label();
+            this.lblNomAtelier = new System.Windows.Forms.Label();
+            this.lblAtelier = new System.Windows.Forms.Label();
+            this.cbxAtelier = new System.Windows.Forms.ComboBox();
+            this.tabPageIntervenant = new System.Windows.Forms.TabPage();
+            this.cbxAtelierAnimateur = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cbxAnimateur = new System.Windows.Forms.ComboBox();
+            this.tabControlAtelier.SuspendLayout();
+            this.tabPageHoraire.SuspendLayout();
+            this.tabPageIntervenant.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabControlAtelier
             // 
-<<<<<<< HEAD
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.menuToolStripMenuItem, this.inscriptionToolStripMenuItem, this.gestionAteliersToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-=======
-            this.tabControl1.Controls.Add(this.tabInscription);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 450);
-            this.tabControl1.TabIndex = 0;
->>>>>>> parent of 14db4e1 (-)
+            this.tabControlAtelier.Controls.Add(this.tabPageHoraire);
+            this.tabControlAtelier.Controls.Add(this.tabPageIntervenant);
+            this.tabControlAtelier.Location = new System.Drawing.Point(32, 28);
+            this.tabControlAtelier.Name = "tabControlAtelier";
+            this.tabControlAtelier.SelectedIndex = 0;
+            this.tabControlAtelier.Size = new System.Drawing.Size(722, 351);
+            this.tabControlAtelier.TabIndex = 0;
             // 
-            // tabInscription
+            // tabPageHoraire
             // 
-<<<<<<< HEAD
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.menuToolStripMenuItem.Text = "Menu";
-            this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
-=======
-            this.tabInscription.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabInscription.Controls.Add(this.tabControl2);
-            this.tabInscription.Location = new System.Drawing.Point(4, 22);
-            this.tabInscription.Name = "tabInscription";
-            this.tabInscription.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInscription.Size = new System.Drawing.Size(792, 424);
-            this.tabInscription.TabIndex = 0;
-            this.tabInscription.Text = "Inscription";
-            this.tabInscription.Click += new System.EventHandler(this.tabInscription_Click);
->>>>>>> parent of 14db4e1 (-)
+            this.tabPageHoraire.Controls.Add(this.lblHoraireFin);
+            this.tabPageHoraire.Controls.Add(this.label3);
+            this.tabPageHoraire.Controls.Add(this.lblHoraireDebut);
+            this.tabPageHoraire.Controls.Add(this.lblHoraire1);
+            this.tabPageHoraire.Controls.Add(this.lblNomAtelier);
+            this.tabPageHoraire.Controls.Add(this.lblAtelier);
+            this.tabPageHoraire.Controls.Add(this.cbxAtelier);
+            this.tabPageHoraire.Location = new System.Drawing.Point(4, 22);
+            this.tabPageHoraire.Name = "tabPageHoraire";
+            this.tabPageHoraire.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageHoraire.Size = new System.Drawing.Size(714, 325);
+            this.tabPageHoraire.TabIndex = 0;
+            this.tabPageHoraire.Text = "Afficher Horaire";
+            this.tabPageHoraire.UseVisualStyleBackColor = true;
+            this.tabPageHoraire.Enter += new System.EventHandler(this.tabPageHoraire_Enter);
             // 
-            // tabPage2
+            // lblHoraireFin
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabPage2.Controls.Add(this.tabControl3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 424);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Ateliers";
-            this.tabPage2.Click += new System.EventHandler(this.tabAtelier_Click);
+            this.lblHoraireFin.AutoSize = true;
+            this.lblHoraireFin.Location = new System.Drawing.Point(108, 143);
+            this.lblHoraireFin.Name = "lblHoraireFin";
+            this.lblHoraireFin.Size = new System.Drawing.Size(53, 13);
+            this.lblHoraireFin.TabIndex = 6;
+            this.lblHoraireFin.Text = "horaire fin";
             // 
-            // tabControl2
+            // label3
             // 
-            this.tabControl2.Controls.Add(this.tabPage1);
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(3, 3);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(786, 418);
-            this.tabControl2.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(41, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Horaire Fin:";
             // 
-            // tabPage1
+            // lblHoraireDebut
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(778, 392);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.lblHoraireDebut.AutoSize = true;
+            this.lblHoraireDebut.Location = new System.Drawing.Point(123, 116);
+            this.lblHoraireDebut.Name = "lblHoraireDebut";
+            this.lblHoraireDebut.Size = new System.Drawing.Size(69, 13);
+            this.lblHoraireDebut.TabIndex = 4;
+            this.lblHoraireDebut.Text = "horaire debut";
             // 
-            // tabPage3
+            // lblHoraire1
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(192, 74);
-            this.tabPage3.TabIndex = 1;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.lblHoraire1.AutoSize = true;
+            this.lblHoraire1.Location = new System.Drawing.Point(41, 116);
+            this.lblHoraire1.Name = "lblHoraire1";
+            this.lblHoraire1.Size = new System.Drawing.Size(76, 13);
+            this.lblHoraire1.TabIndex = 3;
+            this.lblHoraire1.Text = "Horaire Debut:";
             // 
-            // tabControl3
+            // lblNomAtelier
             // 
-            this.tabControl3.Controls.Add(this.tabPage4);
-            this.tabControl3.Controls.Add(this.tabPage5);
-            this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl3.Location = new System.Drawing.Point(3, 3);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(786, 418);
-            this.tabControl3.TabIndex = 0;
+            this.lblNomAtelier.AutoSize = true;
+            this.lblNomAtelier.Location = new System.Drawing.Point(132, 81);
+            this.lblNomAtelier.Name = "lblNomAtelier";
+            this.lblNomAtelier.Size = new System.Drawing.Size(27, 13);
+            this.lblNomAtelier.TabIndex = 2;
+            this.lblNomAtelier.Text = "nom";
             // 
-            // tabPage4
+            // lblAtelier
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(778, 392);
-            this.tabPage4.TabIndex = 0;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.lblAtelier.AutoSize = true;
+            this.lblAtelier.Location = new System.Drawing.Point(41, 81);
+            this.lblAtelier.Name = "lblAtelier";
+            this.lblAtelier.Size = new System.Drawing.Size(85, 13);
+            this.lblAtelier.TabIndex = 1;
+            this.lblAtelier.Text = "Nom de l\'atelier :";
             // 
-            // tabPage5
+            // cbxAtelier
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(192, 74);
-            this.tabPage5.TabIndex = 1;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.cbxAtelier.FormattingEnabled = true;
+            this.cbxAtelier.Location = new System.Drawing.Point(38, 29);
+            this.cbxAtelier.Name = "cbxAtelier";
+            this.cbxAtelier.Size = new System.Drawing.Size(113, 21);
+            this.cbxAtelier.TabIndex = 0;
+            this.cbxAtelier.Text = "Choisir un atelier";
+            this.cbxAtelier.SelectedIndexChanged += new System.EventHandler(this.cbxAtelier_SelectedIndexChanged);
+            // 
+            // tabPageIntervenant
+            // 
+            this.tabPageIntervenant.Controls.Add(this.cbxAtelierAnimateur);
+            this.tabPageIntervenant.Controls.Add(this.button1);
+            this.tabPageIntervenant.Controls.Add(this.cbxAnimateur);
+            this.tabPageIntervenant.Location = new System.Drawing.Point(4, 22);
+            this.tabPageIntervenant.Name = "tabPageIntervenant";
+            this.tabPageIntervenant.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageIntervenant.Size = new System.Drawing.Size(714, 325);
+            this.tabPageIntervenant.TabIndex = 1;
+            this.tabPageIntervenant.Text = "Affecter un animateur";
+            this.tabPageIntervenant.UseVisualStyleBackColor = true;
+            // 
+            // cbxAtelierAnimateur
+            // 
+            this.cbxAtelierAnimateur.FormattingEnabled = true;
+            this.cbxAtelierAnimateur.Location = new System.Drawing.Point(69, 79);
+            this.cbxAtelierAnimateur.Name = "cbxAtelierAnimateur";
+            this.cbxAtelierAnimateur.Size = new System.Drawing.Size(143, 21);
+            this.cbxAtelierAnimateur.TabIndex = 2;
+            this.cbxAtelierAnimateur.Text = "Choisir un atelier";
+            this.cbxAtelierAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAnimateur_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(69, 144);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 42);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // cbxAnimateur
+            // 
+            this.cbxAnimateur.FormattingEnabled = true;
+            this.cbxAnimateur.Location = new System.Drawing.Point(69, 34);
+            this.cbxAnimateur.Name = "cbxAnimateur";
+            this.cbxAnimateur.Size = new System.Drawing.Size(143, 21);
+            this.cbxAnimateur.TabIndex = 0;
+            this.cbxAnimateur.Text = "Choisir un animateur";
+            this.cbxAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAnimateur_SelectedIndexChanged);
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tabControl1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Controls.Add(this.tabControlAtelier);
             this.Name = "main";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MDL Gestion";
-            this.tabControl1.ResumeLayout(false);
-            this.tabInscription.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
-            this.tabControl3.ResumeLayout(false);
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.main_Load);
+            this.tabControlAtelier.ResumeLayout(false);
+            this.tabPageHoraire.ResumeLayout(false);
+            this.tabPageHoraire.PerformLayout();
+            this.tabPageIntervenant.ResumeLayout(false);
             this.ResumeLayout(false);
-<<<<<<< HEAD
-            this.PerformLayout();
-=======
 
->>>>>>> parent of 14db4e1 (-)
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabInscription;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabControl tabControl3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabControl tabControlAtelier;
+        private System.Windows.Forms.TabPage tabPageHoraire;
+        private System.Windows.Forms.TabPage tabPageIntervenant;
+        private System.Windows.Forms.Label lblHoraireFin;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblHoraireDebut;
+        private System.Windows.Forms.Label lblHoraire1;
+        private System.Windows.Forms.Label lblNomAtelier;
+        private System.Windows.Forms.Label lblAtelier;
+        private System.Windows.Forms.ComboBox cbxAtelier;
+        private System.Windows.Forms.ComboBox cbxAtelierAnimateur;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbxAnimateur;
     }
 }
 
