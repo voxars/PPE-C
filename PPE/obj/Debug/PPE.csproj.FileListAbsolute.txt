@@ -27,3 +27,4 @@ E:\travail\PPE-C\PPE\obj\Debug\PPE.csproj.GenerateResource.cache
 E:\travail\PPE-C\PPE\obj\Debug\PPE.csproj.CoreCompileInputs.cache
 E:\travail\PPE-C\PPE\obj\Debug\PPE.exe
 E:\travail\PPE-C\PPE\obj\Debug\PPE.pdb
+E:\travail\PPE-C\PPE\obj\Debug\PPE.Login.resources

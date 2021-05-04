@@ -45,12 +45,20 @@ namespace PPE
             {
                 cbxAtelier.Items.Add(unAtelier.Libelle);
                 cbxAtelierAnimateur.Items.Add(unAtelier.Libelle);
+                cbbAtelier.Items.Add(unAtelier.Libelle);
             }
 
             foreach (Animateur unAnimateur in monAnimateur.LesAnimateurs)
             {
                 cbxAnimateur.Items.Add(unAnimateur.Prenom);
             }
+
+            cbbType.Items.Add("Licencié");
+            cbbType.Items.Add("Intervenant");
+            cbbType.Items.Add("Benevole");
+
+            cbbBenevole.Items.Add("Matin");
+            cbbBenevole.Items.Add("Apres-midi");
 
         }
 
@@ -85,5 +93,71 @@ namespace PPE
 
         }
         #endregion
+
+        #region participants
+
+        private void txbNom_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txbPrenom_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void cbbType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+
+        private void txbAdresse_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+
+        private void txbMail_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+
+        private void txbPortable_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+
+        private void cbbAtelier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+
+        private void cbbBenevole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+
+        private void btnCreer_Click(object sender, EventArgs e)
+        {
+            string nom = txbNom.Text;
+            string prenom = txbPrenom.Text;
+            string type = cbbType.SelectedText;
+            string adresse = txbAdresse.Text;
+            string mail = txbMail.Text;
+            int portable = Int32.Parse(txbPortable.Text);
+            int idAtelier = cbbAtelier.SelectedIndex+1;
+
+            DAOParticipant.ajouterParticipant(nom, prenom, type, adresse, mail, portable,idAtelier);
+            
+            txbAdresse.Clear();
+            txbMail.Clear();
+            txbNom.Clear();
+            txbPortable.Clear();
+            txbPrenom.Clear();
+            cbbAtelier.ResetText();
+            cbbBenevole.ResetText();
+            cbbType.ResetText();
+        }
+        
+        #endregion
+        
+        
     }
 }

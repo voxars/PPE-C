@@ -24,8 +24,8 @@ namespace PPE
         #region Code généré par le Concepteur Windows Form
 
         /// <summary>
-        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-        /// le contenu de cette méthode avec l'éditeur de code.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -42,15 +42,35 @@ namespace PPE
             this.cbxAtelierAnimateur = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cbxAnimateur = new System.Windows.Forms.ComboBox();
+            this.inscription = new System.Windows.Forms.TabPage();
+            this.cbbBenevole = new System.Windows.Forms.ComboBox();
+            this.cbbAtelier = new System.Windows.Forms.ComboBox();
+            this.cbbType = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txbPortable = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txbMail = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txbAdresse = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txbPrenom = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txbNom = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCreer = new System.Windows.Forms.Button();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
+            this.inscription.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlAtelier
             // 
             this.tabControlAtelier.Controls.Add(this.tabPageHoraire);
             this.tabControlAtelier.Controls.Add(this.tabPageIntervenant);
+            this.tabControlAtelier.Controls.Add(this.inscription);
             this.tabControlAtelier.Location = new System.Drawing.Point(32, 28);
             this.tabControlAtelier.Name = "tabControlAtelier";
             this.tabControlAtelier.SelectedIndex = 0;
@@ -181,6 +201,174 @@ namespace PPE
             this.cbxAnimateur.Text = "Choisir un animateur";
             this.cbxAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAnimateur_SelectedIndexChanged);
             // 
+            // inscription
+            // 
+            this.inscription.Controls.Add(this.cbbBenevole);
+            this.inscription.Controls.Add(this.cbbAtelier);
+            this.inscription.Controls.Add(this.cbbType);
+            this.inscription.Controls.Add(this.label6);
+            this.inscription.Controls.Add(this.label7);
+            this.inscription.Controls.Add(this.txbPortable);
+            this.inscription.Controls.Add(this.label8);
+            this.inscription.Controls.Add(this.txbMail);
+            this.inscription.Controls.Add(this.label9);
+            this.inscription.Controls.Add(this.txbAdresse);
+            this.inscription.Controls.Add(this.label4);
+            this.inscription.Controls.Add(this.label5);
+            this.inscription.Controls.Add(this.txbPrenom);
+            this.inscription.Controls.Add(this.label2);
+            this.inscription.Controls.Add(this.txbNom);
+            this.inscription.Controls.Add(this.label1);
+            this.inscription.Controls.Add(this.btnCreer);
+            this.inscription.Location = new System.Drawing.Point(4, 22);
+            this.inscription.Name = "inscription";
+            this.inscription.Padding = new System.Windows.Forms.Padding(3);
+            this.inscription.Size = new System.Drawing.Size(714, 325);
+            this.inscription.TabIndex = 2;
+            this.inscription.Text = "Inscription participant";
+            this.inscription.UseVisualStyleBackColor = true;
+            // 
+            // cbbBenevole
+            // 
+            this.cbbBenevole.FormattingEnabled = true;
+            this.cbbBenevole.Location = new System.Drawing.Point(327, 205);
+            this.cbbBenevole.Name = "cbbBenevole";
+            this.cbbBenevole.Size = new System.Drawing.Size(100, 21);
+            this.cbbBenevole.TabIndex = 19;
+            this.cbbBenevole.SelectedIndexChanged += new System.EventHandler(this.cbbBenevole_SelectedIndexChanged);
+            // 
+            // cbbAtelier
+            // 
+            this.cbbAtelier.FormattingEnabled = true;
+            this.cbbAtelier.Location = new System.Drawing.Point(221, 205);
+            this.cbbAtelier.Name = "cbbAtelier";
+            this.cbbAtelier.Size = new System.Drawing.Size(100, 21);
+            this.cbbAtelier.TabIndex = 18;
+            this.cbbAtelier.SelectedIndexChanged += new System.EventHandler(this.cbbAtelier_SelectedIndexChanged);
+            // 
+            // cbbType
+            // 
+            this.cbbType.FormattingEnabled = true;
+            this.cbbType.Location = new System.Drawing.Point(378, 69);
+            this.cbbType.Name = "cbbType";
+            this.cbbType.Size = new System.Drawing.Size(100, 21);
+            this.cbbType.TabIndex = 17;
+            this.cbbType.SelectedIndexChanged += new System.EventHandler(this.cbbType_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(327, 179);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 23);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Si benevole";
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(221, 179);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 23);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Atelier";
+            // 
+            // txbPortable
+            // 
+            this.txbPortable.Location = new System.Drawing.Point(378, 144);
+            this.txbPortable.Name = "txbPortable";
+            this.txbPortable.Size = new System.Drawing.Size(100, 20);
+            this.txbPortable.TabIndex = 12;
+            this.txbPortable.TextChanged += new System.EventHandler(this.txbPortable_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(378, 118);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(116, 23);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Numero de telephone";
+            // 
+            // txbMail
+            // 
+            this.txbMail.Location = new System.Drawing.Point(272, 144);
+            this.txbMail.Name = "txbMail";
+            this.txbMail.Size = new System.Drawing.Size(100, 20);
+            this.txbMail.TabIndex = 10;
+            this.txbMail.TextChanged += new System.EventHandler(this.txbMail_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(272, 118);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(100, 23);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Mail";
+            // 
+            // txbAdresse
+            // 
+            this.txbAdresse.Location = new System.Drawing.Point(166, 144);
+            this.txbAdresse.Name = "txbAdresse";
+            this.txbAdresse.Size = new System.Drawing.Size(100, 20);
+            this.txbAdresse.TabIndex = 8;
+            this.txbAdresse.TextChanged += new System.EventHandler(this.txbAdresse_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(166, 118);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 23);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Adresse";
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(378, 43);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Type";
+            // 
+            // txbPrenom
+            // 
+            this.txbPrenom.Location = new System.Drawing.Point(272, 69);
+            this.txbPrenom.Name = "txbPrenom";
+            this.txbPrenom.Size = new System.Drawing.Size(100, 20);
+            this.txbPrenom.TabIndex = 4;
+            this.txbPrenom.TextChanged += new System.EventHandler(this.txbPrenom_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(272, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Prenom";
+            // 
+            // txbNom
+            // 
+            this.txbNom.Location = new System.Drawing.Point(166, 69);
+            this.txbNom.Name = "txbNom";
+            this.txbNom.Size = new System.Drawing.Size(100, 20);
+            this.txbNom.TabIndex = 2;
+            this.txbNom.TextChanged += new System.EventHandler(this.txbNom_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(166, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Nom";
+            // 
+            // btnCreer
+            // 
+            this.btnCreer.Location = new System.Drawing.Point(221, 254);
+            this.btnCreer.Name = "btnCreer";
+            this.btnCreer.Size = new System.Drawing.Size(206, 40);
+            this.btnCreer.TabIndex = 0;
+            this.btnCreer.Text = "Ajouter participant";
+            this.btnCreer.UseVisualStyleBackColor = true;
+            this.btnCreer.Click += new System.EventHandler(this.btnCreer_Click);
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,9 +382,37 @@ namespace PPE
             this.tabPageHoraire.ResumeLayout(false);
             this.tabPageHoraire.PerformLayout();
             this.tabPageIntervenant.ResumeLayout(false);
+            this.inscription.ResumeLayout(false);
+            this.inscription.PerformLayout();
             this.ResumeLayout(false);
-
         }
+
+        private System.Windows.Forms.Button btnCreer;
+
+        private System.Windows.Forms.ComboBox cbbBenevole;
+
+        private System.Windows.Forms.ComboBox cbbAtelier;
+
+        private System.Windows.Forms.TextBox txbPortable;
+
+        private System.Windows.Forms.TextBox txbMail;
+
+        private System.Windows.Forms.TextBox txbAdresse;
+
+        private System.Windows.Forms.ComboBox cbbType;
+
+        private System.Windows.Forms.TextBox txbNom;
+        private System.Windows.Forms.TextBox txbPrenom;
+
+        private System.Windows.Forms.TabPage inscription;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
 
         #endregion
 
