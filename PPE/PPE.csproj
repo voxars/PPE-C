@@ -51,10 +51,6 @@
     <Compile Include="DAOAnimateur.cs" />
     <Compile Include="DAOAtelier.cs" />
     <Compile Include="DAOFactory.cs" />
-<<<<<<< HEAD
-    <Compile Include="DAOParticipants.cs" />
-=======
->>>>>>> leo
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
