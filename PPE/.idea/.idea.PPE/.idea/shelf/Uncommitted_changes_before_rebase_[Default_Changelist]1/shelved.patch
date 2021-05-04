@@ -1,68 +1,3 @@
-Index: .idea/.idea.PPE/.idea/riderModule.iml
-===================================================================
-diff --git a/.idea/.idea.PPE/.idea/riderModule.iml b/.idea/.idea.PPE/.idea/riderModule.iml
-deleted file mode 100644
---- a/.idea/.idea.PPE/.idea/riderModule.iml	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
-+++ /dev/null	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
-@@ -1,7 +0,0 @@
--<?xml version="1.0" encoding="UTF-8"?>
--<module type="RIDER_MODULE" version="4">
--  <component name="NewModuleRootManager">
--    <content url="file://$MODULE_DIR$/../.." />
--    <orderEntry type="sourceFolder" forTests="false" />
--  </component>
--</module>
-\ No newline at end of file
-Index: .idea/.idea.PPE/.idea/contentModel.xml
-===================================================================
-diff --git a/.idea/.idea.PPE/.idea/contentModel.xml b/.idea/.idea.PPE/.idea/contentModel.xml
-deleted file mode 100644
---- a/.idea/.idea.PPE/.idea/contentModel.xml	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
-+++ /dev/null	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
-@@ -1,26 +0,0 @@
--<?xml version="1.0" encoding="UTF-8"?>
--<project version="4">
--  <component name="ContentModelStore">
--    <e p="C:\Users\arthu\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
--    <e p="C:\Users\arthu\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PPE.427903990.00" t="ExcludeRecursive" />
--    <e p="D:\Travail\PPE-C\PPE" t="IncludeRecursive">
--      <e p="App.config" t="Include" />
--      <e p="bin" t="ExcludeRecursive" />
--      <e p="DAOFactory.cs" t="Include" />
--      <e p="main.cs" t="Include" />
--      <e p="main.Designer.cs" t="Include" />
--      <e p="obj" t="ExcludeRecursive" />
--      <e p="packages" t="ExcludeRecursive" />
--      <e p="PPE.csproj" t="IncludeRecursive" />
--      <e p="PPE.sln" t="IncludeFlat" />
--      <e p="Program.cs" t="Include" />
--      <e p="Properties" t="Include">
--        <e p="AssemblyInfo.cs" t="Include" />
--        <e p="Resources.Designer.cs" t="Include" />
--        <e p="Resources.resx" t="Include" />
--        <e p="Settings.Designer.cs" t="Include" />
--        <e p="Settings.settings" t="Include" />
--      </e>
--    </e>
--  </component>
--</project>
-\ No newline at end of file
-Index: .idea/.idea.PPE/.idea/modules.xml
-===================================================================
-diff --git a/.idea/.idea.PPE/.idea/modules.xml b/.idea/.idea.PPE/.idea/modules.xml
-deleted file mode 100644
---- a/.idea/.idea.PPE/.idea/modules.xml	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
-+++ /dev/null	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
-@@ -1,8 +0,0 @@
--<?xml version="1.0" encoding="UTF-8"?>
--<project version="4">
--  <component name="ProjectModuleManager">
--    <modules>
--      <module fileurl="file://$PROJECT_DIR$/.idea/.idea.PPE/.idea/riderModule.iml" filepath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/riderModule.iml" />
--    </modules>
--  </component>
--</project>
-\ No newline at end of file
 Index: obj/Debug/PPE.csproj.FileListAbsolute.txt
 IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
@@ -72,7 +7,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 ===================================================================
 diff --git a/obj/Debug/PPE.csproj.FileListAbsolute.txt b/obj/Debug/PPE.csproj.FileListAbsolute.txt
 --- a/obj/Debug/PPE.csproj.FileListAbsolute.txt	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
-+++ b/obj/Debug/PPE.csproj.FileListAbsolute.txt	(date 1620150192662)
++++ b/obj/Debug/PPE.csproj.FileListAbsolute.txt	(date 1620150330493)
 @@ -17,3 +17,13 @@
  C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\obj\Debug\PPE.exe
  C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\obj\Debug\PPE.pdb
@@ -96,16 +31,12 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 ===================================================================
 diff --git a/.idea/.idea.PPE/.idea/indexLayout.xml b/.idea/.idea.PPE/.idea/indexLayout.xml
 --- a/.idea/.idea.PPE/.idea/indexLayout.xml	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
-+++ b/.idea/.idea.PPE/.idea/indexLayout.xml	(date 1620150177326)
-@@ -1,7 +1,9 @@
++++ b/.idea/.idea.PPE/.idea/indexLayout.xml	(date 1620150256096)
+@@ -1,6 +1,6 @@
  <?xml version="1.0" encoding="UTF-8"?>
  <project version="4">
 -  <component name="ContentModelUserStore">
--    <attachedFolders />
 +  <component name="UserContentModel">
-+    <attachedFolders>
-+      <Path>../../PPE-C</Path>
-+    </attachedFolders>
+     <attachedFolders />
      <explicitIncludes />
      <explicitExcludes />
-   </component>
