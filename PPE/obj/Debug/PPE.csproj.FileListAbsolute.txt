@@ -7,14 +7,4 @@ D:\Travail\PPE-C\PPE\obj\Debug\PPE.csproj.GenerateResource.cache
 D:\Travail\PPE-C\PPE\obj\Debug\PPE.csproj.CoreCompileInputs.cache
 D:\Travail\PPE-C\PPE\obj\Debug\PPE.exe
 D:\Travail\PPE-C\PPE\obj\Debug\PPE.pdb
-E:\travail\ppc\PPE\bin\Debug\PPE.exe.config
-E:\travail\ppc\PPE\bin\Debug\PPE.exe
-E:\travail\ppc\PPE\bin\Debug\PPE.pdb
-E:\travail\ppc\PPE\obj\Debug\PPE.csprojAssemblyReference.cache
-E:\travail\ppc\PPE\obj\Debug\PPE.Properties.Resources.resources
-E:\travail\ppc\PPE\obj\Debug\PPE.csproj.GenerateResource.cache
-E:\travail\ppc\PPE\obj\Debug\PPE.csproj.CoreCompileInputs.cache
-E:\travail\ppc\PPE\obj\Debug\PPE.exe
-E:\travail\ppc\PPE\obj\Debug\PPE.pdb
-E:\travail\ppc\PPE\obj\Debug\PPE.LoginForm.resources
-E:\travail\ppc\PPE\obj\Debug\PPE.main.resources
+D:\Travail\PPE-C\PPE\obj\Debug\PPE.main.resources
