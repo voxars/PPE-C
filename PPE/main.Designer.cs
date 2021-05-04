@@ -31,16 +31,20 @@ namespace PPE
         {
             this.tabControlAtelier = new System.Windows.Forms.TabControl();
             this.tabPageHoraire = new System.Windows.Forms.TabPage();
-            this.tabPageIntervenant = new System.Windows.Forms.TabPage();
-            this.cbxAtelier = new System.Windows.Forms.ComboBox();
-            this.lblAtelier = new System.Windows.Forms.Label();
-            this.lblNomAtelier = new System.Windows.Forms.Label();
+            this.lblHoraireFin = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblHoraireDebut = new System.Windows.Forms.Label();
             this.lblHoraire1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblHoraireFin = new System.Windows.Forms.Label();
+            this.lblNomAtelier = new System.Windows.Forms.Label();
+            this.lblAtelier = new System.Windows.Forms.Label();
+            this.cbxAtelier = new System.Windows.Forms.ComboBox();
+            this.tabPageIntervenant = new System.Windows.Forms.TabPage();
+            this.cbxAtelierAnimateur = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cbxAnimateur = new System.Windows.Forms.ComboBox();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
+            this.tabPageIntervenant.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlAtelier
@@ -71,43 +75,23 @@ namespace PPE
             this.tabPageHoraire.UseVisualStyleBackColor = true;
             this.tabPageHoraire.Enter += new System.EventHandler(this.tabPageHoraire_Enter);
             // 
-            // tabPageIntervenant
+            // lblHoraireFin
             // 
-            this.tabPageIntervenant.Location = new System.Drawing.Point(4, 22);
-            this.tabPageIntervenant.Name = "tabPageIntervenant";
-            this.tabPageIntervenant.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageIntervenant.Size = new System.Drawing.Size(714, 325);
-            this.tabPageIntervenant.TabIndex = 1;
-            this.tabPageIntervenant.Text = "Affecter un animateur";
-            this.tabPageIntervenant.UseVisualStyleBackColor = true;
+            this.lblHoraireFin.AutoSize = true;
+            this.lblHoraireFin.Location = new System.Drawing.Point(108, 143);
+            this.lblHoraireFin.Name = "lblHoraireFin";
+            this.lblHoraireFin.Size = new System.Drawing.Size(53, 13);
+            this.lblHoraireFin.TabIndex = 6;
+            this.lblHoraireFin.Text = "horaire fin";
             // 
-            // cbxAtelier
+            // label3
             // 
-            this.cbxAtelier.FormattingEnabled = true;
-            this.cbxAtelier.Location = new System.Drawing.Point(38, 29);
-            this.cbxAtelier.Name = "cbxAtelier";
-            this.cbxAtelier.Size = new System.Drawing.Size(113, 21);
-            this.cbxAtelier.TabIndex = 0;
-            this.cbxAtelier.Text = "Choisir un atelier";
-            this.cbxAtelier.SelectedIndexChanged += new System.EventHandler(this.cbxAtelier_SelectedIndexChanged);
-            // 
-            // lblAtelier
-            // 
-            this.lblAtelier.AutoSize = true;
-            this.lblAtelier.Location = new System.Drawing.Point(41, 81);
-            this.lblAtelier.Name = "lblAtelier";
-            this.lblAtelier.Size = new System.Drawing.Size(85, 13);
-            this.lblAtelier.TabIndex = 1;
-            this.lblAtelier.Text = "Nom de l\'atelier :";
-            // 
-            // lblNomAtelier
-            // 
-            this.lblNomAtelier.AutoSize = true;
-            this.lblNomAtelier.Location = new System.Drawing.Point(132, 81);
-            this.lblNomAtelier.Name = "lblNomAtelier";
-            this.lblNomAtelier.Size = new System.Drawing.Size(27, 13);
-            this.lblNomAtelier.TabIndex = 2;
-            this.lblNomAtelier.Text = "nom";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(41, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Horaire Fin:";
             // 
             // lblHoraireDebut
             // 
@@ -127,23 +111,75 @@ namespace PPE
             this.lblHoraire1.TabIndex = 3;
             this.lblHoraire1.Text = "Horaire Debut:";
             // 
-            // label3
+            // lblNomAtelier
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Horaire Fin:";
+            this.lblNomAtelier.AutoSize = true;
+            this.lblNomAtelier.Location = new System.Drawing.Point(132, 81);
+            this.lblNomAtelier.Name = "lblNomAtelier";
+            this.lblNomAtelier.Size = new System.Drawing.Size(27, 13);
+            this.lblNomAtelier.TabIndex = 2;
+            this.lblNomAtelier.Text = "nom";
             // 
-            // lblHoraireFin
+            // lblAtelier
             // 
-            this.lblHoraireFin.AutoSize = true;
-            this.lblHoraireFin.Location = new System.Drawing.Point(108, 143);
-            this.lblHoraireFin.Name = "lblHoraireFin";
-            this.lblHoraireFin.Size = new System.Drawing.Size(53, 13);
-            this.lblHoraireFin.TabIndex = 6;
-            this.lblHoraireFin.Text = "horaire fin";
+            this.lblAtelier.AutoSize = true;
+            this.lblAtelier.Location = new System.Drawing.Point(41, 81);
+            this.lblAtelier.Name = "lblAtelier";
+            this.lblAtelier.Size = new System.Drawing.Size(85, 13);
+            this.lblAtelier.TabIndex = 1;
+            this.lblAtelier.Text = "Nom de l\'atelier :";
+            // 
+            // cbxAtelier
+            // 
+            this.cbxAtelier.FormattingEnabled = true;
+            this.cbxAtelier.Location = new System.Drawing.Point(38, 29);
+            this.cbxAtelier.Name = "cbxAtelier";
+            this.cbxAtelier.Size = new System.Drawing.Size(113, 21);
+            this.cbxAtelier.TabIndex = 0;
+            this.cbxAtelier.Text = "Choisir un atelier";
+            this.cbxAtelier.SelectedIndexChanged += new System.EventHandler(this.cbxAtelier_SelectedIndexChanged);
+            // 
+            // tabPageIntervenant
+            // 
+            this.tabPageIntervenant.Controls.Add(this.cbxAtelierAnimateur);
+            this.tabPageIntervenant.Controls.Add(this.button1);
+            this.tabPageIntervenant.Controls.Add(this.cbxAnimateur);
+            this.tabPageIntervenant.Location = new System.Drawing.Point(4, 22);
+            this.tabPageIntervenant.Name = "tabPageIntervenant";
+            this.tabPageIntervenant.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageIntervenant.Size = new System.Drawing.Size(714, 325);
+            this.tabPageIntervenant.TabIndex = 1;
+            this.tabPageIntervenant.Text = "Affecter un animateur";
+            this.tabPageIntervenant.UseVisualStyleBackColor = true;
+            // 
+            // cbxAtelierAnimateur
+            // 
+            this.cbxAtelierAnimateur.FormattingEnabled = true;
+            this.cbxAtelierAnimateur.Location = new System.Drawing.Point(69, 79);
+            this.cbxAtelierAnimateur.Name = "cbxAtelierAnimateur";
+            this.cbxAtelierAnimateur.Size = new System.Drawing.Size(143, 21);
+            this.cbxAtelierAnimateur.TabIndex = 2;
+            this.cbxAtelierAnimateur.Text = "Choisir un atelier";
+            this.cbxAtelierAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAnimateur_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(69, 144);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 42);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // cbxAnimateur
+            // 
+            this.cbxAnimateur.FormattingEnabled = true;
+            this.cbxAnimateur.Location = new System.Drawing.Point(69, 34);
+            this.cbxAnimateur.Name = "cbxAnimateur";
+            this.cbxAnimateur.Size = new System.Drawing.Size(143, 21);
+            this.cbxAnimateur.TabIndex = 0;
+            this.cbxAnimateur.Text = "Choisir un animateur";
+            this.cbxAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAnimateur_SelectedIndexChanged);
             // 
             // main
             // 
@@ -157,6 +193,7 @@ namespace PPE
             this.tabControlAtelier.ResumeLayout(false);
             this.tabPageHoraire.ResumeLayout(false);
             this.tabPageHoraire.PerformLayout();
+            this.tabPageIntervenant.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -173,6 +210,9 @@ namespace PPE
         private System.Windows.Forms.Label lblNomAtelier;
         private System.Windows.Forms.Label lblAtelier;
         private System.Windows.Forms.ComboBox cbxAtelier;
+        private System.Windows.Forms.ComboBox cbxAtelierAnimateur;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbxAnimateur;
     }
 }
 
