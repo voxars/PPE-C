@@ -16,8 +16,12 @@ namespace PPE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
 
             
+=======
+            Application.Run(new main());
+>>>>>>> leo
         }
     }
 }

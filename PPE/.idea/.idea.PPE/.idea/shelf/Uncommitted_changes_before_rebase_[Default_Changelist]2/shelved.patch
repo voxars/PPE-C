@@ -1,0 +1,18 @@
+Index: .idea/.idea.PPE/.idea/indexLayout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ContentModelUserStore\">\r\n    <attachedFolders />\r\n    <explicitIncludes />\r\n    <explicitExcludes />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.PPE/.idea/indexLayout.xml b/.idea/.idea.PPE/.idea/indexLayout.xml
+--- a/.idea/.idea.PPE/.idea/indexLayout.xml	(revision 6ec59845ae10789bfd8fc954a19606c55ad0563c)
++++ b/.idea/.idea.PPE/.idea/indexLayout.xml	(date 1620150589563)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ContentModelUserStore">
++  <component name="UserContentModel">
+     <attachedFolders />
+     <explicitIncludes />
+     <explicitExcludes />
