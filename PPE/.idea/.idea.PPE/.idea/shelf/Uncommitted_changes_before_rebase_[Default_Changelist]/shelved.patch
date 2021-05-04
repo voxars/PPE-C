@@ -1,0 +1,111 @@
+Index: .idea/.idea.PPE/.idea/riderModule.iml
+===================================================================
+diff --git a/.idea/.idea.PPE/.idea/riderModule.iml b/.idea/.idea.PPE/.idea/riderModule.iml
+deleted file mode 100644
+--- a/.idea/.idea.PPE/.idea/riderModule.iml	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
++++ /dev/null	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
+@@ -1,7 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="RIDER_MODULE" version="4">
+-  <component name="NewModuleRootManager">
+-    <content url="file://$MODULE_DIR$/../.." />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: .idea/.idea.PPE/.idea/contentModel.xml
+===================================================================
+diff --git a/.idea/.idea.PPE/.idea/contentModel.xml b/.idea/.idea.PPE/.idea/contentModel.xml
+deleted file mode 100644
+--- a/.idea/.idea.PPE/.idea/contentModel.xml	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
++++ /dev/null	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
+@@ -1,26 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ContentModelStore">
+-    <e p="C:\Users\arthu\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+-    <e p="C:\Users\arthu\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PPE.427903990.00" t="ExcludeRecursive" />
+-    <e p="D:\Travail\PPE-C\PPE" t="IncludeRecursive">
+-      <e p="App.config" t="Include" />
+-      <e p="bin" t="ExcludeRecursive" />
+-      <e p="DAOFactory.cs" t="Include" />
+-      <e p="main.cs" t="Include" />
+-      <e p="main.Designer.cs" t="Include" />
+-      <e p="obj" t="ExcludeRecursive" />
+-      <e p="packages" t="ExcludeRecursive" />
+-      <e p="PPE.csproj" t="IncludeRecursive" />
+-      <e p="PPE.sln" t="IncludeFlat" />
+-      <e p="Program.cs" t="Include" />
+-      <e p="Properties" t="Include">
+-        <e p="AssemblyInfo.cs" t="Include" />
+-        <e p="Resources.Designer.cs" t="Include" />
+-        <e p="Resources.resx" t="Include" />
+-        <e p="Settings.Designer.cs" t="Include" />
+-        <e p="Settings.settings" t="Include" />
+-      </e>
+-    </e>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/.idea.PPE/.idea/modules.xml
+===================================================================
+diff --git a/.idea/.idea.PPE/.idea/modules.xml b/.idea/.idea.PPE/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/.idea.PPE/.idea/modules.xml	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
++++ /dev/null	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/.idea.PPE/.idea/riderModule.iml" filepath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/riderModule.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: obj/Debug/PPE.csproj.FileListAbsolute.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>D:\\Travail\\PPE-C\\PPE\\bin\\Debug\\PPE.exe.config\r\nD:\\Travail\\PPE-C\\PPE\\bin\\Debug\\PPE.exe\r\nD:\\Travail\\PPE-C\\PPE\\bin\\Debug\\PPE.pdb\r\nD:\\Travail\\PPE-C\\PPE\\obj\\Debug\\PPE.csprojAssemblyReference.cache\r\nD:\\Travail\\PPE-C\\PPE\\obj\\Debug\\PPE.Properties.Resources.resources\r\nD:\\Travail\\PPE-C\\PPE\\obj\\Debug\\PPE.csproj.GenerateResource.cache\r\nD:\\Travail\\PPE-C\\PPE\\obj\\Debug\\PPE.csproj.CoreCompileInputs.cache\r\nD:\\Travail\\PPE-C\\PPE\\obj\\Debug\\PPE.exe\r\nD:\\Travail\\PPE-C\\PPE\\obj\\Debug\\PPE.pdb\r\nC:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE\\bin\\Debug\\PPE.exe.config\r\nC:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE\\bin\\Debug\\PPE.exe\r\nC:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE\\bin\\Debug\\PPE.pdb\r\nC:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE\\obj\\Debug\\PPE.csprojAssemblyReference.cache\r\nC:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE\\obj\\Debug\\PPE.Properties.Resources.resources\r\nC:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE\\obj\\Debug\\PPE.csproj.GenerateResource.cache\r\nC:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE\\obj\\Debug\\PPE.csproj.CoreCompileInputs.cache\r\nC:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE\\obj\\Debug\\PPE.exe\r\nC:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE\\obj\\Debug\\PPE.pdb\r\nC:\\Users\\Léo\\Desktop\\SLAM\\2ème année\\Ressouche\\PPE-C\\PPE\\obj\\Debug\\PPE.main.resources\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/obj/Debug/PPE.csproj.FileListAbsolute.txt b/obj/Debug/PPE.csproj.FileListAbsolute.txt
+--- a/obj/Debug/PPE.csproj.FileListAbsolute.txt	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
++++ b/obj/Debug/PPE.csproj.FileListAbsolute.txt	(date 1620150192662)
+@@ -17,3 +17,13 @@
+ C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\obj\Debug\PPE.exe
+ C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\obj\Debug\PPE.pdb
+ C:\Users\Léo\Desktop\SLAM\2ème année\Ressouche\PPE-C\PPE\obj\Debug\PPE.main.resources
++E:\travail\PPE-C\PPE\bin\Debug\PPE.exe.config
++E:\travail\PPE-C\PPE\bin\Debug\PPE.exe
++E:\travail\PPE-C\PPE\bin\Debug\PPE.pdb
++E:\travail\PPE-C\PPE\obj\Debug\PPE.csprojAssemblyReference.cache
++E:\travail\PPE-C\PPE\obj\Debug\PPE.main.resources
++E:\travail\PPE-C\PPE\obj\Debug\PPE.Properties.Resources.resources
++E:\travail\PPE-C\PPE\obj\Debug\PPE.csproj.GenerateResource.cache
++E:\travail\PPE-C\PPE\obj\Debug\PPE.csproj.CoreCompileInputs.cache
++E:\travail\PPE-C\PPE\obj\Debug\PPE.exe
++E:\travail\PPE-C\PPE\obj\Debug\PPE.pdb
+Index: .idea/.idea.PPE/.idea/indexLayout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ContentModelUserStore\">\r\n    <attachedFolders />\r\n    <explicitIncludes />\r\n    <explicitExcludes />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.PPE/.idea/indexLayout.xml b/.idea/.idea.PPE/.idea/indexLayout.xml
+--- a/.idea/.idea.PPE/.idea/indexLayout.xml	(revision a42458d33d45c0dc00f3e311759e5e58e78305f2)
++++ b/.idea/.idea.PPE/.idea/indexLayout.xml	(date 1620150177326)
+@@ -1,7 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ContentModelUserStore">
+-    <attachedFolders />
++  <component name="UserContentModel">
++    <attachedFolders>
++      <Path>../../PPE-C</Path>
++    </attachedFolders>
+     <explicitIncludes />
+     <explicitExcludes />
+   </component>
