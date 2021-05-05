@@ -31,6 +31,7 @@ namespace PPE
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.txbLogin = new System.Windows.Forms.TextBox();
             this.txbPassword = new System.Windows.Forms.TextBox();
@@ -90,7 +91,9 @@ namespace PPE
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txbLogin);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();

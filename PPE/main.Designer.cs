@@ -44,6 +44,7 @@ namespace PPE
             this.button1 = new System.Windows.Forms.Button();
             this.cbxAnimateur = new System.Windows.Forms.ComboBox();
             this.inscription = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
             this.cbbBenevole = new System.Windows.Forms.ComboBox();
             this.cbbAtelier = new System.Windows.Forms.ComboBox();
             this.cbbType = new System.Windows.Forms.ComboBox();
@@ -67,7 +68,7 @@ namespace PPE
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Atelier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
@@ -214,6 +215,7 @@ namespace PPE
             // 
             // inscription
             // 
+            this.inscription.Controls.Add(this.label12);
             this.inscription.Controls.Add(this.label11);
             this.inscription.Controls.Add(this.cbbBenevole);
             this.inscription.Controls.Add(this.cbbAtelier);
@@ -239,6 +241,16 @@ namespace PPE
             this.inscription.TabIndex = 2;
             this.inscription.Text = "Inscription participant";
             this.inscription.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label11.Location = new System.Drawing.Point(166, 3);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(313, 40);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Inscription des participants";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbbBenevole
             // 
@@ -439,15 +451,14 @@ namespace PPE
             this.Atelier.Name = "Atelier";
             this.Atelier.Width = 220;
             // 
-            // label11
+            // label12
             // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label11.Location = new System.Drawing.Point(166, 3);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(313, 40);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Inscription des participants";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label12.Location = new System.Drawing.Point(478, 236);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(230, 37);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "* : Informations obligatoires";
             // 
             // main
             // 
@@ -457,6 +468,7 @@ namespace PPE
             this.Controls.Add(this.tabControlAtelier);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.main_Load);
             this.tabControlAtelier.ResumeLayout(false);
@@ -469,6 +481,8 @@ namespace PPE
             ((System.ComponentModel.ISupportInitialize) (this.dataParticipants)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label label12;
 
         private System.Windows.Forms.Label label11;
 

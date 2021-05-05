@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efb9377d-9703-46e1-89c1-11e37051c14c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/InfoParticipant.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAOParticipant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAOParticipant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPE.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PPE.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Login.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/PPE.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PPE.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/PPE.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PPE.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/main.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.resx" beforeDir="false" afterPath="$PROJECT_DIR$/main.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.Login.resources" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.Login.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csproj.GenerateResource.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.main.resources" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.main.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
