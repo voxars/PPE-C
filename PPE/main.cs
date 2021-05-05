@@ -51,7 +51,6 @@ namespace PPE
             {
                 cbxAnimateur.Items.Add(unAnimateur.Prenom);
             }
-
         }
 
         private void cbxAtelier_SelectedIndexChanged(object sender, EventArgs e)
