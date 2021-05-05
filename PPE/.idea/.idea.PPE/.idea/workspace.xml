@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efb9377d-9703-46e1-89c1-11e37051c14c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/InfoParticipant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAOParticipant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAOParticipant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPE.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PPE.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/PPE.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PPE.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/PPE.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PPE.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/main.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.resx" beforeDir="false" afterPath="$PROJECT_DIR$/main.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +29,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/e1/5029cef2/Form.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/79/441f55df/Number.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAOFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -27,8 +41,9 @@
       <option value="$PROJECT_DIR$/DAOFactory.cs" />
       <option value="$PROJECT_DIR$/log.cs" />
       <option value="$PROJECT_DIR$/participant.cs" />
-      <option value="$PROJECT_DIR$/DAOParticipant.cs" />
       <option value="$PROJECT_DIR$/main.Designer.cs" />
+      <option value="$PROJECT_DIR$/InfoParticipant.cs" />
+      <option value="$PROJECT_DIR$/DAOParticipant.cs" />
       <option value="$PROJECT_DIR$/main.cs" />
     </changedPaths>
   </component>
@@ -42,6 +57,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlserver" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34995976" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />

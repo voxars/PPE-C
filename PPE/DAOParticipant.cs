@@ -6,10 +6,10 @@ namespace PPE
 {
     public class DAOParticipant
     {
-        public static List<participant> GetPartcipants()
+        public static List<InfoParticipant> GetInfoPartcipants()
         {
-            List<participant> lesPartcipants = new List<participant>();
-            string req = "Select * from participant";
+            List<InfoParticipant> lesInfoPartcipants = new List<InfoParticipant>();
+            string req = "Select nom, t.libelle,a.libelle from participant p inner join atelier a on p.id_atelier = a.id inner join typeParticipant t on p.type = t.id";
             DAOFactory db = new DAOFactory();
             db.connecter();
 
@@ -17,12 +17,12 @@ namespace PPE
 
             while (reader.Read())
             {
-                participant a = new participant(reader[0].ToString(), reader[1].ToString(), int.Parse(reader[2].ToString()),
-                    reader[3].ToString(), reader[4].ToString(), int.Parse(reader[5].ToString()), int.Parse(reader[6].ToString()), int.Parse(reader[7].ToString()) );
-                lesPartcipants.Add(a);
+                InfoParticipant a = new InfoParticipant(reader[0].ToString(), reader[1].ToString(), reader[2].ToString());
+                lesInfoPartcipants.Add(a);
             }
 
-            return lesPartcipants;
+            MessageBox.Show("participants recuperes");
+            return lesInfoPartcipants;
         }
 
         public static void ajouterParticipant(string nom, string prenom, int type, string adresse, string mail, int portable, int idAtelier, int hreBenevole)

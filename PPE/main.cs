@@ -14,9 +14,8 @@ namespace PPE
     {
         private Atelier monAtelier;
         private Animateur monAnimateur;
-        
-
-        public main()
+        private List<InfoParticipant> listP = new List<InfoParticipant>();
+            public main()
         {
             InitializeComponent();
         }
@@ -26,13 +25,13 @@ namespace PPE
         {
             monAtelier = new Atelier(10, "test", 50, "21:20", "21:30");
 
-            monAtelier.LesAteliers = Atelier.listeAtelier();
+            monAtelier.LesAteliers = DAOAtelier.getAtelier();
         }
         private void initialiserAnimateur()
         {
             monAnimateur = new Animateur(1, "testAnimateur", "", "", "","",1);
 
-            monAnimateur.LesAnimateurs = Animateur.listeAnimateur();
+            monAnimateur.LesAnimateurs = DAOAnimateur.getAnimateur();
         }
         #endregion
 
@@ -60,15 +59,16 @@ namespace PPE
 
             cbbBenevole.Items.Add("Matin");
             cbbBenevole.Items.Add("Apres-midi");
+
             
+            listP = DAOParticipant.GetInfoPartcipants();
             
-            List<participant> lesPartcipants = new List<participant>();
-            lesPartcipants = DAOParticipant.GetPartcipants();
-            foreach (participant unParticipant in lesPartcipants)
+            foreach (var v in this.listP)
             {
-                dataParticipants.Rows.Add(unParticipant.Nom, unParticipant.Type, unParticipant.IdAtelier);
+                dataParticipants.Rows.Add(v.Nom, v.Atelier, v.Type);
             }
 
+            
         }
 
         private void cbxAtelier_SelectedIndexChanged(object sender, EventArgs e)
@@ -101,10 +101,7 @@ namespace PPE
         {
 
         }
-        #endregion
-
-        #region participants
-
+        
         private void txbNom_TextChanged(object sender, EventArgs e)
         {
         }
@@ -141,7 +138,9 @@ namespace PPE
         private void cbbBenevole_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
+        #endregion
 
+        #region participants
 
         private void btnCreer_Click(object sender, EventArgs e)
         {
