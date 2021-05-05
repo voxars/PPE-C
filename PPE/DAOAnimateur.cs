@@ -27,9 +27,9 @@ namespace PPE
 
             return lesAnimateurs;
         }
-        public static void affecterAnimateurBDD(Atelier unAtelier, Animateur unAnimateur)
+        public static void affecterAnimateurBDD(int idAtelier, int idAnimateur)
         {
-            string requete = "update atelier set id_participant=" + unAnimateur.Id + " where id=" + unAtelier.Id ;
+            string requete = "update atelier set id_participant=" + idAnimateur + " where id=" + idAtelier;
 
             DAOFactory db = new DAOFactory();
             db.connecter();

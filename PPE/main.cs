@@ -53,7 +53,7 @@ namespace PPE
                 cbxIntervenant1.Items.Add(unAnimateur.Prenom);
                 cbxIntervenant2.Items.Add(unAnimateur.Prenom);
                 cbxIntervenant3.Items.Add(unAnimateur.Prenom);
-                cbxIntervenant1.Items.Add(unAnimateur.Prenom);
+                cbxIntervenant4.Items.Add(unAnimateur.Prenom);
             }
         }
 
@@ -91,24 +91,17 @@ namespace PPE
 
         private void btnAffecter_Click(object sender, EventArgs e)
         {
-            if (cbxAnimateur.Text == "Choisir un animateur" || cbxIntervenant1.Text == "1er Intervenant")
+            if (cbxAnimateur.Text == "Choisir un animateur" || cbxAtelierAnimateur.Text == "Choisir un atelier")
             {
                 lblAffectation.Text = "Veuillez choisir un animateur et au moins un Intervenant";
                 lblAffectation.ForeColor = Color.Red;
             }
             else
             {
-                int iAnimateur = cbxAnimateur.SelectedIndex;
-                Animateur a;
-                a = monAnimateur.LesAnimateurs.ElementAt(iAnimateur);
-                a.affecterAnimateur();
+                int idAtelier = cbxAtelierAnimateur.SelectedIndex + 1;
+                int idAnimateur = cbxAnimateur.SelectedIndex + 1;
 
-                int iAtelier = cbxAtelierAnimateur.SelectedIndex;
-                Atelier b;
-                b = monAtelier.LesAteliers.ElementAt(iAtelier);
-                b.affecterAnimateur();
-
-
+                DAOAnimateur.affecterAnimateurBDD(idAtelier, idAnimateur);
 
                 lblAffectation.Text = "Animateur et intervenant(s) bien affecté(s)";
                 lblAffectation.ForeColor = Color.Green;
