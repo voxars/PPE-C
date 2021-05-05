@@ -26,7 +26,7 @@ namespace PPE
         {
             monAtelier = new Atelier(10, "test", 50, "21:20", "21:30");
 
-            //monAtelier.LesAteliers = Atelier.listeAtelier();
+            monAtelier.LesAteliers = Atelier.listeAtelier();
         }
         private void initialiserAnimateur()
         {
