@@ -40,8 +40,12 @@ namespace PPE
             this.cbxAtelier = new System.Windows.Forms.ComboBox();
             this.tabPageIntervenant = new System.Windows.Forms.TabPage();
             this.cbxAtelierAnimateur = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAffecter = new System.Windows.Forms.Button();
             this.cbxAnimateur = new System.Windows.Forms.ComboBox();
+            this.cbxIntervenant1 = new System.Windows.Forms.ComboBox();
+            this.cbxIntervenant2 = new System.Windows.Forms.ComboBox();
+            this.cbxIntervenant3 = new System.Windows.Forms.ComboBox();
+            this.cbxIntervenant4 = new System.Windows.Forms.ComboBox();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
@@ -51,10 +55,10 @@ namespace PPE
             // 
             this.tabControlAtelier.Controls.Add(this.tabPageHoraire);
             this.tabControlAtelier.Controls.Add(this.tabPageIntervenant);
-            this.tabControlAtelier.Location = new System.Drawing.Point(32, 28);
+            this.tabControlAtelier.Location = new System.Drawing.Point(12, 12);
             this.tabControlAtelier.Name = "tabControlAtelier";
             this.tabControlAtelier.SelectedIndex = 0;
-            this.tabControlAtelier.Size = new System.Drawing.Size(722, 351);
+            this.tabControlAtelier.Size = new System.Drawing.Size(776, 426);
             this.tabControlAtelier.TabIndex = 0;
             // 
             // tabPageHoraire
@@ -141,13 +145,17 @@ namespace PPE
             // 
             // tabPageIntervenant
             // 
+            this.tabPageIntervenant.Controls.Add(this.cbxIntervenant4);
+            this.tabPageIntervenant.Controls.Add(this.cbxIntervenant3);
+            this.tabPageIntervenant.Controls.Add(this.cbxIntervenant2);
+            this.tabPageIntervenant.Controls.Add(this.cbxIntervenant1);
             this.tabPageIntervenant.Controls.Add(this.cbxAtelierAnimateur);
-            this.tabPageIntervenant.Controls.Add(this.button1);
+            this.tabPageIntervenant.Controls.Add(this.btnAffecter);
             this.tabPageIntervenant.Controls.Add(this.cbxAnimateur);
             this.tabPageIntervenant.Location = new System.Drawing.Point(4, 22);
             this.tabPageIntervenant.Name = "tabPageIntervenant";
             this.tabPageIntervenant.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageIntervenant.Size = new System.Drawing.Size(714, 325);
+            this.tabPageIntervenant.Size = new System.Drawing.Size(768, 400);
             this.tabPageIntervenant.TabIndex = 1;
             this.tabPageIntervenant.Text = "Affecter un animateur";
             this.tabPageIntervenant.UseVisualStyleBackColor = true;
@@ -162,14 +170,14 @@ namespace PPE
             this.cbxAtelierAnimateur.Text = "Choisir un atelier";
             this.cbxAtelierAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAnimateur_SelectedIndexChanged);
             // 
-            // button1
+            // btnAffecter
             // 
-            this.button1.Location = new System.Drawing.Point(69, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 42);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAffecter.Location = new System.Drawing.Point(303, 140);
+            this.btnAffecter.Name = "btnAffecter";
+            this.btnAffecter.Size = new System.Drawing.Size(143, 42);
+            this.btnAffecter.TabIndex = 1;
+            this.btnAffecter.Text = "Affecter";
+            this.btnAffecter.UseVisualStyleBackColor = true;
             // 
             // cbxAnimateur
             // 
@@ -180,6 +188,42 @@ namespace PPE
             this.cbxAnimateur.TabIndex = 0;
             this.cbxAnimateur.Text = "Choisir un animateur";
             this.cbxAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAnimateur_SelectedIndexChanged);
+            // 
+            // cbxIntervenant1
+            // 
+            this.cbxIntervenant1.FormattingEnabled = true;
+            this.cbxIntervenant1.Location = new System.Drawing.Point(256, 35);
+            this.cbxIntervenant1.Name = "cbxIntervenant1";
+            this.cbxIntervenant1.Size = new System.Drawing.Size(98, 21);
+            this.cbxIntervenant1.TabIndex = 3;
+            this.cbxIntervenant1.Text = "1er Intervenant";
+            // 
+            // cbxIntervenant2
+            // 
+            this.cbxIntervenant2.FormattingEnabled = true;
+            this.cbxIntervenant2.Location = new System.Drawing.Point(374, 35);
+            this.cbxIntervenant2.Name = "cbxIntervenant2";
+            this.cbxIntervenant2.Size = new System.Drawing.Size(109, 21);
+            this.cbxIntervenant2.TabIndex = 4;
+            this.cbxIntervenant2.Text = "2eme Intervenant";
+            // 
+            // cbxIntervenant3
+            // 
+            this.cbxIntervenant3.FormattingEnabled = true;
+            this.cbxIntervenant3.Location = new System.Drawing.Point(499, 35);
+            this.cbxIntervenant3.Name = "cbxIntervenant3";
+            this.cbxIntervenant3.Size = new System.Drawing.Size(110, 21);
+            this.cbxIntervenant3.TabIndex = 5;
+            this.cbxIntervenant3.Text = "3eme Intervenant";
+            // 
+            // cbxIntervenant4
+            // 
+            this.cbxIntervenant4.FormattingEnabled = true;
+            this.cbxIntervenant4.Location = new System.Drawing.Point(628, 35);
+            this.cbxIntervenant4.Name = "cbxIntervenant4";
+            this.cbxIntervenant4.Size = new System.Drawing.Size(106, 21);
+            this.cbxIntervenant4.TabIndex = 6;
+            this.cbxIntervenant4.Text = "4eme Intervenant";
             // 
             // main
             // 
@@ -211,8 +255,12 @@ namespace PPE
         private System.Windows.Forms.Label lblAtelier;
         private System.Windows.Forms.ComboBox cbxAtelier;
         private System.Windows.Forms.ComboBox cbxAtelierAnimateur;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAffecter;
         private System.Windows.Forms.ComboBox cbxAnimateur;
+        private System.Windows.Forms.ComboBox cbxIntervenant4;
+        private System.Windows.Forms.ComboBox cbxIntervenant3;
+        private System.Windows.Forms.ComboBox cbxIntervenant2;
+        private System.Windows.Forms.ComboBox cbxIntervenant1;
     }
 }
 
