@@ -43,6 +43,9 @@ namespace PPE
         {
             return DAOAnimateur.getAnimateur();
         }
-
+        public void affecterAnimateur()
+        {
+            DAOAnimateur.affecterAnimateurBDD(this);
+        }
     }
 }

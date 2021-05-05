@@ -22,7 +22,6 @@ namespace PPE
             this.CapaciteMax = capaciteMax;
             this.Debut = debut;
             this.Fin = fin;
-            lesAteliers = new List<Atelier>();
         }
 
         #region Getter Setter
@@ -63,6 +62,5 @@ namespace PPE
         {
             return DAOAtelier.getAtelier();
         }
-
     }
 }

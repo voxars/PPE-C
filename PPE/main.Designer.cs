@@ -39,13 +39,15 @@ namespace PPE
             this.lblAtelier = new System.Windows.Forms.Label();
             this.cbxAtelier = new System.Windows.Forms.ComboBox();
             this.tabPageIntervenant = new System.Windows.Forms.TabPage();
+            this.cbxIntervenant4 = new System.Windows.Forms.ComboBox();
+            this.cbxIntervenant3 = new System.Windows.Forms.ComboBox();
+            this.cbxIntervenant2 = new System.Windows.Forms.ComboBox();
+            this.cbxIntervenant1 = new System.Windows.Forms.ComboBox();
             this.cbxAtelierAnimateur = new System.Windows.Forms.ComboBox();
             this.btnAffecter = new System.Windows.Forms.Button();
             this.cbxAnimateur = new System.Windows.Forms.ComboBox();
-            this.cbxIntervenant1 = new System.Windows.Forms.ComboBox();
-            this.cbxIntervenant2 = new System.Windows.Forms.ComboBox();
-            this.cbxIntervenant3 = new System.Windows.Forms.ComboBox();
-            this.cbxIntervenant4 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblAffectation = new System.Windows.Forms.Label();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
@@ -63,6 +65,7 @@ namespace PPE
             // 
             // tabPageHoraire
             // 
+            this.tabPageHoraire.Controls.Add(this.label1);
             this.tabPageHoraire.Controls.Add(this.lblHoraireFin);
             this.tabPageHoraire.Controls.Add(this.label3);
             this.tabPageHoraire.Controls.Add(this.lblHoraireDebut);
@@ -73,7 +76,7 @@ namespace PPE
             this.tabPageHoraire.Location = new System.Drawing.Point(4, 22);
             this.tabPageHoraire.Name = "tabPageHoraire";
             this.tabPageHoraire.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageHoraire.Size = new System.Drawing.Size(714, 325);
+            this.tabPageHoraire.Size = new System.Drawing.Size(768, 400);
             this.tabPageHoraire.TabIndex = 0;
             this.tabPageHoraire.Text = "Afficher Horaire";
             this.tabPageHoraire.UseVisualStyleBackColor = true;
@@ -82,7 +85,7 @@ namespace PPE
             // lblHoraireFin
             // 
             this.lblHoraireFin.AutoSize = true;
-            this.lblHoraireFin.Location = new System.Drawing.Point(108, 143);
+            this.lblHoraireFin.Location = new System.Drawing.Point(399, 243);
             this.lblHoraireFin.Name = "lblHoraireFin";
             this.lblHoraireFin.Size = new System.Drawing.Size(53, 13);
             this.lblHoraireFin.TabIndex = 6;
@@ -91,16 +94,17 @@ namespace PPE
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 143);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(299, 239);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.Size = new System.Drawing.Size(94, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Horaire Fin:";
             // 
             // lblHoraireDebut
             // 
             this.lblHoraireDebut.AutoSize = true;
-            this.lblHoraireDebut.Location = new System.Drawing.Point(123, 116);
+            this.lblHoraireDebut.Location = new System.Drawing.Point(399, 212);
             this.lblHoraireDebut.Name = "lblHoraireDebut";
             this.lblHoraireDebut.Size = new System.Drawing.Size(69, 13);
             this.lblHoraireDebut.TabIndex = 4;
@@ -109,16 +113,17 @@ namespace PPE
             // lblHoraire1
             // 
             this.lblHoraire1.AutoSize = true;
-            this.lblHoraire1.Location = new System.Drawing.Point(41, 116);
+            this.lblHoraire1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblHoraire1.Location = new System.Drawing.Point(278, 212);
             this.lblHoraire1.Name = "lblHoraire1";
-            this.lblHoraire1.Size = new System.Drawing.Size(76, 13);
+            this.lblHoraire1.Size = new System.Drawing.Size(115, 17);
             this.lblHoraire1.TabIndex = 3;
             this.lblHoraire1.Text = "Horaire Debut:";
             // 
             // lblNomAtelier
             // 
             this.lblNomAtelier.AutoSize = true;
-            this.lblNomAtelier.Location = new System.Drawing.Point(132, 81);
+            this.lblNomAtelier.Location = new System.Drawing.Point(399, 177);
             this.lblNomAtelier.Name = "lblNomAtelier";
             this.lblNomAtelier.Size = new System.Drawing.Size(27, 13);
             this.lblNomAtelier.TabIndex = 2;
@@ -127,16 +132,17 @@ namespace PPE
             // lblAtelier
             // 
             this.lblAtelier.AutoSize = true;
-            this.lblAtelier.Location = new System.Drawing.Point(41, 81);
+            this.lblAtelier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblAtelier.Location = new System.Drawing.Point(261, 177);
             this.lblAtelier.Name = "lblAtelier";
-            this.lblAtelier.Size = new System.Drawing.Size(85, 13);
+            this.lblAtelier.Size = new System.Drawing.Size(132, 17);
             this.lblAtelier.TabIndex = 1;
             this.lblAtelier.Text = "Nom de l\'atelier :";
             // 
             // cbxAtelier
             // 
             this.cbxAtelier.FormattingEnabled = true;
-            this.cbxAtelier.Location = new System.Drawing.Point(38, 29);
+            this.cbxAtelier.Location = new System.Drawing.Point(305, 125);
             this.cbxAtelier.Name = "cbxAtelier";
             this.cbxAtelier.Size = new System.Drawing.Size(113, 21);
             this.cbxAtelier.TabIndex = 0;
@@ -145,6 +151,7 @@ namespace PPE
             // 
             // tabPageIntervenant
             // 
+            this.tabPageIntervenant.Controls.Add(this.lblAffectation);
             this.tabPageIntervenant.Controls.Add(this.cbxIntervenant4);
             this.tabPageIntervenant.Controls.Add(this.cbxIntervenant3);
             this.tabPageIntervenant.Controls.Add(this.cbxIntervenant2);
@@ -160,6 +167,42 @@ namespace PPE
             this.tabPageIntervenant.Text = "Affecter un animateur";
             this.tabPageIntervenant.UseVisualStyleBackColor = true;
             // 
+            // cbxIntervenant4
+            // 
+            this.cbxIntervenant4.FormattingEnabled = true;
+            this.cbxIntervenant4.Location = new System.Drawing.Point(628, 35);
+            this.cbxIntervenant4.Name = "cbxIntervenant4";
+            this.cbxIntervenant4.Size = new System.Drawing.Size(106, 21);
+            this.cbxIntervenant4.TabIndex = 6;
+            this.cbxIntervenant4.Text = "4eme Intervenant";
+            // 
+            // cbxIntervenant3
+            // 
+            this.cbxIntervenant3.FormattingEnabled = true;
+            this.cbxIntervenant3.Location = new System.Drawing.Point(499, 35);
+            this.cbxIntervenant3.Name = "cbxIntervenant3";
+            this.cbxIntervenant3.Size = new System.Drawing.Size(110, 21);
+            this.cbxIntervenant3.TabIndex = 5;
+            this.cbxIntervenant3.Text = "3eme Intervenant";
+            // 
+            // cbxIntervenant2
+            // 
+            this.cbxIntervenant2.FormattingEnabled = true;
+            this.cbxIntervenant2.Location = new System.Drawing.Point(374, 35);
+            this.cbxIntervenant2.Name = "cbxIntervenant2";
+            this.cbxIntervenant2.Size = new System.Drawing.Size(109, 21);
+            this.cbxIntervenant2.TabIndex = 4;
+            this.cbxIntervenant2.Text = "2eme Intervenant";
+            // 
+            // cbxIntervenant1
+            // 
+            this.cbxIntervenant1.FormattingEnabled = true;
+            this.cbxIntervenant1.Location = new System.Drawing.Point(256, 35);
+            this.cbxIntervenant1.Name = "cbxIntervenant1";
+            this.cbxIntervenant1.Size = new System.Drawing.Size(98, 21);
+            this.cbxIntervenant1.TabIndex = 3;
+            this.cbxIntervenant1.Text = "1er Intervenant";
+            // 
             // cbxAtelierAnimateur
             // 
             this.cbxAtelierAnimateur.FormattingEnabled = true;
@@ -172,12 +215,14 @@ namespace PPE
             // 
             // btnAffecter
             // 
+            this.btnAffecter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnAffecter.Location = new System.Drawing.Point(303, 140);
             this.btnAffecter.Name = "btnAffecter";
             this.btnAffecter.Size = new System.Drawing.Size(143, 42);
             this.btnAffecter.TabIndex = 1;
             this.btnAffecter.Text = "Affecter";
             this.btnAffecter.UseVisualStyleBackColor = true;
+            this.btnAffecter.Click += new System.EventHandler(this.btnAffecter_Click);
             // 
             // cbxAnimateur
             // 
@@ -189,41 +234,23 @@ namespace PPE
             this.cbxAnimateur.Text = "Choisir un animateur";
             this.cbxAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAnimateur_SelectedIndexChanged);
             // 
-            // cbxIntervenant1
+            // label1
             // 
-            this.cbxIntervenant1.FormattingEnabled = true;
-            this.cbxIntervenant1.Location = new System.Drawing.Point(256, 35);
-            this.cbxIntervenant1.Name = "cbxIntervenant1";
-            this.cbxIntervenant1.Size = new System.Drawing.Size(98, 21);
-            this.cbxIntervenant1.TabIndex = 3;
-            this.cbxIntervenant1.Text = "1er Intervenant";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(308, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "HORAIRE ATELIER";
             // 
-            // cbxIntervenant2
+            // lblAffectation
             // 
-            this.cbxIntervenant2.FormattingEnabled = true;
-            this.cbxIntervenant2.Location = new System.Drawing.Point(374, 35);
-            this.cbxIntervenant2.Name = "cbxIntervenant2";
-            this.cbxIntervenant2.Size = new System.Drawing.Size(109, 21);
-            this.cbxIntervenant2.TabIndex = 4;
-            this.cbxIntervenant2.Text = "2eme Intervenant";
-            // 
-            // cbxIntervenant3
-            // 
-            this.cbxIntervenant3.FormattingEnabled = true;
-            this.cbxIntervenant3.Location = new System.Drawing.Point(499, 35);
-            this.cbxIntervenant3.Name = "cbxIntervenant3";
-            this.cbxIntervenant3.Size = new System.Drawing.Size(110, 21);
-            this.cbxIntervenant3.TabIndex = 5;
-            this.cbxIntervenant3.Text = "3eme Intervenant";
-            // 
-            // cbxIntervenant4
-            // 
-            this.cbxIntervenant4.FormattingEnabled = true;
-            this.cbxIntervenant4.Location = new System.Drawing.Point(628, 35);
-            this.cbxIntervenant4.Name = "cbxIntervenant4";
-            this.cbxIntervenant4.Size = new System.Drawing.Size(106, 21);
-            this.cbxIntervenant4.TabIndex = 6;
-            this.cbxIntervenant4.Text = "4eme Intervenant";
+            this.lblAffectation.AutoSize = true;
+            this.lblAffectation.Location = new System.Drawing.Point(300, 233);
+            this.lblAffectation.Name = "lblAffectation";
+            this.lblAffectation.Size = new System.Drawing.Size(0, 13);
+            this.lblAffectation.TabIndex = 7;
             // 
             // main
             // 
@@ -238,6 +265,7 @@ namespace PPE
             this.tabPageHoraire.ResumeLayout(false);
             this.tabPageHoraire.PerformLayout();
             this.tabPageIntervenant.ResumeLayout(false);
+            this.tabPageIntervenant.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -261,6 +289,8 @@ namespace PPE
         private System.Windows.Forms.ComboBox cbxIntervenant3;
         private System.Windows.Forms.ComboBox cbxIntervenant2;
         private System.Windows.Forms.ComboBox cbxIntervenant1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAffectation;
     }
 }
 

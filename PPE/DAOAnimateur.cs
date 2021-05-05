@@ -27,5 +27,13 @@ namespace PPE
 
             return lesAnimateurs;
         }
+        public static void affecterAnimateurBDD(Atelier unAtelier, Animateur unAnimateur)
+        {
+            string requete = "update atelier set id_participant=" + unAnimateur.Id + " where id=" + unAtelier.Id ;
+
+            DAOFactory db = new DAOFactory();
+            db.connecter();
+            db.execSQLWrite(requete);
+        }
     }
 }
