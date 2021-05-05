@@ -60,10 +60,18 @@ namespace PPE
             this.txbNom = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCreer = new System.Windows.Forms.Button();
+            this.tabParticipant = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dataParticipants = new System.Windows.Forms.DataGridView();
+            this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Atelier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
             this.inscription.SuspendLayout();
+            this.tabParticipant.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dataParticipants)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAtelier
@@ -71,6 +79,7 @@ namespace PPE
             this.tabControlAtelier.Controls.Add(this.tabPageHoraire);
             this.tabControlAtelier.Controls.Add(this.tabPageIntervenant);
             this.tabControlAtelier.Controls.Add(this.inscription);
+            this.tabControlAtelier.Controls.Add(this.tabParticipant);
             this.tabControlAtelier.Location = new System.Drawing.Point(32, 28);
             this.tabControlAtelier.Name = "tabControlAtelier";
             this.tabControlAtelier.SelectedIndex = 0;
@@ -369,6 +378,55 @@ namespace PPE
             this.btnCreer.UseVisualStyleBackColor = true;
             this.btnCreer.Click += new System.EventHandler(this.btnCreer_Click);
             // 
+            // tabParticipant
+            // 
+            this.tabParticipant.Controls.Add(this.label10);
+            this.tabParticipant.Controls.Add(this.dataParticipants);
+            this.tabParticipant.Location = new System.Drawing.Point(4, 22);
+            this.tabParticipant.Name = "tabParticipant";
+            this.tabParticipant.Padding = new System.Windows.Forms.Padding(3);
+            this.tabParticipant.Size = new System.Drawing.Size(714, 325);
+            this.tabParticipant.TabIndex = 3;
+            this.tabParticipant.Text = "Liste participants";
+            this.tabParticipant.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label10.Location = new System.Drawing.Point(256, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(197, 23);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Liste des participants";
+            // 
+            // dataParticipants
+            // 
+            this.dataParticipants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataParticipants.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.Nom, this.Atelier, this.Type});
+            this.dataParticipants.Location = new System.Drawing.Point(3, 35);
+            this.dataParticipants.Name = "dataParticipants";
+            this.dataParticipants.Size = new System.Drawing.Size(705, 284);
+            this.dataParticipants.TabIndex = 0;
+            this.dataParticipants.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataParticipants_CellContentClick);
+            // 
+            // Nom
+            // 
+            this.Nom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Nom.HeaderText = "Nom";
+            this.Nom.Name = "Nom";
+            this.Nom.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Nom.Width = 54;
+            // 
+            // Atelier
+            // 
+            this.Atelier.HeaderText = "Atelier";
+            this.Atelier.Name = "Atelier";
+            // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,8 +442,18 @@ namespace PPE
             this.tabPageIntervenant.ResumeLayout(false);
             this.inscription.ResumeLayout(false);
             this.inscription.PerformLayout();
+            this.tabParticipant.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.dataParticipants)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.DataGridView dataParticipants;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Atelier;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TabPage tabParticipant;
 
         private System.Windows.Forms.Button btnCreer;
 

@@ -14,6 +14,7 @@ namespace PPE
     {
         private Atelier monAtelier;
         private Animateur monAnimateur;
+        
 
         public main()
         {
@@ -25,7 +26,7 @@ namespace PPE
         {
             monAtelier = new Atelier(10, "test", 50, "21:20", "21:30");
 
-            monAtelier.LesAteliers = Atelier.listeAtelier();
+            //monAtelier.LesAteliers = Atelier.listeAtelier();
         }
         private void initialiserAnimateur()
         {
@@ -59,6 +60,14 @@ namespace PPE
 
             cbbBenevole.Items.Add("Matin");
             cbbBenevole.Items.Add("Apres-midi");
+            
+            
+            List<participant> lesPartcipants = new List<participant>();
+            lesPartcipants = DAOParticipant.GetPartcipants();
+            foreach (participant unParticipant in lesPartcipants)
+            {
+                dataParticipants.Rows.Add(unParticipant.Nom, unParticipant.Type, unParticipant.IdAtelier);
+            }
 
         }
 
@@ -138,13 +147,15 @@ namespace PPE
         {
             string nom = txbNom.Text;
             string prenom = txbPrenom.Text;
-            string type = cbbType.SelectedText;
+            int type = cbbType.SelectedIndex+1;
             string adresse = txbAdresse.Text;
             string mail = txbMail.Text;
             int portable = Int32.Parse(txbPortable.Text);
             int idAtelier = cbbAtelier.SelectedIndex+1;
+            int hreBene = cbbBenevole.SelectedIndex+1;
+            
 
-            DAOParticipant.ajouterParticipant(nom, prenom, type, adresse, mail, portable,idAtelier);
+            DAOParticipant.ajouterParticipant(nom, prenom, type, adresse, mail, portable,idAtelier, hreBene);
             
             txbAdresse.Clear();
             txbMail.Clear();
@@ -157,7 +168,11 @@ namespace PPE
         }
         
         #endregion
-        
-        
+
+        #region Liste
+        private void dataParticipants_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+        #endregion
     }
 }

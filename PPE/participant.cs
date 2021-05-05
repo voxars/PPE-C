@@ -4,13 +4,14 @@
     {
         private string nom;
         private string prenom;
-        private string type;
+        private int type;
         private string adresse;
         private string mail;
         private int portable;
         private int idAtelier;
+        private int hreBenevole;
 
-        public participant(string nom, string prenom, string type, string adresse, string mail, int portable, int idAtelier)
+        public participant(string nom, string prenom, int type, string adresse, string mail, int portable, int idAtelier, int hreBenevole)
         {
             this.nom = nom;
             this.prenom = prenom;
@@ -19,6 +20,7 @@
             this.mail = mail;
             this.portable = portable;
             this.idAtelier = idAtelier;
+            this.hreBenevole = hreBenevole;
         }
 
         public string Nom
@@ -33,7 +35,7 @@
             set => prenom = value;
         }
 
-        public string Type
+        public int Type
         {
             get => type;
             set => type = value;
@@ -61,6 +63,12 @@
         {
             get => idAtelier;
             set => idAtelier = value;
+        }
+
+        public int HreBenevole
+        {
+            get => hreBenevole;
+            set => hreBenevole = value;
         }
     }
 }
