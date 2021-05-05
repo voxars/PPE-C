@@ -93,7 +93,7 @@ namespace PPE
         {
             if (cbxAnimateur.Text == "Choisir un animateur" || cbxAtelierAnimateur.Text == "Choisir un atelier")
             {
-                lblAffectation.Text = "Veuillez choisir un animateur et au moins un Intervenant";
+                lblAffectation.Text = "Veuillez choisir un animateur, un atelier";
                 lblAffectation.ForeColor = Color.Red;
             }
             else
@@ -103,11 +103,48 @@ namespace PPE
 
                 DAOAnimateur.affecterAnimateurBDD(idAtelier, idAnimateur);
 
+                if (cbxIntervenant1.Text != "1er Intervenant")
+                {
+                    int idIntervenant = cbxIntervenant1.SelectedIndex + 1;
+
+                    DAOIntervenant.affecterIntervenantBDD(idAtelier, idIntervenant);
+                }
+
+                if (cbxIntervenant2.Text != "2eme Intervenant")
+                {
+                    int idIntervenant = cbxIntervenant2.SelectedIndex + 1;
+
+                    DAOIntervenant.affecterIntervenantBDD(idAtelier, idIntervenant);
+                }
+
+                if (cbxIntervenant3.Text != "3eme Intervenant")
+                {
+                    int idIntervenant = cbxIntervenant3.SelectedIndex + 1;
+
+                    DAOIntervenant.affecterIntervenantBDD(idAtelier, idIntervenant);
+                }
+
+                if (cbxIntervenant4.Text != "4eme Intervenant")
+                {
+                    int idIntervenant = cbxIntervenant4.SelectedIndex + 1;
+
+                    DAOIntervenant.affecterIntervenantBDD(idAtelier, idIntervenant);
+                }
+
                 lblAffectation.Text = "Animateur et intervenant(s) bien affecté(s)";
                 lblAffectation.ForeColor = Color.Green;
             }
 
         }
 
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            cbxAtelierAnimateur.Text = "Choisir un atelier";
+            cbxAnimateur.Text = "Choisir un animateur";
+            cbxIntervenant1.Text = "1er Intervenant";
+            cbxIntervenant2.Text = "2eme Intervenant";
+            cbxIntervenant3.Text = "3eme Intervenant";
+            cbxIntervenant4.Text = "4eme Intervenant";
+        }
     }
 }

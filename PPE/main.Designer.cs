@@ -31,6 +31,7 @@ namespace PPE
         {
             this.tabControlAtelier = new System.Windows.Forms.TabControl();
             this.tabPageHoraire = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblHoraireFin = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblHoraireDebut = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@ namespace PPE
             this.lblAtelier = new System.Windows.Forms.Label();
             this.cbxAtelier = new System.Windows.Forms.ComboBox();
             this.tabPageIntervenant = new System.Windows.Forms.TabPage();
+            this.lblAffectation = new System.Windows.Forms.Label();
             this.cbxIntervenant4 = new System.Windows.Forms.ComboBox();
             this.cbxIntervenant3 = new System.Windows.Forms.ComboBox();
             this.cbxIntervenant2 = new System.Windows.Forms.ComboBox();
@@ -46,8 +48,7 @@ namespace PPE
             this.cbxAtelierAnimateur = new System.Windows.Forms.ComboBox();
             this.btnAffecter = new System.Windows.Forms.Button();
             this.cbxAnimateur = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblAffectation = new System.Windows.Forms.Label();
+            this.btnAnnuler = new System.Windows.Forms.Button();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
@@ -81,6 +82,16 @@ namespace PPE
             this.tabPageHoraire.Text = "Afficher Horaire";
             this.tabPageHoraire.UseVisualStyleBackColor = true;
             this.tabPageHoraire.Enter += new System.EventHandler(this.tabPageHoraire_Enter);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(308, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "HORAIRE ATELIER";
             // 
             // lblHoraireFin
             // 
@@ -151,6 +162,7 @@ namespace PPE
             // 
             // tabPageIntervenant
             // 
+            this.tabPageIntervenant.Controls.Add(this.btnAnnuler);
             this.tabPageIntervenant.Controls.Add(this.lblAffectation);
             this.tabPageIntervenant.Controls.Add(this.cbxIntervenant4);
             this.tabPageIntervenant.Controls.Add(this.cbxIntervenant3);
@@ -166,6 +178,14 @@ namespace PPE
             this.tabPageIntervenant.TabIndex = 1;
             this.tabPageIntervenant.Text = "Affecter un animateur";
             this.tabPageIntervenant.UseVisualStyleBackColor = true;
+            // 
+            // lblAffectation
+            // 
+            this.lblAffectation.AutoSize = true;
+            this.lblAffectation.Location = new System.Drawing.Point(300, 233);
+            this.lblAffectation.Name = "lblAffectation";
+            this.lblAffectation.Size = new System.Drawing.Size(0, 13);
+            this.lblAffectation.TabIndex = 7;
             // 
             // cbxIntervenant4
             // 
@@ -216,7 +236,7 @@ namespace PPE
             // btnAffecter
             // 
             this.btnAffecter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAffecter.Location = new System.Drawing.Point(303, 140);
+            this.btnAffecter.Location = new System.Drawing.Point(181, 145);
             this.btnAffecter.Name = "btnAffecter";
             this.btnAffecter.Size = new System.Drawing.Size(143, 42);
             this.btnAffecter.TabIndex = 1;
@@ -234,23 +254,16 @@ namespace PPE
             this.cbxAnimateur.Text = "Choisir un animateur";
             this.cbxAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAnimateur_SelectedIndexChanged);
             // 
-            // label1
+            // btnAnnuler
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(308, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "HORAIRE ATELIER";
-            // 
-            // lblAffectation
-            // 
-            this.lblAffectation.AutoSize = true;
-            this.lblAffectation.Location = new System.Drawing.Point(300, 233);
-            this.lblAffectation.Name = "lblAffectation";
-            this.lblAffectation.Size = new System.Drawing.Size(0, 13);
-            this.lblAffectation.TabIndex = 7;
+            this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAnnuler.Location = new System.Drawing.Point(396, 145);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(143, 42);
+            this.btnAnnuler.TabIndex = 8;
+            this.btnAnnuler.Text = "Annuler";
+            this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // main
             // 
@@ -291,6 +304,7 @@ namespace PPE
         private System.Windows.Forms.ComboBox cbxIntervenant1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblAffectation;
+        private System.Windows.Forms.Button btnAnnuler;
     }
 }
 
