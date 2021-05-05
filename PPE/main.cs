@@ -50,6 +50,10 @@ namespace PPE
             foreach (Animateur unAnimateur in monAnimateur.LesAnimateurs)
             {
                 cbxAnimateur.Items.Add(unAnimateur.Prenom);
+                cbxIntervenant1.Items.Add(unAnimateur.Prenom);
+                cbxIntervenant2.Items.Add(unAnimateur.Prenom);
+                cbxIntervenant3.Items.Add(unAnimateur.Prenom);
+                cbxIntervenant4.Items.Add(unAnimateur.Prenom);
             }
         }
 
