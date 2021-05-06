@@ -45,6 +45,7 @@ namespace PPE
             {
                 cbxAtelier.Items.Add(unAtelier.Libelle);
                 cbxAtelierAnimateur.Items.Add(unAtelier.Libelle);
+                cbxAtelierAll.Items.Add(unAtelier.Libelle);
             }
 
             foreach (Animateur unAnimateur in monAnimateur.LesAnimateurs)
@@ -145,6 +146,29 @@ namespace PPE
             cbxIntervenant2.Text = "2eme Intervenant";
             cbxIntervenant3.Text = "3eme Intervenant";
             cbxIntervenant4.Text = "4eme Intervenant";
+        }
+
+        private void tbAfficherAll_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void remplirIntervenant()
+        {
+            dgvIntervenant.DataSource = null;
+            dgvIntervenant.DataSource = monAnimateur.LesAnimateurs;
+
+            dgvIntervenant.AutoResizeColumns();
+        }
+
+        private void cbxAtelierAll_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = cbxAtelierAll.SelectedIndex;
+            Atelier unAtelier;
+            unAtelier = monAtelier.LesAteliers.ElementAt(i);
+
+            txbAtelier.Text = unAtelier.Libelle;
+
         }
     }
 }

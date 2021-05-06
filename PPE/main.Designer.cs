@@ -40,6 +40,7 @@ namespace PPE
             this.lblAtelier = new System.Windows.Forms.Label();
             this.cbxAtelier = new System.Windows.Forms.ComboBox();
             this.tabPageIntervenant = new System.Windows.Forms.TabPage();
+            this.btnAnnuler = new System.Windows.Forms.Button();
             this.lblAffectation = new System.Windows.Forms.Label();
             this.cbxIntervenant4 = new System.Windows.Forms.ComboBox();
             this.cbxIntervenant3 = new System.Windows.Forms.ComboBox();
@@ -48,16 +49,29 @@ namespace PPE
             this.cbxAtelierAnimateur = new System.Windows.Forms.ComboBox();
             this.btnAffecter = new System.Windows.Forms.Button();
             this.cbxAnimateur = new System.Windows.Forms.ComboBox();
-            this.btnAnnuler = new System.Windows.Forms.Button();
+            this.tbAfficherAll = new System.Windows.Forms.TabPage();
+            this.cbxAtelierAll = new System.Windows.Forms.ComboBox();
+            this.lblAtelierAll = new System.Windows.Forms.Label();
+            this.txbAtelier = new System.Windows.Forms.TextBox();
+            this.lblAnimateur = new System.Windows.Forms.Label();
+            this.txbAnimateur = new System.Windows.Forms.TextBox();
+            this.lblntervenant = new System.Windows.Forms.Label();
+            this.lblTheme = new System.Windows.Forms.Label();
+            this.dgvIntervenant = new System.Windows.Forms.DataGridView();
+            this.dgvTheme = new System.Windows.Forms.DataGridView();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
+            this.tbAfficherAll.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIntervenant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTheme)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAtelier
             // 
             this.tabControlAtelier.Controls.Add(this.tabPageHoraire);
             this.tabControlAtelier.Controls.Add(this.tabPageIntervenant);
+            this.tabControlAtelier.Controls.Add(this.tbAfficherAll);
             this.tabControlAtelier.Location = new System.Drawing.Point(12, 12);
             this.tabControlAtelier.Name = "tabControlAtelier";
             this.tabControlAtelier.SelectedIndex = 0;
@@ -179,6 +193,17 @@ namespace PPE
             this.tabPageIntervenant.Text = "Affecter un animateur";
             this.tabPageIntervenant.UseVisualStyleBackColor = true;
             // 
+            // btnAnnuler
+            // 
+            this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAnnuler.Location = new System.Drawing.Point(396, 145);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(143, 42);
+            this.btnAnnuler.TabIndex = 8;
+            this.btnAnnuler.Text = "Annuler";
+            this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
+            // 
             // lblAffectation
             // 
             this.lblAffectation.AutoSize = true;
@@ -254,16 +279,105 @@ namespace PPE
             this.cbxAnimateur.Text = "Choisir un animateur";
             this.cbxAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAnimateur_SelectedIndexChanged);
             // 
-            // btnAnnuler
+            // tbAfficherAll
             // 
-            this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAnnuler.Location = new System.Drawing.Point(396, 145);
-            this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(143, 42);
-            this.btnAnnuler.TabIndex = 8;
-            this.btnAnnuler.Text = "Annuler";
-            this.btnAnnuler.UseVisualStyleBackColor = true;
-            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
+            this.tbAfficherAll.Controls.Add(this.dgvTheme);
+            this.tbAfficherAll.Controls.Add(this.dgvIntervenant);
+            this.tbAfficherAll.Controls.Add(this.lblTheme);
+            this.tbAfficherAll.Controls.Add(this.lblntervenant);
+            this.tbAfficherAll.Controls.Add(this.txbAnimateur);
+            this.tbAfficherAll.Controls.Add(this.lblAnimateur);
+            this.tbAfficherAll.Controls.Add(this.txbAtelier);
+            this.tbAfficherAll.Controls.Add(this.lblAtelierAll);
+            this.tbAfficherAll.Controls.Add(this.cbxAtelierAll);
+            this.tbAfficherAll.Location = new System.Drawing.Point(4, 22);
+            this.tbAfficherAll.Name = "tbAfficherAll";
+            this.tbAfficherAll.Padding = new System.Windows.Forms.Padding(3);
+            this.tbAfficherAll.Size = new System.Drawing.Size(768, 400);
+            this.tbAfficherAll.TabIndex = 2;
+            this.tbAfficherAll.Text = "Afficher les ateliers";
+            this.tbAfficherAll.UseVisualStyleBackColor = true;
+            this.tbAfficherAll.Click += new System.EventHandler(this.tbAfficherAll_Click);
+            // 
+            // cbxAtelierAll
+            // 
+            this.cbxAtelierAll.FormattingEnabled = true;
+            this.cbxAtelierAll.Location = new System.Drawing.Point(98, 39);
+            this.cbxAtelierAll.Name = "cbxAtelierAll";
+            this.cbxAtelierAll.Size = new System.Drawing.Size(119, 21);
+            this.cbxAtelierAll.TabIndex = 0;
+            this.cbxAtelierAll.Text = "Choisir un atelier";
+            this.cbxAtelierAll.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAll_SelectedIndexChanged);
+            // 
+            // lblAtelierAll
+            // 
+            this.lblAtelierAll.AutoSize = true;
+            this.lblAtelierAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblAtelierAll.Location = new System.Drawing.Point(81, 103);
+            this.lblAtelierAll.Name = "lblAtelierAll";
+            this.lblAtelierAll.Size = new System.Drawing.Size(65, 17);
+            this.lblAtelierAll.TabIndex = 1;
+            this.lblAtelierAll.Text = "Atelier :";
+            // 
+            // txbAtelier
+            // 
+            this.txbAtelier.Location = new System.Drawing.Point(152, 103);
+            this.txbAtelier.Name = "txbAtelier";
+            this.txbAtelier.Size = new System.Drawing.Size(90, 20);
+            this.txbAtelier.TabIndex = 2;
+            // 
+            // lblAnimateur
+            // 
+            this.lblAnimateur.AutoSize = true;
+            this.lblAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblAnimateur.Location = new System.Drawing.Point(55, 172);
+            this.lblAnimateur.Name = "lblAnimateur";
+            this.lblAnimateur.Size = new System.Drawing.Size(91, 17);
+            this.lblAnimateur.TabIndex = 3;
+            this.lblAnimateur.Text = "Animateur :";
+            // 
+            // txbAnimateur
+            // 
+            this.txbAnimateur.Location = new System.Drawing.Point(152, 172);
+            this.txbAnimateur.Name = "txbAnimateur";
+            this.txbAnimateur.Size = new System.Drawing.Size(90, 20);
+            this.txbAnimateur.TabIndex = 4;
+            // 
+            // lblntervenant
+            // 
+            this.lblntervenant.AutoSize = true;
+            this.lblntervenant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblntervenant.Location = new System.Drawing.Point(335, 60);
+            this.lblntervenant.Name = "lblntervenant";
+            this.lblntervenant.Size = new System.Drawing.Size(100, 17);
+            this.lblntervenant.TabIndex = 5;
+            this.lblntervenant.Text = "Intervenant :";
+            // 
+            // lblTheme
+            // 
+            this.lblTheme.AutoSize = true;
+            this.lblTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTheme.Location = new System.Drawing.Point(594, 60);
+            this.lblTheme.Name = "lblTheme";
+            this.lblTheme.Size = new System.Drawing.Size(75, 17);
+            this.lblTheme.TabIndex = 6;
+            this.lblTheme.Text = "Themes :";
+            // 
+            // dgvIntervenant
+            // 
+            this.dgvIntervenant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIntervenant.Location = new System.Drawing.Point(296, 100);
+            this.dgvIntervenant.Name = "dgvIntervenant";
+            this.dgvIntervenant.Size = new System.Drawing.Size(187, 255);
+            this.dgvIntervenant.TabIndex = 7;
+            // 
+            // dgvTheme
+            // 
+            this.dgvTheme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTheme.Location = new System.Drawing.Point(534, 103);
+            this.dgvTheme.Name = "dgvTheme";
+            this.dgvTheme.Size = new System.Drawing.Size(187, 252);
+            this.dgvTheme.TabIndex = 8;
             // 
             // main
             // 
@@ -279,6 +393,10 @@ namespace PPE
             this.tabPageHoraire.PerformLayout();
             this.tabPageIntervenant.ResumeLayout(false);
             this.tabPageIntervenant.PerformLayout();
+            this.tbAfficherAll.ResumeLayout(false);
+            this.tbAfficherAll.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIntervenant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTheme)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -305,6 +423,16 @@ namespace PPE
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblAffectation;
         private System.Windows.Forms.Button btnAnnuler;
+        private System.Windows.Forms.TabPage tbAfficherAll;
+        private System.Windows.Forms.Label lblTheme;
+        private System.Windows.Forms.Label lblntervenant;
+        private System.Windows.Forms.TextBox txbAnimateur;
+        private System.Windows.Forms.Label lblAnimateur;
+        private System.Windows.Forms.TextBox txbAtelier;
+        private System.Windows.Forms.Label lblAtelierAll;
+        private System.Windows.Forms.ComboBox cbxAtelierAll;
+        private System.Windows.Forms.DataGridView dgvTheme;
+        private System.Windows.Forms.DataGridView dgvIntervenant;
     }
 }
 
