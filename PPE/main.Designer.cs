@@ -29,19 +29,25 @@ namespace PPE
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.tabControlAtelier = new System.Windows.Forms.TabControl();
             this.tabPageHoraire = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
             this.lblHoraireFin = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.lblHoraireDebut = new System.Windows.Forms.Label();
-            this.lblHoraire1 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.lblNomAtelier = new System.Windows.Forms.Label();
-            this.lblAtelier = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.cbxAtelier = new System.Windows.Forms.ComboBox();
             this.tabPageIntervenant = new System.Windows.Forms.TabPage();
+            this.lblAffectation = new System.Windows.Forms.Label();
+            this.btnAnnuler = new System.Windows.Forms.Button();
+            this.cbxIntervenant4 = new System.Windows.Forms.ComboBox();
+            this.cbxIntervenant3 = new System.Windows.Forms.ComboBox();
+            this.cbxIntervenant2 = new System.Windows.Forms.ComboBox();
+            this.cbxIntervenant1 = new System.Windows.Forms.ComboBox();
             this.cbxAtelierAnimateur = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAffecter = new System.Windows.Forms.Button();
             this.cbxAnimateur = new System.Windows.Forms.ComboBox();
             this.inscription = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
@@ -69,12 +75,25 @@ namespace PPE
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Atelier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgvTheme = new System.Windows.Forms.DataGridView();
+            this.dgvIntervenant = new System.Windows.Forms.DataGridView();
+            this.lblTheme = new System.Windows.Forms.Label();
+            this.lblntervenant = new System.Windows.Forms.Label();
+            this.txbAnimateur = new System.Windows.Forms.TextBox();
+            this.lblAnimateur = new System.Windows.Forms.Label();
+            this.txbAtelier = new System.Windows.Forms.TextBox();
+            this.lblAtelierAll = new System.Windows.Forms.Label();
+            this.cbxAtelierAll = new System.Windows.Forms.ComboBox();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
             this.inscription.SuspendLayout();
             this.tabParticipant.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dataParticipants)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvTheme)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvIntervenant)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAtelier
@@ -83,135 +102,220 @@ namespace PPE
             this.tabControlAtelier.Controls.Add(this.tabPageIntervenant);
             this.tabControlAtelier.Controls.Add(this.inscription);
             this.tabControlAtelier.Controls.Add(this.tabParticipant);
-            this.tabControlAtelier.Location = new System.Drawing.Point(32, 28);
+            this.tabControlAtelier.Controls.Add(this.tabPage1);
+            this.tabControlAtelier.Location = new System.Drawing.Point(12, 12);
             this.tabControlAtelier.Name = "tabControlAtelier";
             this.tabControlAtelier.SelectedIndex = 0;
-            this.tabControlAtelier.Size = new System.Drawing.Size(722, 351);
+            this.tabControlAtelier.Size = new System.Drawing.Size(758, 392);
             this.tabControlAtelier.TabIndex = 0;
             // 
             // tabPageHoraire
             // 
+            this.tabPageHoraire.Controls.Add(this.label13);
             this.tabPageHoraire.Controls.Add(this.lblHoraireFin);
-            this.tabPageHoraire.Controls.Add(this.label3);
+            this.tabPageHoraire.Controls.Add(this.label15);
             this.tabPageHoraire.Controls.Add(this.lblHoraireDebut);
-            this.tabPageHoraire.Controls.Add(this.lblHoraire1);
+            this.tabPageHoraire.Controls.Add(this.label17);
             this.tabPageHoraire.Controls.Add(this.lblNomAtelier);
-            this.tabPageHoraire.Controls.Add(this.lblAtelier);
+            this.tabPageHoraire.Controls.Add(this.label19);
             this.tabPageHoraire.Controls.Add(this.cbxAtelier);
             this.tabPageHoraire.Location = new System.Drawing.Point(4, 22);
             this.tabPageHoraire.Name = "tabPageHoraire";
             this.tabPageHoraire.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageHoraire.Size = new System.Drawing.Size(714, 325);
+            this.tabPageHoraire.Size = new System.Drawing.Size(750, 366);
             this.tabPageHoraire.TabIndex = 0;
             this.tabPageHoraire.Text = "Afficher Horaire";
             this.tabPageHoraire.UseVisualStyleBackColor = true;
             this.tabPageHoraire.Enter += new System.EventHandler(this.tabPageHoraire_Enter);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label13.Location = new System.Drawing.Point(279, 30);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(146, 17);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "HORAIRE ATELIER";
+            // 
             // lblHoraireFin
             // 
             this.lblHoraireFin.AutoSize = true;
-            this.lblHoraireFin.Location = new System.Drawing.Point(108, 143);
+            this.lblHoraireFin.Location = new System.Drawing.Point(370, 212);
             this.lblHoraireFin.Name = "lblHoraireFin";
             this.lblHoraireFin.Size = new System.Drawing.Size(53, 13);
-            this.lblHoraireFin.TabIndex = 6;
+            this.lblHoraireFin.TabIndex = 14;
             this.lblHoraireFin.Text = "horaire fin";
+            this.lblHoraireFin.Click += new System.EventHandler(this.lblHoraireFin_Click);
             // 
-            // label3
+            // label15
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Horaire Fin:";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(270, 208);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(94, 17);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "Horaire Fin:";
             // 
             // lblHoraireDebut
             // 
             this.lblHoraireDebut.AutoSize = true;
-            this.lblHoraireDebut.Location = new System.Drawing.Point(123, 116);
+            this.lblHoraireDebut.Location = new System.Drawing.Point(370, 181);
             this.lblHoraireDebut.Name = "lblHoraireDebut";
             this.lblHoraireDebut.Size = new System.Drawing.Size(69, 13);
-            this.lblHoraireDebut.TabIndex = 4;
+            this.lblHoraireDebut.TabIndex = 12;
             this.lblHoraireDebut.Text = "horaire debut";
+            this.lblHoraireDebut.Click += new System.EventHandler(this.lblHoraireDebut_Click);
             // 
-            // lblHoraire1
+            // label17
             // 
-            this.lblHoraire1.AutoSize = true;
-            this.lblHoraire1.Location = new System.Drawing.Point(41, 116);
-            this.lblHoraire1.Name = "lblHoraire1";
-            this.lblHoraire1.Size = new System.Drawing.Size(76, 13);
-            this.lblHoraire1.TabIndex = 3;
-            this.lblHoraire1.Text = "Horaire Debut:";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label17.Location = new System.Drawing.Point(249, 181);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(115, 17);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Horaire Debut:";
             // 
             // lblNomAtelier
             // 
             this.lblNomAtelier.AutoSize = true;
-            this.lblNomAtelier.Location = new System.Drawing.Point(132, 81);
+            this.lblNomAtelier.Location = new System.Drawing.Point(370, 146);
             this.lblNomAtelier.Name = "lblNomAtelier";
             this.lblNomAtelier.Size = new System.Drawing.Size(27, 13);
-            this.lblNomAtelier.TabIndex = 2;
+            this.lblNomAtelier.TabIndex = 10;
             this.lblNomAtelier.Text = "nom";
+            this.lblNomAtelier.Click += new System.EventHandler(this.lblNomAtelier_Click);
             // 
-            // lblAtelier
+            // label19
             // 
-            this.lblAtelier.AutoSize = true;
-            this.lblAtelier.Location = new System.Drawing.Point(41, 81);
-            this.lblAtelier.Name = "lblAtelier";
-            this.lblAtelier.Size = new System.Drawing.Size(85, 13);
-            this.lblAtelier.TabIndex = 1;
-            this.lblAtelier.Text = "Nom de l\'atelier :";
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label19.Location = new System.Drawing.Point(232, 146);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(132, 17);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "Nom de l\'atelier :";
             // 
             // cbxAtelier
             // 
             this.cbxAtelier.FormattingEnabled = true;
-            this.cbxAtelier.Location = new System.Drawing.Point(38, 29);
+            this.cbxAtelier.Location = new System.Drawing.Point(276, 94);
             this.cbxAtelier.Name = "cbxAtelier";
             this.cbxAtelier.Size = new System.Drawing.Size(113, 21);
-            this.cbxAtelier.TabIndex = 0;
+            this.cbxAtelier.TabIndex = 7;
             this.cbxAtelier.Text = "Choisir un atelier";
             this.cbxAtelier.SelectedIndexChanged += new System.EventHandler(this.cbxAtelier_SelectedIndexChanged);
             // 
             // tabPageIntervenant
             // 
+            this.tabPageIntervenant.Controls.Add(this.lblAffectation);
+            this.tabPageIntervenant.Controls.Add(this.btnAnnuler);
+            this.tabPageIntervenant.Controls.Add(this.cbxIntervenant4);
+            this.tabPageIntervenant.Controls.Add(this.cbxIntervenant3);
+            this.tabPageIntervenant.Controls.Add(this.cbxIntervenant2);
+            this.tabPageIntervenant.Controls.Add(this.cbxIntervenant1);
             this.tabPageIntervenant.Controls.Add(this.cbxAtelierAnimateur);
-            this.tabPageIntervenant.Controls.Add(this.button1);
+            this.tabPageIntervenant.Controls.Add(this.btnAffecter);
             this.tabPageIntervenant.Controls.Add(this.cbxAnimateur);
             this.tabPageIntervenant.Location = new System.Drawing.Point(4, 22);
             this.tabPageIntervenant.Name = "tabPageIntervenant";
             this.tabPageIntervenant.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageIntervenant.Size = new System.Drawing.Size(714, 325);
+            this.tabPageIntervenant.Size = new System.Drawing.Size(750, 366);
             this.tabPageIntervenant.TabIndex = 1;
             this.tabPageIntervenant.Text = "Affecter un animateur";
             this.tabPageIntervenant.UseVisualStyleBackColor = true;
             // 
+            // lblAffectation
+            // 
+            this.lblAffectation.AutoSize = true;
+            this.lblAffectation.Location = new System.Drawing.Point(293, 228);
+            this.lblAffectation.Name = "lblAffectation";
+            this.lblAffectation.Size = new System.Drawing.Size(0, 13);
+            this.lblAffectation.TabIndex = 17;
+            // 
+            // btnAnnuler
+            // 
+            this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAnnuler.Location = new System.Drawing.Point(365, 141);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(143, 42);
+            this.btnAnnuler.TabIndex = 16;
+            this.btnAnnuler.Text = "Annuler";
+            this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
+            // 
+            // cbxIntervenant4
+            // 
+            this.cbxIntervenant4.FormattingEnabled = true;
+            this.cbxIntervenant4.Location = new System.Drawing.Point(597, 31);
+            this.cbxIntervenant4.Name = "cbxIntervenant4";
+            this.cbxIntervenant4.Size = new System.Drawing.Size(106, 21);
+            this.cbxIntervenant4.TabIndex = 15;
+            this.cbxIntervenant4.Text = "4eme Intervenant";
+            this.cbxIntervenant4.SelectedIndexChanged += new System.EventHandler(this.cbxIntervenant4_SelectedIndexChanged);
+            // 
+            // cbxIntervenant3
+            // 
+            this.cbxIntervenant3.FormattingEnabled = true;
+            this.cbxIntervenant3.Location = new System.Drawing.Point(468, 31);
+            this.cbxIntervenant3.Name = "cbxIntervenant3";
+            this.cbxIntervenant3.Size = new System.Drawing.Size(110, 21);
+            this.cbxIntervenant3.TabIndex = 14;
+            this.cbxIntervenant3.Text = "3eme Intervenant";
+            this.cbxIntervenant3.SelectedIndexChanged += new System.EventHandler(this.cbxIntervenant3_SelectedIndexChanged);
+            // 
+            // cbxIntervenant2
+            // 
+            this.cbxIntervenant2.FormattingEnabled = true;
+            this.cbxIntervenant2.Location = new System.Drawing.Point(343, 31);
+            this.cbxIntervenant2.Name = "cbxIntervenant2";
+            this.cbxIntervenant2.Size = new System.Drawing.Size(109, 21);
+            this.cbxIntervenant2.TabIndex = 13;
+            this.cbxIntervenant2.Text = "2eme Intervenant";
+            this.cbxIntervenant2.SelectedIndexChanged += new System.EventHandler(this.cbxIntervenant2_SelectedIndexChanged);
+            // 
+            // cbxIntervenant1
+            // 
+            this.cbxIntervenant1.FormattingEnabled = true;
+            this.cbxIntervenant1.Location = new System.Drawing.Point(225, 31);
+            this.cbxIntervenant1.Name = "cbxIntervenant1";
+            this.cbxIntervenant1.Size = new System.Drawing.Size(98, 21);
+            this.cbxIntervenant1.TabIndex = 12;
+            this.cbxIntervenant1.Text = "1er Intervenant";
+            this.cbxIntervenant1.SelectedIndexChanged += new System.EventHandler(this.cbxIntervenant1_SelectedIndexChanged);
+            // 
             // cbxAtelierAnimateur
             // 
             this.cbxAtelierAnimateur.FormattingEnabled = true;
-            this.cbxAtelierAnimateur.Location = new System.Drawing.Point(69, 79);
+            this.cbxAtelierAnimateur.Location = new System.Drawing.Point(38, 75);
             this.cbxAtelierAnimateur.Name = "cbxAtelierAnimateur";
             this.cbxAtelierAnimateur.Size = new System.Drawing.Size(143, 21);
-            this.cbxAtelierAnimateur.TabIndex = 2;
+            this.cbxAtelierAnimateur.TabIndex = 11;
             this.cbxAtelierAnimateur.Text = "Choisir un atelier";
-            this.cbxAtelierAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAnimateur_SelectedIndexChanged);
+            this.cbxAtelierAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAnimateur_SelectedIndexChanged_1);
             // 
-            // button1
+            // btnAffecter
             // 
-            this.button1.Location = new System.Drawing.Point(69, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 42);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAffecter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAffecter.Location = new System.Drawing.Point(150, 141);
+            this.btnAffecter.Name = "btnAffecter";
+            this.btnAffecter.Size = new System.Drawing.Size(143, 42);
+            this.btnAffecter.TabIndex = 10;
+            this.btnAffecter.Text = "Affecter";
+            this.btnAffecter.UseVisualStyleBackColor = true;
+            this.btnAffecter.Click += new System.EventHandler(this.btnAffecter_Click);
             // 
             // cbxAnimateur
             // 
             this.cbxAnimateur.FormattingEnabled = true;
-            this.cbxAnimateur.Location = new System.Drawing.Point(69, 34);
+            this.cbxAnimateur.Location = new System.Drawing.Point(38, 30);
             this.cbxAnimateur.Name = "cbxAnimateur";
             this.cbxAnimateur.Size = new System.Drawing.Size(143, 21);
-            this.cbxAnimateur.TabIndex = 0;
+            this.cbxAnimateur.TabIndex = 9;
             this.cbxAnimateur.Text = "Choisir un animateur";
-            this.cbxAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAnimateur_SelectedIndexChanged);
+            this.cbxAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAnimateur_SelectedIndexChanged_1);
             // 
             // inscription
             // 
@@ -237,7 +341,7 @@ namespace PPE
             this.inscription.Location = new System.Drawing.Point(4, 22);
             this.inscription.Name = "inscription";
             this.inscription.Padding = new System.Windows.Forms.Padding(3);
-            this.inscription.Size = new System.Drawing.Size(714, 325);
+            this.inscription.Size = new System.Drawing.Size(750, 366);
             this.inscription.TabIndex = 2;
             this.inscription.Text = "Inscription participant";
             this.inscription.UseVisualStyleBackColor = true;
@@ -418,7 +522,7 @@ namespace PPE
             this.tabParticipant.Location = new System.Drawing.Point(4, 22);
             this.tabParticipant.Name = "tabParticipant";
             this.tabParticipant.Padding = new System.Windows.Forms.Padding(3);
-            this.tabParticipant.Size = new System.Drawing.Size(714, 325);
+            this.tabParticipant.Size = new System.Drawing.Size(750, 366);
             this.tabParticipant.TabIndex = 3;
             this.tabParticipant.Text = "Liste participants";
             this.tabParticipant.UseVisualStyleBackColor = true;
@@ -460,13 +564,114 @@ namespace PPE
             this.Atelier.Name = "Atelier";
             this.Atelier.Width = 220;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dgvTheme);
+            this.tabPage1.Controls.Add(this.dgvIntervenant);
+            this.tabPage1.Controls.Add(this.lblTheme);
+            this.tabPage1.Controls.Add(this.lblntervenant);
+            this.tabPage1.Controls.Add(this.txbAnimateur);
+            this.tabPage1.Controls.Add(this.lblAnimateur);
+            this.tabPage1.Controls.Add(this.txbAtelier);
+            this.tabPage1.Controls.Add(this.lblAtelierAll);
+            this.tabPage1.Controls.Add(this.cbxAtelierAll);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(750, 366);
+            this.tabPage1.TabIndex = 4;
+            this.tabPage1.Text = "Afficher les ateliers";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dgvTheme
+            // 
+            this.dgvTheme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTheme.Location = new System.Drawing.Point(533, 80);
+            this.dgvTheme.Name = "dgvTheme";
+            this.dgvTheme.Size = new System.Drawing.Size(187, 252);
+            this.dgvTheme.TabIndex = 17;
+            this.dgvTheme.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTheme_CellContentClick);
+            // 
+            // dgvIntervenant
+            // 
+            this.dgvIntervenant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIntervenant.Location = new System.Drawing.Point(295, 77);
+            this.dgvIntervenant.Name = "dgvIntervenant";
+            this.dgvIntervenant.Size = new System.Drawing.Size(187, 255);
+            this.dgvIntervenant.TabIndex = 16;
+            this.dgvIntervenant.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIntervenant_CellContentClick);
+            // 
+            // lblTheme
+            // 
+            this.lblTheme.AutoSize = true;
+            this.lblTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTheme.Location = new System.Drawing.Point(593, 37);
+            this.lblTheme.Name = "lblTheme";
+            this.lblTheme.Size = new System.Drawing.Size(75, 17);
+            this.lblTheme.TabIndex = 15;
+            this.lblTheme.Text = "Themes :";
+            // 
+            // lblntervenant
+            // 
+            this.lblntervenant.AutoSize = true;
+            this.lblntervenant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblntervenant.Location = new System.Drawing.Point(334, 37);
+            this.lblntervenant.Name = "lblntervenant";
+            this.lblntervenant.Size = new System.Drawing.Size(100, 17);
+            this.lblntervenant.TabIndex = 14;
+            this.lblntervenant.Text = "Intervenant :";
+            // 
+            // txbAnimateur
+            // 
+            this.txbAnimateur.Location = new System.Drawing.Point(103, 137);
+            this.txbAnimateur.Name = "txbAnimateur";
+            this.txbAnimateur.Size = new System.Drawing.Size(186, 20);
+            this.txbAnimateur.TabIndex = 13;
+            // 
+            // lblAnimateur
+            // 
+            this.lblAnimateur.AutoSize = true;
+            this.lblAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblAnimateur.Location = new System.Drawing.Point(6, 137);
+            this.lblAnimateur.Name = "lblAnimateur";
+            this.lblAnimateur.Size = new System.Drawing.Size(91, 17);
+            this.lblAnimateur.TabIndex = 12;
+            this.lblAnimateur.Text = "Animateur :";
+            // 
+            // txbAtelier
+            // 
+            this.txbAtelier.Location = new System.Drawing.Point(103, 80);
+            this.txbAtelier.Name = "txbAtelier";
+            this.txbAtelier.Size = new System.Drawing.Size(186, 20);
+            this.txbAtelier.TabIndex = 11;
+            this.txbAtelier.TextChanged += new System.EventHandler(this.txbAtelier_TextChanged);
+            // 
+            // lblAtelierAll
+            // 
+            this.lblAtelierAll.AutoSize = true;
+            this.lblAtelierAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblAtelierAll.Location = new System.Drawing.Point(32, 80);
+            this.lblAtelierAll.Name = "lblAtelierAll";
+            this.lblAtelierAll.Size = new System.Drawing.Size(65, 17);
+            this.lblAtelierAll.TabIndex = 10;
+            this.lblAtelierAll.Text = "Atelier :";
+            // 
+            // cbxAtelierAll
+            // 
+            this.cbxAtelierAll.FormattingEnabled = true;
+            this.cbxAtelierAll.Location = new System.Drawing.Point(103, 22);
+            this.cbxAtelierAll.Name = "cbxAtelierAll";
+            this.cbxAtelierAll.Size = new System.Drawing.Size(186, 21);
+            this.cbxAtelierAll.TabIndex = 9;
+            this.cbxAtelierAll.Text = "Choisir un atelier";
+            this.cbxAtelierAll.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAll_SelectedIndexChanged);
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 416);
             this.Controls.Add(this.tabControlAtelier);
-            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -476,12 +681,53 @@ namespace PPE
             this.tabPageHoraire.ResumeLayout(false);
             this.tabPageHoraire.PerformLayout();
             this.tabPageIntervenant.ResumeLayout(false);
+            this.tabPageIntervenant.PerformLayout();
             this.inscription.ResumeLayout(false);
             this.inscription.PerformLayout();
             this.tabParticipant.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dataParticipants)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvTheme)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvIntervenant)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label lblAffectation;
+
+        private System.Windows.Forms.DataGridView dgvTheme;
+        private System.Windows.Forms.DataGridView dgvIntervenant;
+        private System.Windows.Forms.Label lblTheme;
+        private System.Windows.Forms.Label lblntervenant;
+        private System.Windows.Forms.TextBox txbAnimateur;
+        private System.Windows.Forms.Label lblAnimateur;
+        private System.Windows.Forms.TextBox txbAtelier;
+        private System.Windows.Forms.Label lblAtelierAll;
+        private System.Windows.Forms.ComboBox cbxAtelierAll;
+
+        private System.Windows.Forms.Button btnAnnuler;
+        private System.Windows.Forms.ComboBox cbxIntervenant4;
+        private System.Windows.Forms.ComboBox cbxIntervenant3;
+        private System.Windows.Forms.ComboBox cbxIntervenant2;
+        private System.Windows.Forms.ComboBox cbxIntervenant1;
+        private System.Windows.Forms.Button btnAffecter;
+
+        private System.Windows.Forms.Label lblHoraireFin;
+
+        private System.Windows.Forms.Label lblNomAtelier;
+        private System.Windows.Forms.Label lblHoraireDebut;
+
+        private System.Windows.Forms.ComboBox cbxAtelier;
+
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label13;
+        
+        private System.Windows.Forms.Label label15;
+        
+        private System.Windows.Forms.Label label17;
+        
+        private System.Windows.Forms.Label label19;
+        
 
         private System.Windows.Forms.Label label12;
 
@@ -528,15 +774,7 @@ namespace PPE
         private System.Windows.Forms.TabControl tabControlAtelier;
         private System.Windows.Forms.TabPage tabPageHoraire;
         private System.Windows.Forms.TabPage tabPageIntervenant;
-        private System.Windows.Forms.Label lblHoraireFin;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblHoraireDebut;
-        private System.Windows.Forms.Label lblHoraire1;
-        private System.Windows.Forms.Label lblNomAtelier;
-        private System.Windows.Forms.Label lblAtelier;
-        private System.Windows.Forms.ComboBox cbxAtelier;
         private System.Windows.Forms.ComboBox cbxAtelierAnimateur;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cbxAnimateur;
     }
 }

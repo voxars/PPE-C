@@ -12,8 +12,10 @@ namespace PPE
 {
     public partial class main : Form
     {
-        private Atelier monAtelier;
-        private Animateur monAnimateur;
+        private List<Atelier> mesAteliers = new List<Atelier>();
+        private List<participant> mesParticipants = new List<participant>();
+        private List<Intervenant> mesIntervenants = new List<Intervenant>();
+        private List<Theme> mesThemes = new List<Theme>();
         private List<type> mesType = new List<type>();
         private List<benevole> mesHre = new List<benevole>();
         private List<InfoParticipant> listP = new List<InfoParticipant>();
@@ -21,40 +23,29 @@ namespace PPE
         {
             InitializeComponent();
         }
-
-        #region initialisation des données
-        private void initialiserAtelier()
-        {
-            monAtelier = new Atelier(10, "test", 50, "21:20", "21:30");
-
-            monAtelier.LesAteliers = DAOAtelier.getAtelier();
-        }
-        private void initialiserAnimateur()
-        {
-            monAnimateur = new Animateur(1, "testAnimateur", "", "", "","",1);
-
-            monAnimateur.LesAnimateurs = DAOAnimateur.getAnimateur();
-        }
-        #endregion
-
-
         private void main_Load(object sender, EventArgs e)
         {
-            initialiserAtelier();
-            initialiserAnimateur();
+            mesAteliers = DAOAtelier.getAtelier();
+            mesParticipants = DAOParticipant.getParticipant();
             mesType = DAOType.GetInfotypes();
             mesHre = DAOBenevole.GetInfoJ();
+            
 
-            foreach (Atelier unAtelier in monAtelier.LesAteliers)
+            foreach (var v in this.mesAteliers)
             {
-                cbxAtelier.Items.Add(unAtelier.Libelle);
-                cbxAtelierAnimateur.Items.Add(unAtelier.Libelle);
-                cbbAtelier.Items.Add(unAtelier.Libelle);
+                cbxAtelier.Items.Add(v.Libelle);
+                cbxAtelierAnimateur.Items.Add(v.Libelle);
+                cbxAtelierAll.Items.Add(v.Libelle);
+                cbbAtelier.Items.Add(v.Libelle);
             }
 
-            foreach (Animateur unAnimateur in monAnimateur.LesAnimateurs)
+            foreach (var v in this.mesParticipants)
             {
-                cbxAnimateur.Items.Add(unAnimateur.Prenom);
+                cbxAnimateur.Items.Add(v.Prenom);
+                cbxIntervenant1.Items.Add(v.Prenom);
+                cbxIntervenant2.Items.Add(v.Prenom);
+                cbxIntervenant3.Items.Add(v.Prenom);
+                cbxIntervenant4.Items.Add(v.Prenom);
             }
 
             foreach (var v in this.mesType)
@@ -79,17 +70,6 @@ namespace PPE
             cbbBenevole.SelectedIndex = 0;
             cbbType.SelectedIndex = 0;
 
-        }
-
-        private void cbxAtelier_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int i = cbxAtelier.SelectedIndex;
-            Atelier unAtelier;
-            unAtelier = monAtelier.LesAteliers.ElementAt(i);
-
-            lblNomAtelier.Text = unAtelier.Libelle;
-            lblHoraireDebut.Text = unAtelier.Debut.ToString();
-            lblHoraireFin.Text = unAtelier.Fin.ToString();
         }
 
         #region not use
@@ -150,7 +130,7 @@ namespace PPE
         }
         #endregion
 
-        #region participants
+        #region AjouterParticipants
 
         private void btnCreer_Click(object sender, EventArgs e)
         {
@@ -249,15 +229,145 @@ namespace PPE
         
         #endregion
 
-        #region Liste
+        #region ListeParticipants
         private void dataParticipants_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
         #endregion
+        
+        #region afficherAtelier
+        private void cbxAtelier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = cbxAtelier.SelectedIndex;
+            Atelier unAtelier;
+            unAtelier = mesAteliers.ElementAt(i);
 
+            lblNomAtelier.Text = unAtelier.Libelle;
+            lblHoraireDebut.Text = unAtelier.Debut.ToString();
+            lblHoraireFin.Text = unAtelier.Fin.ToString();
+        }
+        private void lblNomAtelier_Click(object sender, EventArgs e)
+                {
+                }
+        private void lblHoraireDebut_Click(object sender, EventArgs e)
+        {
+        }
+        private void lblHoraireFin_Click(object sender, EventArgs e)
+                {
+                }
+        #endregion
+
+        #region AffecterAnimateur
+        private void cbxAnimateur_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+        }
+        private void cbxAtelierAnimateur_SelectedIndexChanged_1(object sender, EventArgs e)
+                {
+                }
+        private void cbxIntervenant1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+        private void cbxIntervenant2_SelectedIndexChanged(object sender, EventArgs e)
+                { }
+        private void cbxIntervenant3_SelectedIndexChanged(object sender, EventArgs e)
+                {
+                }
+        private void cbxIntervenant4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+        private void btnAffecter_Click(object sender, EventArgs e)
+        {
+            if (cbxAnimateur.Text == "Choisir un animateur" || cbxAtelierAnimateur.Text == "Choisir un atelier")
+            {
+                lblAffectation.Text = "Veuillez choisir un animateur, un atelier";
+                lblAffectation.ForeColor = Color.Red;
+            }
+            else
+            {
+                int idAtelier = cbxAtelierAnimateur.SelectedIndex + 1;
+                int idAnimateur = cbxAnimateur.SelectedIndex + 1;
+
+                DAOParticipant.affecterAnimateurBDD(idAtelier, idAnimateur);
+
+                if (cbxIntervenant1.Text != "1er Intervenant")
+                {
+                    int idParticipant = cbxIntervenant1.SelectedIndex + 1;
+
+                    DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
+                }
+
+                if (cbxIntervenant2.Text != "2eme Intervenant")
+                {
+                    int idParticipant = cbxIntervenant2.SelectedIndex + 1;
+
+                    DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
+                }
+
+                if (cbxIntervenant3.Text != "3eme Intervenant")
+                {
+                    int idParticipant = cbxIntervenant3.SelectedIndex + 1;
+
+                    DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
+                }
+
+                if (cbxIntervenant4.Text != "4eme Intervenant")
+                {
+                    int idParticipant = cbxIntervenant4.SelectedIndex + 1;
+
+                    DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
+                }
+
+                lblAffectation.Text = "Animateur et intervenant(s) bien affecté(s)";
+                lblAffectation.ForeColor = Color.Green;
+            }
+        }
+        private void btnAnnuler_Click(object sender, EventArgs e)
+                {
+                    cbxAtelierAnimateur.Text = "Choisir un atelier";
+                    cbxAnimateur.Text = "Choisir un animateur";
+                    cbxIntervenant1.Text = "1er Intervenant";
+                    cbxIntervenant2.Text = "2eme Intervenant";
+                    cbxIntervenant3.Text = "3eme Intervenant";
+                    cbxIntervenant4.Text = "4eme Intervenant";
+                }
+        
+        #endregion
+
+        #region AfficherAtelier
+
+        private void cbxAtelierAll_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = cbxAtelierAll.SelectedIndex;
+            Atelier unAtelier;
+            unAtelier = mesAteliers.ElementAt(i);
+            txbAtelier.Text = unAtelier.Libelle;
+            txbAnimateur.Text = unAtelier.Animateur;
+
+            int idAtelier = cbxAtelierAll.SelectedIndex + 1;
+            
+            dgvIntervenant.DataSource = null;
+            dgvIntervenant.DataSource = mesIntervenants;
+            dgvIntervenant.AutoResizeColumns();
+
+            
+            dgvTheme.DataSource = null;
+            dgvTheme.DataSource = mesThemes;
+            dgvTheme.AutoResizeColumns();
+        }
+        private void txbAtelier_TextChanged(object sender, EventArgs e)
+        {
+        }
+        private void dgvIntervenant_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+        private void dgvTheme_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+        #endregion
+        
         private void main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+          Application.Exit();
         }
     }
 }

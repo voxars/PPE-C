@@ -1,4 +1,6 @@
-﻿namespace PPE
+﻿using System.Collections.Generic;
+
+namespace PPE
 {
     public class participant
     {
@@ -70,5 +72,7 @@
             get => hreBenevole;
             set => hreBenevole = value;
         }
+        
+
     }
 }

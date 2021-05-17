@@ -4,7 +4,33 @@
     <projectFile>PPE.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efb9377d-9703-46e1-89c1-11e37051c14c" name="Default Changelist" comment="finito pipo" />
+    <list default="true" id="efb9377d-9703-46e1-89c1-11e37051c14c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DAOIntervenant.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DAOTheme.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intervenant.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Theme.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atelier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Atelier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAOAtelier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAOAtelier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAOParticipant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAOParticipant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPE.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PPE.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/PPE.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PPE.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/PPE.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PPE.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/main.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.resx" beforeDir="false" afterPath="$PROJECT_DIR$/main.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.main.resources" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.main.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/participant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/participant.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,17 +55,23 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/DAOFactory.cs" />
       <option value="$PROJECT_DIR$/log.cs" />
-      <option value="$PROJECT_DIR$/participant.cs" />
-      <option value="$PROJECT_DIR$/main.Designer.cs" />
       <option value="$PROJECT_DIR$/InfoParticipant.cs" />
       <option value="$PROJECT_DIR$/Login.cs" />
       <option value="$PROJECT_DIR$/Program.cs" />
-      <option value="$PROJECT_DIR$/DAOParticipant.cs" />
       <option value="$PROJECT_DIR$/DAOType.cs" />
       <option value="$PROJECT_DIR$/type.cs" />
       <option value="$PROJECT_DIR$/benevole.cs" />
       <option value="$PROJECT_DIR$/DAOBenevole.cs" />
+      <option value="$PROJECT_DIR$/Theme.cs" />
+      <option value="$PROJECT_DIR$/DAOTheme.cs" />
+      <option value="$PROJECT_DIR$/DAOIntervenant.cs" />
+      <option value="$PROJECT_DIR$/DAOAtelier.cs" />
+      <option value="$PROJECT_DIR$/participant.cs" />
+      <option value="$PROJECT_DIR$/Atelier.cs" />
+      <option value="$PROJECT_DIR$/Intervenant.cs" />
+      <option value="$PROJECT_DIR$/DAOParticipant.cs" />
       <option value="$PROJECT_DIR$/main.cs" />
+      <option value="$PROJECT_DIR$/main.Designer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lgrAhptgbJ9pu0oY3RoRYhnwOY" />
@@ -102,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621271207464</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="-">
+      <created>1621274407866</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621274407866</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +164,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="finito pipo" />
-    <option name="LAST_COMMIT_MESSAGE" value="finito pipo" />
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>
 </project>

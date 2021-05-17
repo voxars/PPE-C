@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace PPE
 {
-    class Atelier
+    public class Atelier
     {
         private int id;
         private string libelle;
         private int capaciteMax;
         private string debut;
         private string fin;
-        private List<Atelier> lesAteliers;
+        private string animateur;
 
-        public Atelier(int id, string libelle, int capaciteMax, string debut, string fin)
+        public Atelier(int id, string libelle, int capaciteMax, string debut, string fin, string animateur)
         {
             this.Id = id;
             this.Libelle = libelle;
             this.CapaciteMax = capaciteMax;
             this.Debut = debut;
             this.Fin = fin;
-            lesAteliers = new List<Atelier>();
+            this.Animateur = animateur;
         }
 
         #region Getter Setter
@@ -52,17 +52,11 @@ namespace PPE
             get => fin; 
             set => fin = value; 
         }
-        internal List<Atelier> LesAteliers 
-        {
-            get => lesAteliers; 
-            set => lesAteliers = value; 
-        }
+        public string Animateur { get => animateur; set => animateur = value; }
+ 
         #endregion
 
-        public static List<Atelier> listeAtelier()
-        {
-            return DAOAtelier.getAtelier();
-        }
+
 
     }
 }
