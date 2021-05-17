@@ -156,77 +156,95 @@ namespace PPE
         {
             string nom = txbNom.Text;
             string prenom = txbPrenom.Text;
-            int type = null;
-            type = cbbType.SelectedIndex;
+            int type = cbbType.SelectedIndex;
             string adresse = txbAdresse.Text;
             string mail = txbMail.Text;
-            int portable = Int32.Parse(txbPortable.Text);
-            int idAtelier = cbbAtelier.SelectedIndex;
+            string portable = txbPortable.Text;
+            int idAtelier = cbbAtelier.SelectedIndex+1;
             int hreBene = cbbBenevole.SelectedIndex;
-            if (nom != null || prenom != null  || adresse != null || mail != null ||  Atelier != null || portable.ToString() != null )
+            if (txbNom.Text.Length != 0 || txbPrenom.Text.Length != 0 || txbAdresse.Text.Length != 0 || txbMail.Text.Length != 0)
             {
-                if (cbbType.SelectedText == "Benevole")
+                if (txbPortable.Text.Length == 10)
                 {
-                    if (cbbBenevole.SelectedIndex != 0)
+                    if (cbbType.SelectedIndex == 2)
                     {
-                        
-            
-
-                        DAOParticipant.ajouterParticipant(nom, prenom, type, adresse, mail, portable,idAtelier, hreBene);
-            
-                        txbAdresse.Clear();
-                        txbMail.Clear();
-                        txbNom.Clear();
-                        txbPortable.Clear();
-                        txbPrenom.Clear();
-                        cbbAtelier.ResetText();
-                        cbbBenevole.ResetText();
-                        cbbType.ResetText();
-            
-                        dataParticipants.Rows.Clear();
-                        listP = DAOParticipant.GetInfoPartcipants();
-            
-                        foreach (var v in this.listP)
+                        if (cbbBenevole.SelectedIndex == 1 || cbbBenevole.SelectedIndex == 2)
                         {
-                            dataParticipants.Rows.Add(v.Nom, v.Atelier, v.Type);
+
+                            DAOParticipant.ajouterParticipant(nom, prenom, type, adresse, mail,
+                                Convert.ToInt32(portable), idAtelier, hreBene);
+
+                            txbAdresse.Clear();
+                            txbMail.Clear();
+                            txbNom.Clear();
+                            txbPortable.Clear();
+                            txbPrenom.Clear();
+
+                            cbbAtelier.SelectedIndex = 0;
+                            cbbBenevole.SelectedIndex = 0;
+                            cbbType.SelectedIndex = 0;
+
+                            dataParticipants.Rows.Clear();
+                            listP = DAOParticipant.GetInfoPartcipants();
+
+                            foreach (var v in this.listP)
+                            {
+                                dataParticipants.Rows.Add(v.Nom, v.Atelier, v.Type);
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("ERREURE : Un benevole doit etre assigné a une demi-journée");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("ERREURE : Un benevole doit etre assigné a une demi-journée");
+                        if (cbbBenevole.SelectedIndex != 0)
+                        {
+                            MessageBox.Show(
+                                "ERREURE : un licencier ou un intervenant ne peut pas etre assigné a une demi-journée de benevola");
+                        }
+                        else
+                        {
+                            if (txbPortable.Text.Length == 10)
+                            {
+                                DAOParticipant.ajouterParticipant(nom, prenom, type, adresse, mail,
+                                    Convert.ToInt32(portable), idAtelier, hreBene);
+
+                                txbAdresse.Clear();
+                                txbMail.Clear();
+                                txbNom.Clear();
+                                txbPortable.Clear();
+                                txbPrenom.Clear();
+                                
+                                cbbAtelier.SelectedIndex = 0;
+                                cbbBenevole.SelectedIndex = 0;
+                                cbbType.SelectedIndex = 0;
+
+                                dataParticipants.Rows.Clear();
+                                listP = DAOParticipant.GetInfoPartcipants();
+
+                                foreach (var v in this.listP)
+                                {
+                                    dataParticipants.Rows.Add(v.Nom, v.Atelier, v.Type);
+                                }
+                            }
+
+                        }
                     }
                 }
-                else if (cbbType.SelectedIndex == 1 || cbbType.SelectedIndex == 2)
+                else
                 {
-                    if (cbbBenevole.SelectedIndex != 0)
-                    {
-                        MessageBox.Show("ERREURE : un licencier ou un intervenant ne peut pas etre assigné a une demi-journée de benevola");
-                    }
-                    else
-                    {
-                      DAOParticipant.ajouterParticipant(nom, prenom, type, adresse, mail, portable,idAtelier, hreBene);
-            
-                        txbAdresse.Clear();
-                        txbMail.Clear();
-                        txbNom.Clear();
-                        txbPortable.Clear();
-                        txbPrenom.Clear();
-                        cbbAtelier.ResetText();
-                        cbbBenevole.ResetText();
-                        cbbType.ResetText();
-            
-                        dataParticipants.Rows.Clear();
-                        listP = DAOParticipant.GetInfoPartcipants();
-            
-                        foreach (var v in this.listP)
-                        {
-                            dataParticipants.Rows.Add(v.Nom, v.Atelier, v.Type);
-                        }
-                    }
+                    MessageBox.Show("Un numero de telephone doit contenir 10 chiffres");
                 }
                     
             }
-            
+            else
+            {
+                MessageBox.Show("Tout les champs doivent etres remplis !");
+            }
+
         }
         
         #endregion
