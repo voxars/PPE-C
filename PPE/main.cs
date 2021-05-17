@@ -23,53 +23,57 @@ namespace PPE
         {
             InitializeComponent();
         }
+
+            public void Reload()
+            {
+                mesAteliers = DAOAtelier.getAtelier();
+                mesParticipants = DAOParticipant.getParticipant();
+                mesType = DAOType.GetInfotypes();
+                mesHre = DAOBenevole.GetInfoJ();
+            
+
+                foreach (var v in this.mesAteliers)
+                {
+                    cbxAtelier.Items.Add(v.Libelle);
+                    cbxAtelierAnimateur.Items.Add(v.Libelle);
+                    cbxAtelierAll.Items.Add(v.Libelle);
+                    cbbAtelier.Items.Add(v.Libelle);
+                }
+
+                foreach (var v in this.mesParticipants)
+                {
+                    cbxAnimateur.Items.Add(v.Prenom);
+                    cbxIntervenant1.Items.Add(v.Prenom);
+                    cbxIntervenant2.Items.Add(v.Prenom);
+                    cbxIntervenant3.Items.Add(v.Prenom);
+                    cbxIntervenant4.Items.Add(v.Prenom);
+                }
+
+                foreach (var v in this.mesType)
+                {
+                    cbbType.Items.Add(v.Libelle);
+                }
+            
+                foreach (var v in this.mesHre)
+                {
+                    cbbBenevole.Items.Add(v.Demij);
+                }
+
+
+                listP = DAOParticipant.GetInfoPartcipants();
+            
+                foreach (var v in this.listP)
+                {
+                    dataParticipants.Rows.Add(v.Nom, v.Atelier, v.Type);
+                }
+
+                cbbAtelier.SelectedIndex = 0;
+                cbbBenevole.SelectedIndex = 0;
+                cbbType.SelectedIndex = 0;
+            }
         private void main_Load(object sender, EventArgs e)
         {
-            mesAteliers = DAOAtelier.getAtelier();
-            mesParticipants = DAOParticipant.getParticipant();
-            mesType = DAOType.GetInfotypes();
-            mesHre = DAOBenevole.GetInfoJ();
-            
-
-            foreach (var v in this.mesAteliers)
-            {
-                cbxAtelier.Items.Add(v.Libelle);
-                cbxAtelierAnimateur.Items.Add(v.Libelle);
-                cbxAtelierAll.Items.Add(v.Libelle);
-                cbbAtelier.Items.Add(v.Libelle);
-            }
-
-            foreach (var v in this.mesParticipants)
-            {
-                cbxAnimateur.Items.Add(v.Prenom);
-                cbxIntervenant1.Items.Add(v.Prenom);
-                cbxIntervenant2.Items.Add(v.Prenom);
-                cbxIntervenant3.Items.Add(v.Prenom);
-                cbxIntervenant4.Items.Add(v.Prenom);
-            }
-
-            foreach (var v in this.mesType)
-            {
-                cbbType.Items.Add(v.Libelle);
-            }
-            
-            foreach (var v in this.mesHre)
-            {
-                cbbBenevole.Items.Add(v.Demij);
-            }
-
-
-            listP = DAOParticipant.GetInfoPartcipants();
-            
-            foreach (var v in this.listP)
-            {
-                dataParticipants.Rows.Add(v.Nom, v.Atelier, v.Type);
-            }
-
-            cbbAtelier.SelectedIndex = 0;
-            cbbBenevole.SelectedIndex = 0;
-            cbbType.SelectedIndex = 0;
-
+            Reload();
         }
 
         #region not use
@@ -319,6 +323,11 @@ namespace PPE
 
                 lblAffectation.Text = "Animateur et intervenant(s) bien affecté(s)";
                 lblAffectation.ForeColor = Color.Green;
+                
+                this.Controls.Clear();
+                this.InitializeComponent();
+
+                Reload();
             }
         }
         private void btnAnnuler_Click(object sender, EventArgs e)
