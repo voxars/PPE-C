@@ -12,65 +12,35 @@ namespace PPE
 {
     public partial class main : Form
     {
-        private Atelier monAtelier;
-        private Participant monParticipant;
-        private Intervenant monIntervenant;
-        private Theme monTheme;
+        private List<Atelier> lesAteliers = new List<Atelier>();
+        private List<Participant> lesParticipants = new List<Participant>();
+        private List<Intervenant> lesIntervenants = new List<Intervenant>();
+        private List<Theme> lesThemes = new List<Theme>();
 
         public main()
         {
             InitializeComponent();
         }
 
-        #region initialisation des données
-        private void initialiserAtelier()
-        {
-            monAtelier = new Atelier(10, "test", 50, "21:20", "21:30", "animateurTest");
-
-            monAtelier.LesAteliers = Atelier.listeAtelier();
-        }
-        private void initialiserParticipant()
-        {
-            monParticipant = new Participant(1, "testAnimateur", "", "", "","",1);
-
-            monParticipant.LesParticipants = Participant.listeParticipant();
-        }
-        private void initialiserIntervenant(int idAtelier)
-        {
-            monIntervenant = new Intervenant(1, "test");
-
-            monIntervenant.LesIntervenants = Intervenant.listeIntervenant(idAtelier);
-        }
-        private void initialiserTheme(int idAtelier)
-        {
-            monTheme = new Theme(1, "test");
-
-            monTheme.LesThemes = Theme.listeTheme(idAtelier);
-        }
-
-
-        #endregion
-
-
         private void main_Load(object sender, EventArgs e)
         {
-            initialiserAtelier();
-            initialiserParticipant();
+            lesAteliers = DAOAtelier.getAtelier();
+            lesParticipants = DAOParticipant.getParticipant();
 
-            foreach (Atelier unAtelier in monAtelier.LesAteliers)
+            foreach (var v in this.lesAteliers)
             {
-                cbxAtelier.Items.Add(unAtelier.Libelle);
-                cbxAtelierAnimateur.Items.Add(unAtelier.Libelle);
-                cbxAtelierAll.Items.Add(unAtelier.Libelle);
+                cbxAtelier.Items.Add(v.Libelle);
+                cbxAtelierAnimateur.Items.Add(v.Libelle);
+                cbxAtelierAll.Items.Add(v.Libelle);
             }
 
-            foreach (Participant unParticipant in monParticipant.LesParticipants)
+            foreach (var v in this.lesParticipants)
             {
-                cbxAnimateur.Items.Add(unParticipant.Prenom);
-                cbxIntervenant1.Items.Add(unParticipant.Prenom);
-                cbxIntervenant2.Items.Add(unParticipant.Prenom);
-                cbxIntervenant3.Items.Add(unParticipant.Prenom);
-                cbxIntervenant4.Items.Add(unParticipant.Prenom);
+                cbxAnimateur.Items.Add(v.Prenom);
+                cbxIntervenant1.Items.Add(v.Prenom);
+                cbxIntervenant2.Items.Add(v.Prenom);
+                cbxIntervenant3.Items.Add(v.Prenom);
+                cbxIntervenant4.Items.Add(v.Prenom);
             }
         }
 
@@ -78,7 +48,7 @@ namespace PPE
         {
             int i = cbxAtelier.SelectedIndex;
             Atelier unAtelier;
-            unAtelier = monAtelier.LesAteliers.ElementAt(i);
+            unAtelier = lesAteliers.ElementAt(i);
 
             lblNomAtelier.Text = unAtelier.Libelle;
             lblHoraireDebut.Text = unAtelier.Debut.ToString();
@@ -88,8 +58,13 @@ namespace PPE
         #region not use
         private void cbxAtelierAnimateur_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
+        private void tbAfficherAll_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void cbxAnimateur_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -164,28 +139,24 @@ namespace PPE
             cbxIntervenant4.Text = "4eme Intervenant";
         }
 
-        private void tbAfficherAll_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void cbxAtelierAll_SelectedIndexChanged(object sender, EventArgs e)
         {
             int i = cbxAtelierAll.SelectedIndex;
             Atelier unAtelier;
-            unAtelier = monAtelier.LesAteliers.ElementAt(i);
+            unAtelier = lesAteliers.ElementAt(i);
             txbAtelier.Text = unAtelier.Libelle;
             txbAnimateur.Text = unAtelier.Animateur;
 
             int idAtelier = cbxAtelierAll.SelectedIndex + 1;
-            initialiserIntervenant(idAtelier);
+            lesIntervenants = DAOIntervenant.getIntervenantByAtelier(idAtelier);
             dgvIntervenant.DataSource = null;
-            dgvIntervenant.DataSource = monIntervenant.LesIntervenants;
+            dgvIntervenant.DataSource = lesIntervenants;
             dgvIntervenant.AutoResizeColumns();
 
-            initialiserTheme(idAtelier);
+            lesThemes = DAOTheme.getThemeByAtelier(idAtelier);
             dgvTheme.DataSource = null;
-            dgvTheme.DataSource = monTheme.LesThemes;
+            dgvTheme.DataSource = lesThemes;
             dgvTheme.AutoResizeColumns();
 
         }

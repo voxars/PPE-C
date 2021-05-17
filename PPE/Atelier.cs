@@ -14,7 +14,6 @@ namespace PPE
         private string debut;
         private string fin;
         private string animateur;
-        private List<Atelier> lesAteliers;
 
         public Atelier(int id, string libelle, int capaciteMax, string debut, string fin, string animateur)
         {
@@ -54,16 +53,8 @@ namespace PPE
             set => fin = value; 
         }
         public string Animateur { get => animateur; set => animateur = value; }
-        internal List<Atelier> LesAteliers 
-        {
-            get => lesAteliers; 
-            set => lesAteliers = value; 
-        }
+        
         #endregion
 
-        public static List<Atelier> listeAtelier()
-        {
-            return DAOAtelier.getAtelier();
-        }
     }
 }

@@ -15,7 +15,6 @@ namespace PPE
         private string adresse;
         private string mail;
         private int numPortable;
-        private List<Participant> lesParticipants;
 
         public Participant(int id, string nom, string prenom, string type, string adresse, string mail, int numPortable)
         {
@@ -36,12 +35,8 @@ namespace PPE
         public string Adresse { get => adresse; set => adresse = value; }
         public string Mail { get => mail; set => mail = value; }
         public int NumPortable { get => numPortable; set => numPortable = value; }
-        internal List<Participant> LesParticipants { get => lesParticipants; set => lesParticipants = value; }
         #endregion
 
-        public static List<Participant> listeParticipant()
-        {
-            return DAOParticipant.getParticipant();
-        }
+        
     }
 }

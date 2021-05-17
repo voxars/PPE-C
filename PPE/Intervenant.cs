@@ -10,7 +10,6 @@ namespace PPE
     {
         int id;
         string prenom;
-        private List<Intervenant> lesIntervenants;
 
         public Intervenant(int id, string prenom)
         {
@@ -20,12 +19,8 @@ namespace PPE
 
         public int Id { get => id; set => id = value; }
         public string Prenom { get => prenom; set => prenom = value; }
-        internal List<Intervenant> LesIntervenants { get => lesIntervenants; set => lesIntervenants = value; }
 
-        public static List<Intervenant> listeIntervenant(int idAtelier)
-        {
-            return DAOIntervenant.getIntervenantByAtelier(idAtelier);
-        }
+        
 
     }
 }
