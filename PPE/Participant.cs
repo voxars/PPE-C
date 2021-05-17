@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PPE
 {
-    class Animateur
+    class Participant
     {
         private int id;
         private string nom;
@@ -15,9 +15,9 @@ namespace PPE
         private string adresse;
         private string mail;
         private int numPortable;
-        private List<Animateur> lesAnimateurs;
+        private List<Participant> lesParticipants;
 
-        public Animateur(int id, string nom, string prenom, string type, string adresse, string mail, int numPortable)
+        public Participant(int id, string nom, string prenom, string type, string adresse, string mail, int numPortable)
         {
             this.Id = id;
             this.Nom = nom;
@@ -36,12 +36,12 @@ namespace PPE
         public string Adresse { get => adresse; set => adresse = value; }
         public string Mail { get => mail; set => mail = value; }
         public int NumPortable { get => numPortable; set => numPortable = value; }
-        internal List<Animateur> LesAnimateurs { get => lesAnimateurs; set => lesAnimateurs = value; }
+        internal List<Participant> LesParticipants { get => lesParticipants; set => lesParticipants = value; }
         #endregion
 
-        public static List<Animateur> listeAnimateur()
+        public static List<Participant> listeParticipant()
         {
-            return DAOAnimateur.getAnimateur();
+            return DAOParticipant.getParticipant();
         }
     }
 }

@@ -302,9 +302,9 @@ namespace PPE
             // cbxAtelierAll
             // 
             this.cbxAtelierAll.FormattingEnabled = true;
-            this.cbxAtelierAll.Location = new System.Drawing.Point(123, 45);
+            this.cbxAtelierAll.Location = new System.Drawing.Point(104, 45);
             this.cbxAtelierAll.Name = "cbxAtelierAll";
-            this.cbxAtelierAll.Size = new System.Drawing.Size(119, 21);
+            this.cbxAtelierAll.Size = new System.Drawing.Size(186, 21);
             this.cbxAtelierAll.TabIndex = 0;
             this.cbxAtelierAll.Text = "Choisir un atelier";
             this.cbxAtelierAll.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAll_SelectedIndexChanged);
@@ -313,7 +313,7 @@ namespace PPE
             // 
             this.lblAtelierAll.AutoSize = true;
             this.lblAtelierAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblAtelierAll.Location = new System.Drawing.Point(81, 103);
+            this.lblAtelierAll.Location = new System.Drawing.Point(33, 103);
             this.lblAtelierAll.Name = "lblAtelierAll";
             this.lblAtelierAll.Size = new System.Drawing.Size(65, 17);
             this.lblAtelierAll.TabIndex = 1;
@@ -321,16 +321,16 @@ namespace PPE
             // 
             // txbAtelier
             // 
-            this.txbAtelier.Location = new System.Drawing.Point(152, 103);
+            this.txbAtelier.Location = new System.Drawing.Point(104, 103);
             this.txbAtelier.Name = "txbAtelier";
-            this.txbAtelier.Size = new System.Drawing.Size(138, 20);
+            this.txbAtelier.Size = new System.Drawing.Size(186, 20);
             this.txbAtelier.TabIndex = 2;
             // 
             // lblAnimateur
             // 
             this.lblAnimateur.AutoSize = true;
             this.lblAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblAnimateur.Location = new System.Drawing.Point(55, 172);
+            this.lblAnimateur.Location = new System.Drawing.Point(7, 160);
             this.lblAnimateur.Name = "lblAnimateur";
             this.lblAnimateur.Size = new System.Drawing.Size(91, 17);
             this.lblAnimateur.TabIndex = 3;
@@ -338,9 +338,9 @@ namespace PPE
             // 
             // txbAnimateur
             // 
-            this.txbAnimateur.Location = new System.Drawing.Point(152, 172);
+            this.txbAnimateur.Location = new System.Drawing.Point(104, 160);
             this.txbAnimateur.Name = "txbAnimateur";
-            this.txbAnimateur.Size = new System.Drawing.Size(138, 20);
+            this.txbAnimateur.Size = new System.Drawing.Size(186, 20);
             this.txbAnimateur.TabIndex = 4;
             // 
             // lblntervenant

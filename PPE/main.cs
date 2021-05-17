@@ -13,7 +13,9 @@ namespace PPE
     public partial class main : Form
     {
         private Atelier monAtelier;
-        private Animateur monAnimateur;
+        private Participant monParticipant;
+        private Intervenant monIntervenant;
+        private Theme monTheme;
 
         public main()
         {
@@ -23,23 +25,37 @@ namespace PPE
         #region initialisation des données
         private void initialiserAtelier()
         {
-            monAtelier = new Atelier(10, "test", 50, "21:20", "21:30");
+            monAtelier = new Atelier(10, "test", 50, "21:20", "21:30", "animateurTest");
 
             monAtelier.LesAteliers = Atelier.listeAtelier();
         }
-        private void initialiserAnimateur()
+        private void initialiserParticipant()
         {
-            monAnimateur = new Animateur(1, "testAnimateur", "", "", "","",1);
+            monParticipant = new Participant(1, "testAnimateur", "", "", "","",1);
 
-            monAnimateur.LesAnimateurs = Animateur.listeAnimateur();
+            monParticipant.LesParticipants = Participant.listeParticipant();
         }
+        private void initialiserIntervenant(int idAtelier)
+        {
+            monIntervenant = new Intervenant(1, "test");
+
+            monIntervenant.LesIntervenants = Intervenant.listeIntervenant(idAtelier);
+        }
+        private void initialiserTheme(int idAtelier)
+        {
+            monTheme = new Theme(1, "test");
+
+            monTheme.LesThemes = Theme.listeTheme(idAtelier);
+        }
+
+
         #endregion
 
 
         private void main_Load(object sender, EventArgs e)
         {
             initialiserAtelier();
-            initialiserAnimateur();
+            initialiserParticipant();
 
             foreach (Atelier unAtelier in monAtelier.LesAteliers)
             {
@@ -48,13 +64,13 @@ namespace PPE
                 cbxAtelierAll.Items.Add(unAtelier.Libelle);
             }
 
-            foreach (Animateur unAnimateur in monAnimateur.LesAnimateurs)
+            foreach (Participant unParticipant in monParticipant.LesParticipants)
             {
-                cbxAnimateur.Items.Add(unAnimateur.Prenom);
-                cbxIntervenant1.Items.Add(unAnimateur.Prenom);
-                cbxIntervenant2.Items.Add(unAnimateur.Prenom);
-                cbxIntervenant3.Items.Add(unAnimateur.Prenom);
-                cbxIntervenant4.Items.Add(unAnimateur.Prenom);
+                cbxAnimateur.Items.Add(unParticipant.Prenom);
+                cbxIntervenant1.Items.Add(unParticipant.Prenom);
+                cbxIntervenant2.Items.Add(unParticipant.Prenom);
+                cbxIntervenant3.Items.Add(unParticipant.Prenom);
+                cbxIntervenant4.Items.Add(unParticipant.Prenom);
             }
         }
 
@@ -102,34 +118,34 @@ namespace PPE
                 int idAtelier = cbxAtelierAnimateur.SelectedIndex + 1;
                 int idAnimateur = cbxAnimateur.SelectedIndex + 1;
 
-                DAOAnimateur.affecterAnimateurBDD(idAtelier, idAnimateur);
+                DAOParticipant.affecterAnimateurBDD(idAtelier, idAnimateur);
 
                 if (cbxIntervenant1.Text != "1er Intervenant")
                 {
-                    int idIntervenant = cbxIntervenant1.SelectedIndex + 1;
+                    int idParticipant = cbxIntervenant1.SelectedIndex + 1;
 
-                    DAOIntervenant.affecterIntervenantBDD(idAtelier, idIntervenant);
+                    DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
                 }
 
                 if (cbxIntervenant2.Text != "2eme Intervenant")
                 {
-                    int idIntervenant = cbxIntervenant2.SelectedIndex + 1;
+                    int idParticipant = cbxIntervenant2.SelectedIndex + 1;
 
-                    DAOIntervenant.affecterIntervenantBDD(idAtelier, idIntervenant);
+                    DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
                 }
 
                 if (cbxIntervenant3.Text != "3eme Intervenant")
                 {
-                    int idIntervenant = cbxIntervenant3.SelectedIndex + 1;
+                    int idParticipant = cbxIntervenant3.SelectedIndex + 1;
 
-                    DAOIntervenant.affecterIntervenantBDD(idAtelier, idIntervenant);
+                    DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
                 }
 
                 if (cbxIntervenant4.Text != "4eme Intervenant")
                 {
-                    int idIntervenant = cbxIntervenant4.SelectedIndex + 1;
+                    int idParticipant = cbxIntervenant4.SelectedIndex + 1;
 
-                    DAOIntervenant.affecterIntervenantBDD(idAtelier, idIntervenant);
+                    DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
                 }
 
                 lblAffectation.Text = "Animateur et intervenant(s) bien affecté(s)";
@@ -153,21 +169,24 @@ namespace PPE
             
         }
 
-        private void remplirIntervenant()
-        {
-            dgvIntervenant.DataSource = null;
-            dgvIntervenant.DataSource = monAnimateur.LesAnimateurs;
-
-            dgvIntervenant.AutoResizeColumns();
-        }
-
         private void cbxAtelierAll_SelectedIndexChanged(object sender, EventArgs e)
         {
             int i = cbxAtelierAll.SelectedIndex;
             Atelier unAtelier;
             unAtelier = monAtelier.LesAteliers.ElementAt(i);
-
             txbAtelier.Text = unAtelier.Libelle;
+            txbAnimateur.Text = unAtelier.Animateur;
+
+            int idAtelier = cbxAtelierAll.SelectedIndex + 1;
+            initialiserIntervenant(idAtelier);
+            dgvIntervenant.DataSource = null;
+            dgvIntervenant.DataSource = monIntervenant.LesIntervenants;
+            dgvIntervenant.AutoResizeColumns();
+
+            initialiserTheme(idAtelier);
+            dgvTheme.DataSource = null;
+            dgvTheme.DataSource = monTheme.LesThemes;
+            dgvTheme.AutoResizeColumns();
 
         }
     }
