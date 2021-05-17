@@ -13,17 +13,16 @@ namespace PPE
         private int capaciteMax;
         private string debut;
         private string fin;
-        private string animateur;
         private List<Atelier> lesAteliers;
 
-        public Atelier(int id, string libelle, int capaciteMax, string debut, string fin, string animateur)
+        public Atelier(int id, string libelle, int capaciteMax, string debut, string fin)
         {
             this.Id = id;
             this.Libelle = libelle;
             this.CapaciteMax = capaciteMax;
             this.Debut = debut;
             this.Fin = fin;
-            this.Animateur = animateur;
+            lesAteliers = new List<Atelier>();
         }
 
         #region Getter Setter
@@ -53,7 +52,6 @@ namespace PPE
             get => fin; 
             set => fin = value; 
         }
-        public string Animateur { get => animateur; set => animateur = value; }
         internal List<Atelier> LesAteliers 
         {
             get => lesAteliers; 
@@ -65,5 +63,6 @@ namespace PPE
         {
             return DAOAtelier.getAtelier();
         }
+
     }
 }

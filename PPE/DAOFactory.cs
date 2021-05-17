@@ -9,7 +9,7 @@ namespace PPE
         public DAOFactory()
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = "localhost";
+            builder.DataSource = "DESKTOP-JD1LH7J\\SQLEXPRESS";
             builder.IntegratedSecurity = true;
             builder.InitialCatalog = "PPE-C";
             Console.WriteLine("Connexion info created : " + builder.ConnectionString);

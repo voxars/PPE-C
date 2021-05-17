@@ -13,11 +13,11 @@ namespace PPE
     public partial class main : Form
     {
         private Atelier monAtelier;
-        private Participant monParticipant;
-        private Intervenant monIntervenant;
-        private Theme monTheme;
-
-        public main()
+        private Animateur monAnimateur;
+        private List<type> mesType = new List<type>();
+        private List<benevole> mesHre = new List<benevole>();
+        private List<InfoParticipant> listP = new List<InfoParticipant>();
+            public main()
         {
             InitializeComponent();
         }
@@ -25,53 +25,60 @@ namespace PPE
         #region initialisation des données
         private void initialiserAtelier()
         {
-            monAtelier = new Atelier(10, "test", 50, "21:20", "21:30", "animateurTest");
+            monAtelier = new Atelier(10, "test", 50, "21:20", "21:30");
 
-            monAtelier.LesAteliers = Atelier.listeAtelier();
+            monAtelier.LesAteliers = DAOAtelier.getAtelier();
         }
-        private void initialiserParticipant()
+        private void initialiserAnimateur()
         {
-            monParticipant = new Participant(1, "testAnimateur", "", "", "","",1);
+            monAnimateur = new Animateur(1, "testAnimateur", "", "", "","",1);
 
-            monParticipant.LesParticipants = Participant.listeParticipant();
+            monAnimateur.LesAnimateurs = DAOAnimateur.getAnimateur();
         }
-        private void initialiserIntervenant(int idAtelier)
-        {
-            monIntervenant = new Intervenant(1, "test");
-
-            monIntervenant.LesIntervenants = Intervenant.listeIntervenant(idAtelier);
-        }
-        private void initialiserTheme(int idAtelier)
-        {
-            monTheme = new Theme(1, "test");
-
-            monTheme.LesThemes = Theme.listeTheme(idAtelier);
-        }
-
-
         #endregion
 
 
         private void main_Load(object sender, EventArgs e)
         {
             initialiserAtelier();
-            initialiserParticipant();
+            initialiserAnimateur();
+            mesType = DAOType.GetInfotypes();
+            mesHre = DAOBenevole.GetInfoJ();
 
             foreach (Atelier unAtelier in monAtelier.LesAteliers)
             {
                 cbxAtelier.Items.Add(unAtelier.Libelle);
                 cbxAtelierAnimateur.Items.Add(unAtelier.Libelle);
-                cbxAtelierAll.Items.Add(unAtelier.Libelle);
+                cbbAtelier.Items.Add(unAtelier.Libelle);
             }
 
-            foreach (Participant unParticipant in monParticipant.LesParticipants)
+            foreach (Animateur unAnimateur in monAnimateur.LesAnimateurs)
             {
-                cbxAnimateur.Items.Add(unParticipant.Prenom);
-                cbxIntervenant1.Items.Add(unParticipant.Prenom);
-                cbxIntervenant2.Items.Add(unParticipant.Prenom);
-                cbxIntervenant3.Items.Add(unParticipant.Prenom);
-                cbxIntervenant4.Items.Add(unParticipant.Prenom);
+                cbxAnimateur.Items.Add(unAnimateur.Prenom);
             }
+
+            foreach (var v in this.mesType)
+            {
+                cbbType.Items.Add(v.Libelle);
+            }
+            
+            foreach (var v in this.mesHre)
+            {
+                cbbBenevole.Items.Add(v.Demij);
+            }
+
+
+            listP = DAOParticipant.GetInfoPartcipants();
+            
+            foreach (var v in this.listP)
+            {
+                dataParticipants.Rows.Add(v.Nom, v.Atelier, v.Type);
+            }
+
+            cbbAtelier.SelectedIndex = 0;
+            cbbBenevole.SelectedIndex = 0;
+            cbbType.SelectedIndex = 0;
+
         }
 
         private void cbxAtelier_SelectedIndexChanged(object sender, EventArgs e)
@@ -104,90 +111,153 @@ namespace PPE
         {
 
         }
+        
+        private void txbNom_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txbPrenom_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void cbbType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+
+        private void txbAdresse_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+
+        private void txbMail_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+
+        private void txbPortable_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+
+        private void cbbAtelier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+
+        private void cbbBenevole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
         #endregion
 
-        private void btnAffecter_Click(object sender, EventArgs e)
+        #region participants
+
+        private void btnCreer_Click(object sender, EventArgs e)
         {
-            if (cbxAnimateur.Text == "Choisir un animateur" || cbxAtelierAnimateur.Text == "Choisir un atelier")
+            string nom = txbNom.Text;
+            string prenom = txbPrenom.Text;
+            int type = cbbType.SelectedIndex;
+            string adresse = txbAdresse.Text;
+            string mail = txbMail.Text;
+            string portable = txbPortable.Text;
+            int idAtelier = cbbAtelier.SelectedIndex+1;
+            int hreBene = cbbBenevole.SelectedIndex;
+            if (txbNom.Text.Length != 0 || txbPrenom.Text.Length != 0 || txbAdresse.Text.Length != 0 || txbMail.Text.Length != 0)
             {
-                lblAffectation.Text = "Veuillez choisir un animateur, un atelier";
-                lblAffectation.ForeColor = Color.Red;
+                if (txbPortable.Text.Length == 10)
+                {
+                    if (cbbType.SelectedIndex == 2)
+                    {
+                        if (cbbBenevole.SelectedIndex == 1 || cbbBenevole.SelectedIndex == 2)
+                        {
+
+                            DAOParticipant.ajouterParticipant(nom, prenom, type, adresse, mail,
+                                Convert.ToInt32(portable), idAtelier, hreBene);
+
+                            txbAdresse.Clear();
+                            txbMail.Clear();
+                            txbNom.Clear();
+                            txbPortable.Clear();
+                            txbPrenom.Clear();
+
+                            cbbAtelier.SelectedIndex = 0;
+                            cbbBenevole.SelectedIndex = 0;
+                            cbbType.SelectedIndex = 0;
+
+                            dataParticipants.Rows.Clear();
+                            listP = DAOParticipant.GetInfoPartcipants();
+
+                            foreach (var v in this.listP)
+                            {
+                                dataParticipants.Rows.Add(v.Nom, v.Atelier, v.Type);
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("ERREURE : Un benevole doit etre assigné a une demi-journée");
+                        }
+                    }
+                    else
+                    {
+                        if (cbbBenevole.SelectedIndex != 0)
+                        {
+                            MessageBox.Show(
+                                "ERREURE : un licencier ou un intervenant ne peut pas etre assigné a une demi-journée de benevola");
+                        }
+                        else
+                        {
+                            if (txbPortable.Text.Length == 10)
+                            {
+                                DAOParticipant.ajouterParticipant(nom, prenom, type, adresse, mail,
+                                    Convert.ToInt32(portable), idAtelier, hreBene);
+
+                                txbAdresse.Clear();
+                                txbMail.Clear();
+                                txbNom.Clear();
+                                txbPortable.Clear();
+                                txbPrenom.Clear();
+                                
+                                cbbAtelier.SelectedIndex = 0;
+                                cbbBenevole.SelectedIndex = 0;
+                                cbbType.SelectedIndex = 0;
+
+                                dataParticipants.Rows.Clear();
+                                listP = DAOParticipant.GetInfoPartcipants();
+
+                                foreach (var v in this.listP)
+                                {
+                                    dataParticipants.Rows.Add(v.Nom, v.Atelier, v.Type);
+                                }
+                            }
+
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Un numero de telephone doit contenir 10 chiffres");
+                }
+                    
             }
             else
             {
-                int idAtelier = cbxAtelierAnimateur.SelectedIndex + 1;
-                int idAnimateur = cbxAnimateur.SelectedIndex + 1;
-
-                DAOParticipant.affecterAnimateurBDD(idAtelier, idAnimateur);
-
-                if (cbxIntervenant1.Text != "1er Intervenant")
-                {
-                    int idParticipant = cbxIntervenant1.SelectedIndex + 1;
-
-                    DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
-                }
-
-                if (cbxIntervenant2.Text != "2eme Intervenant")
-                {
-                    int idParticipant = cbxIntervenant2.SelectedIndex + 1;
-
-                    DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
-                }
-
-                if (cbxIntervenant3.Text != "3eme Intervenant")
-                {
-                    int idParticipant = cbxIntervenant3.SelectedIndex + 1;
-
-                    DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
-                }
-
-                if (cbxIntervenant4.Text != "4eme Intervenant")
-                {
-                    int idParticipant = cbxIntervenant4.SelectedIndex + 1;
-
-                    DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
-                }
-
-                lblAffectation.Text = "Animateur et intervenant(s) bien affecté(s)";
-                lblAffectation.ForeColor = Color.Green;
+                MessageBox.Show("Tout les champs doivent etres remplis !");
             }
 
         }
+        
+        #endregion
 
-        private void btnAnnuler_Click(object sender, EventArgs e)
+        #region Liste
+        private void dataParticipants_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            cbxAtelierAnimateur.Text = "Choisir un atelier";
-            cbxAnimateur.Text = "Choisir un animateur";
-            cbxIntervenant1.Text = "1er Intervenant";
-            cbxIntervenant2.Text = "2eme Intervenant";
-            cbxIntervenant3.Text = "3eme Intervenant";
-            cbxIntervenant4.Text = "4eme Intervenant";
         }
+        #endregion
 
-        private void tbAfficherAll_Click(object sender, EventArgs e)
+        private void main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
-        }
-
-        private void cbxAtelierAll_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int i = cbxAtelierAll.SelectedIndex;
-            Atelier unAtelier;
-            unAtelier = monAtelier.LesAteliers.ElementAt(i);
-            txbAtelier.Text = unAtelier.Libelle;
-            txbAnimateur.Text = unAtelier.Animateur;
-
-            int idAtelier = cbxAtelierAll.SelectedIndex + 1;
-            initialiserIntervenant(idAtelier);
-            dgvIntervenant.DataSource = null;
-            dgvIntervenant.DataSource = monIntervenant.LesIntervenants;
-            dgvIntervenant.AutoResizeColumns();
-
-            initialiserTheme(idAtelier);
-            dgvTheme.DataSource = null;
-            dgvTheme.DataSource = monTheme.LesThemes;
-            dgvTheme.AutoResizeColumns();
-
+            Application.Exit();
         }
     }
 }
