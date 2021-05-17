@@ -22,7 +22,7 @@ namespace PPE
             InitializeComponent();
         }
 
-        private void main_Load(object sender, EventArgs e)
+        public void ReLoad()
         {
             lesAteliers = DAOAtelier.getAtelier();
             lesParticipants = DAOParticipant.getParticipant();
@@ -42,6 +42,10 @@ namespace PPE
                 cbxIntervenant3.Items.Add(v.Prenom);
                 cbxIntervenant4.Items.Add(v.Prenom);
             }
+        }
+        private void main_Load(object sender, EventArgs e)
+        {
+            ReLoad();
         }
 
         private void cbxAtelier_SelectedIndexChanged(object sender, EventArgs e)
@@ -129,24 +133,7 @@ namespace PPE
                 this.Controls.Clear();
                 this.InitializeComponent();
 
-                lesAteliers = DAOAtelier.getAtelier();
-                lesParticipants = DAOParticipant.getParticipant();
-
-                foreach (var v in this.lesAteliers)
-                {
-                    cbxAtelier.Items.Add(v.Libelle);
-                    cbxAtelierAnimateur.Items.Add(v.Libelle);
-                    cbxAtelierAll.Items.Add(v.Libelle);
-                }
-
-                foreach (var v in this.lesParticipants)
-                {
-                    cbxAnimateur.Items.Add(v.Prenom);
-                    cbxIntervenant1.Items.Add(v.Prenom);
-                    cbxIntervenant2.Items.Add(v.Prenom);
-                    cbxIntervenant3.Items.Add(v.Prenom);
-                    cbxIntervenant4.Items.Add(v.Prenom);
-                }
+                ReLoad();
 
             }
 
