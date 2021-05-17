@@ -148,17 +148,19 @@ namespace PPE
             txbAtelier.Text = unAtelier.Libelle;
             txbAnimateur.Text = unAtelier.Animateur;
 
+
             int idAtelier = cbxAtelierAll.SelectedIndex + 1;
             lesIntervenants = DAOIntervenant.getIntervenantByAtelier(idAtelier);
-            dgvIntervenant.DataSource = null;
+            //dgvIntervenant.DataSource = null;
             dgvIntervenant.DataSource = lesIntervenants;
             dgvIntervenant.AutoResizeColumns();
 
             lesThemes = DAOTheme.getThemeByAtelier(idAtelier);
-            dgvTheme.DataSource = null;
+            //dgvTheme.DataSource = null;
             dgvTheme.DataSource = lesThemes;
             dgvTheme.AutoResizeColumns();
 
         }
+
     }
 }

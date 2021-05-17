@@ -24,9 +24,7 @@ namespace PPE
                     reader[3].ToString(), reader[4].ToString(), reader[5].ToString());
                 lesAteliers.Add(a);
             }
-
             return lesAteliers;
-
         }
 
     }

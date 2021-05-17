@@ -50,21 +50,21 @@ namespace PPE
             this.btnAffecter = new System.Windows.Forms.Button();
             this.cbxAnimateur = new System.Windows.Forms.ComboBox();
             this.tbAfficherAll = new System.Windows.Forms.TabPage();
-            this.cbxAtelierAll = new System.Windows.Forms.ComboBox();
-            this.lblAtelierAll = new System.Windows.Forms.Label();
-            this.txbAtelier = new System.Windows.Forms.TextBox();
-            this.lblAnimateur = new System.Windows.Forms.Label();
-            this.txbAnimateur = new System.Windows.Forms.TextBox();
-            this.lblntervenant = new System.Windows.Forms.Label();
-            this.lblTheme = new System.Windows.Forms.Label();
-            this.dgvIntervenant = new System.Windows.Forms.DataGridView();
             this.dgvTheme = new System.Windows.Forms.DataGridView();
+            this.dgvIntervenant = new System.Windows.Forms.DataGridView();
+            this.lblTheme = new System.Windows.Forms.Label();
+            this.lblntervenant = new System.Windows.Forms.Label();
+            this.txbAnimateur = new System.Windows.Forms.TextBox();
+            this.lblAnimateur = new System.Windows.Forms.Label();
+            this.txbAtelier = new System.Windows.Forms.TextBox();
+            this.lblAtelierAll = new System.Windows.Forms.Label();
+            this.cbxAtelierAll = new System.Windows.Forms.ComboBox();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
             this.tbAfficherAll.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIntervenant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTheme)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIntervenant)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAtelier
@@ -299,59 +299,21 @@ namespace PPE
             this.tbAfficherAll.UseVisualStyleBackColor = true;
             this.tbAfficherAll.Click += new System.EventHandler(this.tbAfficherAll_Click);
             // 
-            // cbxAtelierAll
+            // dgvTheme
             // 
-            this.cbxAtelierAll.FormattingEnabled = true;
-            this.cbxAtelierAll.Location = new System.Drawing.Point(104, 45);
-            this.cbxAtelierAll.Name = "cbxAtelierAll";
-            this.cbxAtelierAll.Size = new System.Drawing.Size(186, 21);
-            this.cbxAtelierAll.TabIndex = 0;
-            this.cbxAtelierAll.Text = "Choisir un atelier";
-            this.cbxAtelierAll.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAll_SelectedIndexChanged);
+            this.dgvTheme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTheme.Location = new System.Drawing.Point(534, 103);
+            this.dgvTheme.Name = "dgvTheme";
+            this.dgvTheme.Size = new System.Drawing.Size(187, 252);
+            this.dgvTheme.TabIndex = 8;
             // 
-            // lblAtelierAll
+            // dgvIntervenant
             // 
-            this.lblAtelierAll.AutoSize = true;
-            this.lblAtelierAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblAtelierAll.Location = new System.Drawing.Point(33, 103);
-            this.lblAtelierAll.Name = "lblAtelierAll";
-            this.lblAtelierAll.Size = new System.Drawing.Size(65, 17);
-            this.lblAtelierAll.TabIndex = 1;
-            this.lblAtelierAll.Text = "Atelier :";
-            // 
-            // txbAtelier
-            // 
-            this.txbAtelier.Location = new System.Drawing.Point(104, 103);
-            this.txbAtelier.Name = "txbAtelier";
-            this.txbAtelier.Size = new System.Drawing.Size(186, 20);
-            this.txbAtelier.TabIndex = 2;
-            // 
-            // lblAnimateur
-            // 
-            this.lblAnimateur.AutoSize = true;
-            this.lblAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblAnimateur.Location = new System.Drawing.Point(7, 160);
-            this.lblAnimateur.Name = "lblAnimateur";
-            this.lblAnimateur.Size = new System.Drawing.Size(91, 17);
-            this.lblAnimateur.TabIndex = 3;
-            this.lblAnimateur.Text = "Animateur :";
-            // 
-            // txbAnimateur
-            // 
-            this.txbAnimateur.Location = new System.Drawing.Point(104, 160);
-            this.txbAnimateur.Name = "txbAnimateur";
-            this.txbAnimateur.Size = new System.Drawing.Size(186, 20);
-            this.txbAnimateur.TabIndex = 4;
-            // 
-            // lblntervenant
-            // 
-            this.lblntervenant.AutoSize = true;
-            this.lblntervenant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblntervenant.Location = new System.Drawing.Point(335, 60);
-            this.lblntervenant.Name = "lblntervenant";
-            this.lblntervenant.Size = new System.Drawing.Size(100, 17);
-            this.lblntervenant.TabIndex = 5;
-            this.lblntervenant.Text = "Intervenant :";
+            this.dgvIntervenant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIntervenant.Location = new System.Drawing.Point(296, 100);
+            this.dgvIntervenant.Name = "dgvIntervenant";
+            this.dgvIntervenant.Size = new System.Drawing.Size(187, 255);
+            this.dgvIntervenant.TabIndex = 7;
             // 
             // lblTheme
             // 
@@ -363,21 +325,59 @@ namespace PPE
             this.lblTheme.TabIndex = 6;
             this.lblTheme.Text = "Themes :";
             // 
-            // dgvIntervenant
+            // lblntervenant
             // 
-            this.dgvIntervenant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIntervenant.Location = new System.Drawing.Point(296, 100);
-            this.dgvIntervenant.Name = "dgvIntervenant";
-            this.dgvIntervenant.Size = new System.Drawing.Size(187, 255);
-            this.dgvIntervenant.TabIndex = 7;
+            this.lblntervenant.AutoSize = true;
+            this.lblntervenant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblntervenant.Location = new System.Drawing.Point(335, 60);
+            this.lblntervenant.Name = "lblntervenant";
+            this.lblntervenant.Size = new System.Drawing.Size(100, 17);
+            this.lblntervenant.TabIndex = 5;
+            this.lblntervenant.Text = "Intervenant :";
             // 
-            // dgvTheme
+            // txbAnimateur
             // 
-            this.dgvTheme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTheme.Location = new System.Drawing.Point(534, 103);
-            this.dgvTheme.Name = "dgvTheme";
-            this.dgvTheme.Size = new System.Drawing.Size(187, 252);
-            this.dgvTheme.TabIndex = 8;
+            this.txbAnimateur.Location = new System.Drawing.Point(104, 160);
+            this.txbAnimateur.Name = "txbAnimateur";
+            this.txbAnimateur.Size = new System.Drawing.Size(186, 20);
+            this.txbAnimateur.TabIndex = 4;
+            // 
+            // lblAnimateur
+            // 
+            this.lblAnimateur.AutoSize = true;
+            this.lblAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblAnimateur.Location = new System.Drawing.Point(7, 160);
+            this.lblAnimateur.Name = "lblAnimateur";
+            this.lblAnimateur.Size = new System.Drawing.Size(91, 17);
+            this.lblAnimateur.TabIndex = 3;
+            this.lblAnimateur.Text = "Animateur :";
+            // 
+            // txbAtelier
+            // 
+            this.txbAtelier.Location = new System.Drawing.Point(104, 103);
+            this.txbAtelier.Name = "txbAtelier";
+            this.txbAtelier.Size = new System.Drawing.Size(186, 20);
+            this.txbAtelier.TabIndex = 2;
+            // 
+            // lblAtelierAll
+            // 
+            this.lblAtelierAll.AutoSize = true;
+            this.lblAtelierAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblAtelierAll.Location = new System.Drawing.Point(33, 103);
+            this.lblAtelierAll.Name = "lblAtelierAll";
+            this.lblAtelierAll.Size = new System.Drawing.Size(65, 17);
+            this.lblAtelierAll.TabIndex = 1;
+            this.lblAtelierAll.Text = "Atelier :";
+            // 
+            // cbxAtelierAll
+            // 
+            this.cbxAtelierAll.FormattingEnabled = true;
+            this.cbxAtelierAll.Location = new System.Drawing.Point(104, 45);
+            this.cbxAtelierAll.Name = "cbxAtelierAll";
+            this.cbxAtelierAll.Size = new System.Drawing.Size(186, 21);
+            this.cbxAtelierAll.TabIndex = 0;
+            this.cbxAtelierAll.Text = "Choisir un atelier";
+            this.cbxAtelierAll.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAll_SelectedIndexChanged);
             // 
             // main
             // 
@@ -395,8 +395,8 @@ namespace PPE
             this.tabPageIntervenant.PerformLayout();
             this.tbAfficherAll.ResumeLayout(false);
             this.tbAfficherAll.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIntervenant)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTheme)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIntervenant)).EndInit();
             this.ResumeLayout(false);
 
         }
