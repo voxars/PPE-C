@@ -14,6 +14,8 @@ namespace PPE
     {
         private Atelier monAtelier;
         private Animateur monAnimateur;
+        private List<type> mesType = new List<type>();
+        private List<benevole> mesHre = new List<benevole>();
         private List<InfoParticipant> listP = new List<InfoParticipant>();
             public main()
         {
@@ -40,6 +42,8 @@ namespace PPE
         {
             initialiserAtelier();
             initialiserAnimateur();
+            mesType = DAOType.GetInfotypes();
+            mesHre = DAOBenevole.GetInfoJ();
 
             foreach (Atelier unAtelier in monAtelier.LesAteliers)
             {
@@ -53,14 +57,17 @@ namespace PPE
                 cbxAnimateur.Items.Add(unAnimateur.Prenom);
             }
 
-            cbbType.Items.Add("Licencié");
-            cbbType.Items.Add("Intervenant");
-            cbbType.Items.Add("Benevole");
-
-            cbbBenevole.Items.Add("Matin");
-            cbbBenevole.Items.Add("Apres-midi");
-
+            foreach (var v in this.mesType)
+            {
+                cbbType.Items.Add(v.Libelle);
+            }
             
+            foreach (var v in this.mesHre)
+            {
+                cbbBenevole.Items.Add(v.Demij);
+            }
+
+
             listP = DAOParticipant.GetInfoPartcipants();
             
             foreach (var v in this.listP)
@@ -68,7 +75,10 @@ namespace PPE
                 dataParticipants.Rows.Add(v.Nom, v.Atelier, v.Type);
             }
 
-            
+            cbbAtelier.SelectedIndex = 0;
+            cbbBenevole.SelectedIndex = 0;
+            cbbType.SelectedIndex = 0;
+
         }
 
         private void cbxAtelier_SelectedIndexChanged(object sender, EventArgs e)
@@ -146,24 +156,77 @@ namespace PPE
         {
             string nom = txbNom.Text;
             string prenom = txbPrenom.Text;
-            int type = cbbType.SelectedIndex+1;
+            int type = null;
+            type = cbbType.SelectedIndex;
             string adresse = txbAdresse.Text;
             string mail = txbMail.Text;
             int portable = Int32.Parse(txbPortable.Text);
-            int idAtelier = cbbAtelier.SelectedIndex+1;
-            int hreBene = cbbBenevole.SelectedIndex+1;
+            int idAtelier = cbbAtelier.SelectedIndex;
+            int hreBene = cbbBenevole.SelectedIndex;
+            if (nom != null || prenom != null  || adresse != null || mail != null ||  Atelier != null || portable.ToString() != null )
+            {
+                if (cbbType.SelectedText == "Benevole")
+                {
+                    if (cbbBenevole.SelectedIndex != 0)
+                    {
+                        
             
 
-            DAOParticipant.ajouterParticipant(nom, prenom, type, adresse, mail, portable,idAtelier, hreBene);
+                        DAOParticipant.ajouterParticipant(nom, prenom, type, adresse, mail, portable,idAtelier, hreBene);
             
-            txbAdresse.Clear();
-            txbMail.Clear();
-            txbNom.Clear();
-            txbPortable.Clear();
-            txbPrenom.Clear();
-            cbbAtelier.ResetText();
-            cbbBenevole.ResetText();
-            cbbType.ResetText();
+                        txbAdresse.Clear();
+                        txbMail.Clear();
+                        txbNom.Clear();
+                        txbPortable.Clear();
+                        txbPrenom.Clear();
+                        cbbAtelier.ResetText();
+                        cbbBenevole.ResetText();
+                        cbbType.ResetText();
+            
+                        dataParticipants.Rows.Clear();
+                        listP = DAOParticipant.GetInfoPartcipants();
+            
+                        foreach (var v in this.listP)
+                        {
+                            dataParticipants.Rows.Add(v.Nom, v.Atelier, v.Type);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERREURE : Un benevole doit etre assigné a une demi-journée");
+                    }
+                }
+                else if (cbbType.SelectedIndex == 1 || cbbType.SelectedIndex == 2)
+                {
+                    if (cbbBenevole.SelectedIndex != 0)
+                    {
+                        MessageBox.Show("ERREURE : un licencier ou un intervenant ne peut pas etre assigné a une demi-journée de benevola");
+                    }
+                    else
+                    {
+                      DAOParticipant.ajouterParticipant(nom, prenom, type, adresse, mail, portable,idAtelier, hreBene);
+            
+                        txbAdresse.Clear();
+                        txbMail.Clear();
+                        txbNom.Clear();
+                        txbPortable.Clear();
+                        txbPrenom.Clear();
+                        cbbAtelier.ResetText();
+                        cbbBenevole.ResetText();
+                        cbbType.ResetText();
+            
+                        dataParticipants.Rows.Clear();
+                        listP = DAOParticipant.GetInfoPartcipants();
+            
+                        foreach (var v in this.listP)
+                        {
+                            dataParticipants.Rows.Add(v.Nom, v.Atelier, v.Type);
+                        }
+                    }
+                }
+                    
+            }
+            
         }
         
         #endregion
@@ -173,5 +236,10 @@ namespace PPE
         {
         }
         #endregion
+
+        private void main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace PPE
                 lesInfoPartcipants.Add(a);
             }
 
-            MessageBox.Show("participants recuperes");
+            //MessageBox.Show("participants recuperes");
             return lesInfoPartcipants;
         }
 

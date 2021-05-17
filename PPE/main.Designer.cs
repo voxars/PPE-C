@@ -44,6 +44,7 @@ namespace PPE
             this.button1 = new System.Windows.Forms.Button();
             this.cbxAnimateur = new System.Windows.Forms.ComboBox();
             this.inscription = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.cbbBenevole = new System.Windows.Forms.ComboBox();
             this.cbbAtelier = new System.Windows.Forms.ComboBox();
@@ -68,7 +69,6 @@ namespace PPE
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Atelier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label12 = new System.Windows.Forms.Label();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
@@ -242,6 +242,15 @@ namespace PPE
             this.inscription.Text = "Inscription participant";
             this.inscription.UseVisualStyleBackColor = true;
             // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label12.Location = new System.Drawing.Point(478, 236);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(230, 37);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "* : Informations obligatoires";
+            // 
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -286,7 +295,7 @@ namespace PPE
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 38);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Si benevole";
+            this.label6.Text = "Benevole ?*";
             // 
             // label7
             // 
@@ -451,15 +460,6 @@ namespace PPE
             this.Atelier.Name = "Atelier";
             this.Atelier.Width = 220;
             // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label12.Location = new System.Drawing.Point(478, 236);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(230, 37);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "* : Informations obligatoires";
-            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,6 +470,7 @@ namespace PPE
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.main_FormClosing);
             this.Load += new System.EventHandler(this.main_Load);
             this.tabControlAtelier.ResumeLayout(false);
             this.tabPageHoraire.ResumeLayout(false);
