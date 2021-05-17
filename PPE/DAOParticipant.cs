@@ -37,7 +37,8 @@ namespace PPE
         }
         public static void affecterIntervenantBDD(int idAtelier, int idParticipant)
         {
-            string requete = "insert into intervenant values (" + idParticipant + "," + idAtelier + ")";
+            //string requete = "insert into intervenant values (" + idParticipant + "," + idAtelier + ")";
+            string requete = "If Not Exists(select id, id_atelier from intervenant where id=" + idParticipant + " AND id_atelier=" + idAtelier +") Begin insert into intervenant values (" + idParticipant + "," + idAtelier + ") End";
 
             DAOFactory db = new DAOFactory();
             db.connecter();
