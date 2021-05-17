@@ -4,6 +4,7 @@ namespace PPE
 {
     public class participant
     {
+        private int id;
         private string nom;
         private string prenom;
         private int type;
@@ -13,8 +14,9 @@ namespace PPE
         private int idAtelier;
         private int hreBenevole;
 
-        public participant(string nom, string prenom, int type, string adresse, string mail, int portable, int idAtelier, int hreBenevole)
+        public participant(int id, string nom, string prenom, int type, string adresse, string mail, int portable, int idAtelier, int hreBenevole)
         {
+            this.id = id;
             this.nom = nom;
             this.prenom = prenom;
             this.type = type;
@@ -23,6 +25,12 @@ namespace PPE
             this.portable = portable;
             this.idAtelier = idAtelier;
             this.hreBenevole = hreBenevole;
+        }
+
+        public int Id
+        {
+            get => id;
+            set => id = value;
         }
 
         public string Nom
