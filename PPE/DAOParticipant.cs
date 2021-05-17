@@ -49,8 +49,8 @@ namespace PPE
 
             while (reader.Read())
             {
-                participant a = new participant(reader[0].ToString(), reader[1].ToString(), int.Parse(reader[2].ToString()),
-                    reader[3].ToString(), reader[4].ToString(), int.Parse(reader[5].ToString()), int.Parse(reader[6].ToString()), int.Parse(reader[7].ToString()));
+                participant a = new participant(reader[0].ToString(), reader[1].ToString(), Int32.Parse(reader[2].ToString()),
+                    reader[3].ToString(), reader[4].ToString(), Int32.Parse(reader[5].ToString()), Int32.Parse(reader[6].ToString()), Int32.Parse(reader[7].ToString()));
                 lesParticipants.Add(a);
             }
 
