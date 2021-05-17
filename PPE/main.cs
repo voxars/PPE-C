@@ -125,6 +125,29 @@ namespace PPE
 
                 lblAffectation.Text = "Animateur et intervenant(s) bien affecté(s)";
                 lblAffectation.ForeColor = Color.Green;
+
+                this.Controls.Clear();
+                this.InitializeComponent();
+
+                lesAteliers = DAOAtelier.getAtelier();
+                lesParticipants = DAOParticipant.getParticipant();
+
+                foreach (var v in this.lesAteliers)
+                {
+                    cbxAtelier.Items.Add(v.Libelle);
+                    cbxAtelierAnimateur.Items.Add(v.Libelle);
+                    cbxAtelierAll.Items.Add(v.Libelle);
+                }
+
+                foreach (var v in this.lesParticipants)
+                {
+                    cbxAnimateur.Items.Add(v.Prenom);
+                    cbxIntervenant1.Items.Add(v.Prenom);
+                    cbxIntervenant2.Items.Add(v.Prenom);
+                    cbxIntervenant3.Items.Add(v.Prenom);
+                    cbxIntervenant4.Items.Add(v.Prenom);
+                }
+
             }
 
         }
@@ -159,8 +182,6 @@ namespace PPE
             //dgvTheme.DataSource = null;
             dgvTheme.DataSource = lesThemes;
             dgvTheme.AutoResizeColumns();
-
         }
-
     }
 }
