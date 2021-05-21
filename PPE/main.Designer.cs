@@ -59,6 +59,11 @@ namespace PPE
             this.txbAtelier = new System.Windows.Forms.TextBox();
             this.lblAtelierAll = new System.Windows.Forms.Label();
             this.cbxAtelierAll = new System.Windows.Forms.ComboBox();
+            this.lblChoisirAtelier = new System.Windows.Forms.Label();
+            this.lblChoisirAtelierAnimateur = new System.Windows.Forms.Label();
+            this.lblChoisirIntervenant = new System.Windows.Forms.Label();
+            this.lblChoisirAnimateur = new System.Windows.Forms.Label();
+            this.lblChoisirAtelierAll = new System.Windows.Forms.Label();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
@@ -80,6 +85,7 @@ namespace PPE
             // 
             // tabPageHoraire
             // 
+            this.tabPageHoraire.Controls.Add(this.lblChoisirAtelier);
             this.tabPageHoraire.Controls.Add(this.label1);
             this.tabPageHoraire.Controls.Add(this.lblHoraireFin);
             this.tabPageHoraire.Controls.Add(this.label3);
@@ -166,16 +172,19 @@ namespace PPE
             // 
             // cbxAtelier
             // 
+            this.cbxAtelier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAtelier.FormattingEnabled = true;
             this.cbxAtelier.Location = new System.Drawing.Point(305, 125);
             this.cbxAtelier.Name = "cbxAtelier";
             this.cbxAtelier.Size = new System.Drawing.Size(113, 21);
             this.cbxAtelier.TabIndex = 0;
-            this.cbxAtelier.Text = "Choisir un atelier";
             this.cbxAtelier.SelectedIndexChanged += new System.EventHandler(this.cbxAtelier_SelectedIndexChanged);
             // 
             // tabPageIntervenant
             // 
+            this.tabPageIntervenant.Controls.Add(this.lblChoisirAnimateur);
+            this.tabPageIntervenant.Controls.Add(this.lblChoisirIntervenant);
+            this.tabPageIntervenant.Controls.Add(this.lblChoisirAtelierAnimateur);
             this.tabPageIntervenant.Controls.Add(this.btnAnnuler);
             this.tabPageIntervenant.Controls.Add(this.lblAffectation);
             this.tabPageIntervenant.Controls.Add(this.cbxIntervenant4);
@@ -196,7 +205,7 @@ namespace PPE
             // btnAnnuler
             // 
             this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAnnuler.Location = new System.Drawing.Point(396, 145);
+            this.btnAnnuler.Location = new System.Drawing.Point(407, 224);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(143, 42);
             this.btnAnnuler.TabIndex = 8;
@@ -207,61 +216,61 @@ namespace PPE
             // lblAffectation
             // 
             this.lblAffectation.AutoSize = true;
-            this.lblAffectation.Location = new System.Drawing.Point(300, 233);
+            this.lblAffectation.Location = new System.Drawing.Point(194, 298);
             this.lblAffectation.Name = "lblAffectation";
             this.lblAffectation.Size = new System.Drawing.Size(0, 13);
             this.lblAffectation.TabIndex = 7;
             // 
             // cbxIntervenant4
             // 
+            this.cbxIntervenant4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxIntervenant4.FormattingEnabled = true;
-            this.cbxIntervenant4.Location = new System.Drawing.Point(628, 35);
+            this.cbxIntervenant4.Location = new System.Drawing.Point(589, 143);
             this.cbxIntervenant4.Name = "cbxIntervenant4";
             this.cbxIntervenant4.Size = new System.Drawing.Size(106, 21);
             this.cbxIntervenant4.TabIndex = 6;
-            this.cbxIntervenant4.Text = "4eme Intervenant";
             // 
             // cbxIntervenant3
             // 
+            this.cbxIntervenant3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxIntervenant3.FormattingEnabled = true;
-            this.cbxIntervenant3.Location = new System.Drawing.Point(499, 35);
+            this.cbxIntervenant3.Location = new System.Drawing.Point(460, 143);
             this.cbxIntervenant3.Name = "cbxIntervenant3";
             this.cbxIntervenant3.Size = new System.Drawing.Size(110, 21);
             this.cbxIntervenant3.TabIndex = 5;
-            this.cbxIntervenant3.Text = "3eme Intervenant";
             // 
             // cbxIntervenant2
             // 
+            this.cbxIntervenant2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxIntervenant2.FormattingEnabled = true;
-            this.cbxIntervenant2.Location = new System.Drawing.Point(374, 35);
+            this.cbxIntervenant2.Location = new System.Drawing.Point(335, 143);
             this.cbxIntervenant2.Name = "cbxIntervenant2";
             this.cbxIntervenant2.Size = new System.Drawing.Size(109, 21);
             this.cbxIntervenant2.TabIndex = 4;
-            this.cbxIntervenant2.Text = "2eme Intervenant";
             // 
             // cbxIntervenant1
             // 
+            this.cbxIntervenant1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxIntervenant1.FormattingEnabled = true;
-            this.cbxIntervenant1.Location = new System.Drawing.Point(256, 35);
+            this.cbxIntervenant1.Location = new System.Drawing.Point(197, 143);
             this.cbxIntervenant1.Name = "cbxIntervenant1";
-            this.cbxIntervenant1.Size = new System.Drawing.Size(98, 21);
+            this.cbxIntervenant1.Size = new System.Drawing.Size(117, 21);
             this.cbxIntervenant1.TabIndex = 3;
-            this.cbxIntervenant1.Text = "1er Intervenant";
             // 
             // cbxAtelierAnimateur
             // 
+            this.cbxAtelierAnimateur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAtelierAnimateur.FormattingEnabled = true;
-            this.cbxAtelierAnimateur.Location = new System.Drawing.Point(69, 79);
+            this.cbxAtelierAnimateur.Location = new System.Drawing.Point(196, 59);
             this.cbxAtelierAnimateur.Name = "cbxAtelierAnimateur";
             this.cbxAtelierAnimateur.Size = new System.Drawing.Size(143, 21);
             this.cbxAtelierAnimateur.TabIndex = 2;
-            this.cbxAtelierAnimateur.Text = "Choisir un atelier";
             this.cbxAtelierAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAnimateur_SelectedIndexChanged);
             // 
             // btnAffecter
             // 
             this.btnAffecter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAffecter.Location = new System.Drawing.Point(181, 145);
+            this.btnAffecter.Location = new System.Drawing.Point(196, 224);
             this.btnAffecter.Name = "btnAffecter";
             this.btnAffecter.Size = new System.Drawing.Size(143, 42);
             this.btnAffecter.TabIndex = 1;
@@ -271,16 +280,17 @@ namespace PPE
             // 
             // cbxAnimateur
             // 
+            this.cbxAnimateur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAnimateur.FormattingEnabled = true;
-            this.cbxAnimateur.Location = new System.Drawing.Point(69, 34);
+            this.cbxAnimateur.Location = new System.Drawing.Point(196, 100);
             this.cbxAnimateur.Name = "cbxAnimateur";
             this.cbxAnimateur.Size = new System.Drawing.Size(143, 21);
             this.cbxAnimateur.TabIndex = 0;
-            this.cbxAnimateur.Text = "Choisir un animateur";
             this.cbxAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAnimateur_SelectedIndexChanged);
             // 
             // tbAfficherAll
             // 
+            this.tbAfficherAll.Controls.Add(this.lblChoisirAtelierAll);
             this.tbAfficherAll.Controls.Add(this.dgvTheme);
             this.tbAfficherAll.Controls.Add(this.dgvIntervenant);
             this.tbAfficherAll.Controls.Add(this.lblTheme);
@@ -371,13 +381,63 @@ namespace PPE
             // 
             // cbxAtelierAll
             // 
+            this.cbxAtelierAll.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAtelierAll.FormattingEnabled = true;
-            this.cbxAtelierAll.Location = new System.Drawing.Point(104, 45);
+            this.cbxAtelierAll.Location = new System.Drawing.Point(104, 56);
             this.cbxAtelierAll.Name = "cbxAtelierAll";
             this.cbxAtelierAll.Size = new System.Drawing.Size(186, 21);
             this.cbxAtelierAll.TabIndex = 0;
-            this.cbxAtelierAll.Text = "Choisir un atelier";
             this.cbxAtelierAll.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAll_SelectedIndexChanged);
+            // 
+            // lblChoisirAtelier
+            // 
+            this.lblChoisirAtelier.AutoSize = true;
+            this.lblChoisirAtelier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirAtelier.Location = new System.Drawing.Point(161, 129);
+            this.lblChoisirAtelier.Name = "lblChoisirAtelier";
+            this.lblChoisirAtelier.Size = new System.Drawing.Size(138, 17);
+            this.lblChoisirAtelier.TabIndex = 7;
+            this.lblChoisirAtelier.Text = "Choisir un Atelier:";
+            // 
+            // lblChoisirAtelierAnimateur
+            // 
+            this.lblChoisirAtelierAnimateur.AutoSize = true;
+            this.lblChoisirAtelierAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirAtelierAnimateur.Location = new System.Drawing.Point(52, 59);
+            this.lblChoisirAtelierAnimateur.Name = "lblChoisirAtelierAnimateur";
+            this.lblChoisirAtelierAnimateur.Size = new System.Drawing.Size(138, 17);
+            this.lblChoisirAtelierAnimateur.TabIndex = 9;
+            this.lblChoisirAtelierAnimateur.Text = "Choisir un Atelier:";
+            // 
+            // lblChoisirIntervenant
+            // 
+            this.lblChoisirIntervenant.AutoSize = true;
+            this.lblChoisirIntervenant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirIntervenant.Location = new System.Drawing.Point(6, 143);
+            this.lblChoisirIntervenant.Name = "lblChoisirIntervenant";
+            this.lblChoisirIntervenant.Size = new System.Drawing.Size(184, 17);
+            this.lblChoisirIntervenant.TabIndex = 10;
+            this.lblChoisirIntervenant.Text = "Choisir les intervenants:";
+            // 
+            // lblChoisirAnimateur
+            // 
+            this.lblChoisirAnimateur.AutoSize = true;
+            this.lblChoisirAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirAnimateur.Location = new System.Drawing.Point(26, 101);
+            this.lblChoisirAnimateur.Name = "lblChoisirAnimateur";
+            this.lblChoisirAnimateur.Size = new System.Drawing.Size(164, 17);
+            this.lblChoisirAnimateur.TabIndex = 11;
+            this.lblChoisirAnimateur.Text = "Choisir un Animateur:";
+            // 
+            // lblChoisirAtelierAll
+            // 
+            this.lblChoisirAtelierAll.AutoSize = true;
+            this.lblChoisirAtelierAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirAtelierAll.Location = new System.Drawing.Point(129, 24);
+            this.lblChoisirAtelierAll.Name = "lblChoisirAtelierAll";
+            this.lblChoisirAtelierAll.Size = new System.Drawing.Size(138, 17);
+            this.lblChoisirAtelierAll.TabIndex = 10;
+            this.lblChoisirAtelierAll.Text = "Choisir un Atelier:";
             // 
             // main
             // 
@@ -433,6 +493,11 @@ namespace PPE
         private System.Windows.Forms.ComboBox cbxAtelierAll;
         private System.Windows.Forms.DataGridView dgvTheme;
         private System.Windows.Forms.DataGridView dgvIntervenant;
+        private System.Windows.Forms.Label lblChoisirAtelier;
+        private System.Windows.Forms.Label lblChoisirAnimateur;
+        private System.Windows.Forms.Label lblChoisirIntervenant;
+        private System.Windows.Forms.Label lblChoisirAtelierAnimateur;
+        private System.Windows.Forms.Label lblChoisirAtelierAll;
     }
 }
 

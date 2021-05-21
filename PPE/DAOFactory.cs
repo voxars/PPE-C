@@ -40,7 +40,6 @@ namespace PPE
         // Exécution d'une requete d'écriture (Insert ou Update) ; ne retourne rien
         public void execSQLWrite(string requete)
         {
-
             SqlCommand maCommand;
             maCommand = new SqlCommand();
             maCommand.CommandText = requete;
