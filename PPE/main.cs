@@ -133,9 +133,6 @@ namespace PPE
                     DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
                 }
 
-                lblAffectation.Text = "Animateur et intervenant(s) bien affecté(s)";
-                lblAffectation.ForeColor = Color.Green;
-
                 this.Controls.Clear();
                 this.InitializeComponent();
 
