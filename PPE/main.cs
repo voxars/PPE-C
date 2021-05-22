@@ -95,7 +95,7 @@ namespace PPE
         {
             if (cbxAnimateur.Text == "" || cbxAtelierAnimateur.Text == "")
             {
-                lblAffectation.Text = "Veuillez choisir un animateur, un atelier";
+                lblAffectation.Text = "Veuillez choisir un animateur et un atelier";
                 lblAffectation.ForeColor = Color.Red;
             }
             else
@@ -186,8 +186,6 @@ namespace PPE
             {
                 MessageBox.Show("L'heure de début doit être supérieur à l'heure de fin et la date doit être la même");
             }
-
-
         }
     }
 }
