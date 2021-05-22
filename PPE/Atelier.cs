@@ -61,11 +61,6 @@ namespace PPE
 
         public AtelierWithAnimateur(int id, string libelle, int capaciteMax, string debut, string fin, string animateur) : base(id, libelle, capaciteMax, debut, fin)
         {
-            this.Id = id;
-            this.Libelle = libelle;
-            this.CapaciteMax = capaciteMax;
-            this.Debut = debut;
-            this.Fin = fin;
             this.Animateur = animateur;
         }
 
