@@ -31,6 +31,7 @@ namespace PPE
         {
             this.tabControlAtelier = new System.Windows.Forms.TabControl();
             this.tabPageHoraire = new System.Windows.Forms.TabPage();
+            this.lblChoisirAtelier = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblHoraireFin = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,6 +41,9 @@ namespace PPE
             this.lblAtelier = new System.Windows.Forms.Label();
             this.cbxAtelier = new System.Windows.Forms.ComboBox();
             this.tabPageIntervenant = new System.Windows.Forms.TabPage();
+            this.lblChoisirAnimateur = new System.Windows.Forms.Label();
+            this.lblChoisirIntervenant = new System.Windows.Forms.Label();
+            this.lblChoisirAtelierAnimateur = new System.Windows.Forms.Label();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.lblAffectation = new System.Windows.Forms.Label();
             this.cbxIntervenant4 = new System.Windows.Forms.ComboBox();
@@ -50,6 +54,7 @@ namespace PPE
             this.btnAffecter = new System.Windows.Forms.Button();
             this.cbxAnimateur = new System.Windows.Forms.ComboBox();
             this.tbAfficherAll = new System.Windows.Forms.TabPage();
+            this.lblChoisirAtelierAll = new System.Windows.Forms.Label();
             this.dgvTheme = new System.Windows.Forms.DataGridView();
             this.dgvIntervenant = new System.Windows.Forms.DataGridView();
             this.lblTheme = new System.Windows.Forms.Label();
@@ -59,11 +64,9 @@ namespace PPE
             this.txbAtelier = new System.Windows.Forms.TextBox();
             this.lblAtelierAll = new System.Windows.Forms.Label();
             this.cbxAtelierAll = new System.Windows.Forms.ComboBox();
-            this.lblChoisirAtelier = new System.Windows.Forms.Label();
-            this.lblChoisirAtelierAnimateur = new System.Windows.Forms.Label();
-            this.lblChoisirIntervenant = new System.Windows.Forms.Label();
-            this.lblChoisirAnimateur = new System.Windows.Forms.Label();
-            this.lblChoisirAtelierAll = new System.Windows.Forms.Label();
+            this.dtpDebut = new System.Windows.Forms.DateTimePicker();
+            this.dtpFin = new System.Windows.Forms.DateTimePicker();
+            this.btnHoraire = new System.Windows.Forms.Button();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
@@ -85,6 +88,9 @@ namespace PPE
             // 
             // tabPageHoraire
             // 
+            this.tabPageHoraire.Controls.Add(this.btnHoraire);
+            this.tabPageHoraire.Controls.Add(this.dtpFin);
+            this.tabPageHoraire.Controls.Add(this.dtpDebut);
             this.tabPageHoraire.Controls.Add(this.lblChoisirAtelier);
             this.tabPageHoraire.Controls.Add(this.label1);
             this.tabPageHoraire.Controls.Add(this.lblHoraireFin);
@@ -102,6 +108,16 @@ namespace PPE
             this.tabPageHoraire.Text = "Afficher Horaire";
             this.tabPageHoraire.UseVisualStyleBackColor = true;
             this.tabPageHoraire.Enter += new System.EventHandler(this.tabPageHoraire_Enter);
+            // 
+            // lblChoisirAtelier
+            // 
+            this.lblChoisirAtelier.AutoSize = true;
+            this.lblChoisirAtelier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirAtelier.Location = new System.Drawing.Point(161, 129);
+            this.lblChoisirAtelier.Name = "lblChoisirAtelier";
+            this.lblChoisirAtelier.Size = new System.Drawing.Size(138, 17);
+            this.lblChoisirAtelier.TabIndex = 7;
+            this.lblChoisirAtelier.Text = "Choisir un Atelier:";
             // 
             // label1
             // 
@@ -201,6 +217,36 @@ namespace PPE
             this.tabPageIntervenant.TabIndex = 1;
             this.tabPageIntervenant.Text = "Affecter un animateur";
             this.tabPageIntervenant.UseVisualStyleBackColor = true;
+            // 
+            // lblChoisirAnimateur
+            // 
+            this.lblChoisirAnimateur.AutoSize = true;
+            this.lblChoisirAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirAnimateur.Location = new System.Drawing.Point(26, 101);
+            this.lblChoisirAnimateur.Name = "lblChoisirAnimateur";
+            this.lblChoisirAnimateur.Size = new System.Drawing.Size(164, 17);
+            this.lblChoisirAnimateur.TabIndex = 11;
+            this.lblChoisirAnimateur.Text = "Choisir un Animateur:";
+            // 
+            // lblChoisirIntervenant
+            // 
+            this.lblChoisirIntervenant.AutoSize = true;
+            this.lblChoisirIntervenant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirIntervenant.Location = new System.Drawing.Point(6, 143);
+            this.lblChoisirIntervenant.Name = "lblChoisirIntervenant";
+            this.lblChoisirIntervenant.Size = new System.Drawing.Size(184, 17);
+            this.lblChoisirIntervenant.TabIndex = 10;
+            this.lblChoisirIntervenant.Text = "Choisir les intervenants:";
+            // 
+            // lblChoisirAtelierAnimateur
+            // 
+            this.lblChoisirAtelierAnimateur.AutoSize = true;
+            this.lblChoisirAtelierAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirAtelierAnimateur.Location = new System.Drawing.Point(52, 59);
+            this.lblChoisirAtelierAnimateur.Name = "lblChoisirAtelierAnimateur";
+            this.lblChoisirAtelierAnimateur.Size = new System.Drawing.Size(138, 17);
+            this.lblChoisirAtelierAnimateur.TabIndex = 9;
+            this.lblChoisirAtelierAnimateur.Text = "Choisir un Atelier:";
             // 
             // btnAnnuler
             // 
@@ -309,6 +355,16 @@ namespace PPE
             this.tbAfficherAll.UseVisualStyleBackColor = true;
             this.tbAfficherAll.Click += new System.EventHandler(this.tbAfficherAll_Click);
             // 
+            // lblChoisirAtelierAll
+            // 
+            this.lblChoisirAtelierAll.AutoSize = true;
+            this.lblChoisirAtelierAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirAtelierAll.Location = new System.Drawing.Point(129, 24);
+            this.lblChoisirAtelierAll.Name = "lblChoisirAtelierAll";
+            this.lblChoisirAtelierAll.Size = new System.Drawing.Size(138, 17);
+            this.lblChoisirAtelierAll.TabIndex = 10;
+            this.lblChoisirAtelierAll.Text = "Choisir un Atelier:";
+            // 
             // dgvTheme
             // 
             this.dgvTheme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -389,55 +445,34 @@ namespace PPE
             this.cbxAtelierAll.TabIndex = 0;
             this.cbxAtelierAll.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAll_SelectedIndexChanged);
             // 
-            // lblChoisirAtelier
+            // dtpDebut
             // 
-            this.lblChoisirAtelier.AutoSize = true;
-            this.lblChoisirAtelier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblChoisirAtelier.Location = new System.Drawing.Point(161, 129);
-            this.lblChoisirAtelier.Name = "lblChoisirAtelier";
-            this.lblChoisirAtelier.Size = new System.Drawing.Size(138, 17);
-            this.lblChoisirAtelier.TabIndex = 7;
-            this.lblChoisirAtelier.Text = "Choisir un Atelier:";
+            this.dtpDebut.CustomFormat = "ddMMMM yyyy  HH:mm";
+            this.dtpDebut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDebut.Location = new System.Drawing.Point(68, 212);
+            this.dtpDebut.Name = "dtpDebut";
+            this.dtpDebut.Size = new System.Drawing.Size(187, 20);
+            this.dtpDebut.TabIndex = 8;
             // 
-            // lblChoisirAtelierAnimateur
+            // dtpFin
             // 
-            this.lblChoisirAtelierAnimateur.AutoSize = true;
-            this.lblChoisirAtelierAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblChoisirAtelierAnimateur.Location = new System.Drawing.Point(52, 59);
-            this.lblChoisirAtelierAnimateur.Name = "lblChoisirAtelierAnimateur";
-            this.lblChoisirAtelierAnimateur.Size = new System.Drawing.Size(138, 17);
-            this.lblChoisirAtelierAnimateur.TabIndex = 9;
-            this.lblChoisirAtelierAnimateur.Text = "Choisir un Atelier:";
+            this.dtpFin.CustomFormat = "ddMMMM yyyy  HH:mm";
+            this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFin.Location = new System.Drawing.Point(68, 243);
+            this.dtpFin.Name = "dtpFin";
+            this.dtpFin.Size = new System.Drawing.Size(187, 20);
+            this.dtpFin.TabIndex = 9;
             // 
-            // lblChoisirIntervenant
+            // btnHoraire
             // 
-            this.lblChoisirIntervenant.AutoSize = true;
-            this.lblChoisirIntervenant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblChoisirIntervenant.Location = new System.Drawing.Point(6, 143);
-            this.lblChoisirIntervenant.Name = "lblChoisirIntervenant";
-            this.lblChoisirIntervenant.Size = new System.Drawing.Size(184, 17);
-            this.lblChoisirIntervenant.TabIndex = 10;
-            this.lblChoisirIntervenant.Text = "Choisir les intervenants:";
-            // 
-            // lblChoisirAnimateur
-            // 
-            this.lblChoisirAnimateur.AutoSize = true;
-            this.lblChoisirAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblChoisirAnimateur.Location = new System.Drawing.Point(26, 101);
-            this.lblChoisirAnimateur.Name = "lblChoisirAnimateur";
-            this.lblChoisirAnimateur.Size = new System.Drawing.Size(164, 17);
-            this.lblChoisirAnimateur.TabIndex = 11;
-            this.lblChoisirAnimateur.Text = "Choisir un Animateur:";
-            // 
-            // lblChoisirAtelierAll
-            // 
-            this.lblChoisirAtelierAll.AutoSize = true;
-            this.lblChoisirAtelierAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblChoisirAtelierAll.Location = new System.Drawing.Point(129, 24);
-            this.lblChoisirAtelierAll.Name = "lblChoisirAtelierAll";
-            this.lblChoisirAtelierAll.Size = new System.Drawing.Size(138, 17);
-            this.lblChoisirAtelierAll.TabIndex = 10;
-            this.lblChoisirAtelierAll.Text = "Choisir un Atelier:";
+            this.btnHoraire.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnHoraire.Location = new System.Drawing.Point(68, 299);
+            this.btnHoraire.Name = "btnHoraire";
+            this.btnHoraire.Size = new System.Drawing.Size(187, 42);
+            this.btnHoraire.TabIndex = 10;
+            this.btnHoraire.Text = "Affecter Horaire";
+            this.btnHoraire.UseVisualStyleBackColor = true;
+            this.btnHoraire.Click += new System.EventHandler(this.btnHoraire_Click);
             // 
             // main
             // 
@@ -498,6 +533,9 @@ namespace PPE
         private System.Windows.Forms.Label lblChoisirIntervenant;
         private System.Windows.Forms.Label lblChoisirAtelierAnimateur;
         private System.Windows.Forms.Label lblChoisirAtelierAll;
+        private System.Windows.Forms.Button btnHoraire;
+        private System.Windows.Forms.DateTimePicker dtpFin;
+        private System.Windows.Forms.DateTimePicker dtpDebut;
     }
 }
 

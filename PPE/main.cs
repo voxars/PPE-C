@@ -135,7 +135,6 @@ namespace PPE
 
                 this.Controls.Clear();
                 this.InitializeComponent();
-
                 ReLoad();
 
             }
@@ -151,7 +150,6 @@ namespace PPE
             cbxIntervenant3.SelectedIndex = -1;
             cbxIntervenant4.SelectedIndex = -1;
         }
-
 
         private void cbxAtelierAll_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -170,6 +168,18 @@ namespace PPE
             lesThemes = DAOTheme.getThemeByAtelier(idAtelier);
             dgvTheme.DataSource = lesThemes;
             dgvTheme.AutoResizeColumns();
+        }
+
+        private void btnHoraire_Click(object sender, EventArgs e)
+        {
+            int idAtelier = cbxAtelier.SelectedIndex + 1;
+
+            DAOAtelier.affecterHoraire(idAtelier, dtpDebut.Value, dtpFin.Value);
+
+            this.Controls.Clear();
+            this.InitializeComponent();
+            ReLoad();
+
         }
     }
 }

@@ -44,5 +44,13 @@ namespace PPE
             return lesAteliers;
         }
 
+        public static void affecterHoraire(int idAtelier, DateTime debut, DateTime fin)
+        {
+            string requete = "update atelier set debut='" + debut + "', fin='" + fin + "' where id=" + idAtelier;
+
+            DAOFactory db = new DAOFactory();
+            db.connecter();
+            db.execSQLWrite(requete);
+        }
     }
 }
