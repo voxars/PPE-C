@@ -136,7 +136,6 @@ namespace PPE
                 this.Controls.Clear();
                 this.InitializeComponent();
                 ReLoad();
-
             }
 
         }
@@ -172,13 +171,22 @@ namespace PPE
 
         private void btnHoraire_Click(object sender, EventArgs e)
         {
-            int idAtelier = cbxAtelier.SelectedIndex + 1;
+            if(dtpDebut.Value.Hour < dtpFin.Value.Hour && dtpDebut.Value.Date == dtpFin.Value.Date && cbxAtelier.Text != null)
+            {
+                int idAtelier = cbxAtelier.SelectedIndex + 1;
 
-            DAOAtelier.affecterHoraire(idAtelier, dtpDebut.Value, dtpFin.Value);
+                DAOAtelier.affecterHoraire(idAtelier, dtpDebut.Value, dtpFin.Value);
 
-            this.Controls.Clear();
-            this.InitializeComponent();
-            ReLoad();
+                this.Controls.Clear();
+                this.InitializeComponent();
+                ReLoad();
+
+            }
+            else
+            {
+                MessageBox.Show("L'heure de début doit être supérieur à l'heure de fin et la date doit être la même");
+            }
+
 
         }
     }
