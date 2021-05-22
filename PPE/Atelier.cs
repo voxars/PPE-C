@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PPE;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +12,10 @@ namespace PPE
         private int id;
         private string libelle;
         private int capaciteMax;
-        private string debut;
-        private string fin;
+        private DateTime debut;
+        private DateTime fin;
 
-        public Atelier(int id, string libelle, int capaciteMax, string debut, string fin)
+        public Atelier(int id, string libelle, int capaciteMax, DateTime debut, DateTime fin)
         {
             this.Id = id;
             this.Libelle = libelle;
@@ -40,26 +41,18 @@ namespace PPE
             get => capaciteMax;
             set => capaciteMax = value; 
         }
-        public string Debut 
-        {
-            get => debut; 
-            set => debut = value; 
-        }
-        public string Fin 
-        { 
-            get => fin; 
-            set => fin = value; 
-        }
+        public DateTime Fin { get => fin; set => fin = value; }
+        public DateTime Debut { get => debut; set => debut = value; }
+    }
         
         #endregion
 
-    }
 
     class AtelierWithAnimateur : Atelier
     {
         private string animateur;
 
-        public AtelierWithAnimateur(int id, string libelle, int capaciteMax, string debut, string fin, string animateur) : base(id, libelle, capaciteMax, debut, fin)
+        public AtelierWithAnimateur(int id, string libelle, int capaciteMax, DateTime debut, DateTime fin, string animateur) : base(id, libelle, capaciteMax, debut, fin)
         {
             this.Animateur = animateur;
         }

@@ -21,7 +21,7 @@ namespace PPE
             while (reader.Read())
             {
                 AtelierWithAnimateur a = new AtelierWithAnimateur(int.Parse(reader[0].ToString()), reader[1].ToString(), int.Parse(reader[2].ToString()), 
-                    reader[3].ToString(), reader[4].ToString(), reader[5].ToString());
+                    DateTime.Parse(reader[3].ToString()), DateTime.Parse(reader[4].ToString()), reader[5].ToString());
                 lesAteliers.Add(a);
             }
             return lesAteliers;
@@ -38,7 +38,7 @@ namespace PPE
             while (reader.Read())
             {
                 Atelier a = new Atelier(int.Parse(reader[0].ToString()), reader[1].ToString(), int.Parse(reader[2].ToString()),
-                    reader[3].ToString(), reader[4].ToString());
+                    DateTime.Parse(reader[3].ToString()), DateTime.Parse(reader[4].ToString()));
                 lesAteliers.Add(a);
             }
             return lesAteliers;
