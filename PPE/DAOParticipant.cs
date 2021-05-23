@@ -12,7 +12,7 @@ namespace PPE
         public static List<Participant> getParticipant()
         {
             List<Participant> lesParticipants = new List<Participant>();
-            string req = "Select id, nom, prenom, type, adresse, mail, numPortable from participant";
+            string req = "Select id, nom, prenom, type, adresse, mail, numPortable from participant where type=2";
             DAOFactory db = new DAOFactory();
             db.connecter();
 
