@@ -11,7 +11,7 @@ namespace PPE
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             builder.DataSource = "localhost";
             builder.IntegratedSecurity = true;
-            builder.InitialCatalog = "PPE-C";
+            builder.InitialCatalog = "TEST";
             Console.WriteLine("Connexion info created : " + builder.ConnectionString);
             connexion = new SqlConnection(builder.ConnectionString);
         }

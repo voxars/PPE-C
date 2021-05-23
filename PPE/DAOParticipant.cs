@@ -12,7 +12,7 @@ namespace PPE
         public static List<Participant> getParticipant()
         {
             List<Participant> lesParticipants = new List<Participant>();
-            string req = "Select * from participant";
+            string req = "Select id, nom, prenom, type, adresse, mail, numPortable from participant";
             DAOFactory db = new DAOFactory();
             db.connecter();
 
@@ -21,7 +21,7 @@ namespace PPE
             while (reader.Read())
             {
                 Participant a = new Participant(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(),
-                    reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), int.Parse(reader[6].ToString()));
+                    int.Parse(reader[3].ToString()), reader[4].ToString(), reader[5].ToString(), int.Parse(reader[6].ToString()));
                 lesParticipants.Add(a);
             }
 
