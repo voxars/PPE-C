@@ -16,6 +16,7 @@ namespace PPE
         private List<participant> mesParticipants = new List<participant>();
         private List<Intervenant> mesIntervenants = new List<Intervenant>();
         private List<Theme> mesThemes = new List<Theme>();
+        private List<AtelierWithAnimateur> lesAteliersWithAnimateur = new List<AtelierWithAnimateur>();
         private List<type> mesType = new List<type>();
         private List<benevole> mesHre = new List<benevole>();
         private List<InfoParticipant> listP = new List<InfoParticipant>();
@@ -28,6 +29,7 @@ namespace PPE
             {
                 mesAteliers = DAOAtelier.getAtelier();
                 mesParticipants = DAOParticipant.getParticipant();
+                lesAteliersWithAnimateur = DAOAtelier.getAtelierWithAnimateur();
                 mesType = DAOType.GetInfotypes();
                 mesHre = DAOBenevole.GetInfoJ();
             
@@ -38,6 +40,11 @@ namespace PPE
                     cbxAtelierAnimateur.Items.Add(v.Libelle);
                     cbxAtelierAll.Items.Add(v.Libelle);
                     cbbAtelier.Items.Add(v.Libelle);
+                }
+                
+                foreach (var v in this.lesAteliersWithAnimateur)
+                {
+                    cbxAtelierAll.Items.Add(v.Libelle);
                 }
 
                 foreach (var v in this.mesParticipants)
@@ -251,14 +258,15 @@ namespace PPE
             lblHoraireFin.Text = unAtelier.Fin.ToString();
         }
         private void lblNomAtelier_Click(object sender, EventArgs e)
-                {
-                }
+        {
+        }
         private void lblHoraireDebut_Click(object sender, EventArgs e)
         {
         }
         private void lblHoraireFin_Click(object sender, EventArgs e)
-                {
-                }
+        {
+        }
+        
         #endregion
 
         #region AffecterAnimateur
@@ -281,9 +289,9 @@ namespace PPE
         }
         private void btnAffecter_Click(object sender, EventArgs e)
         {
-            if (cbxAnimateur.Text == "Choisir un animateur" || cbxAtelierAnimateur.Text == "Choisir un atelier")
+            if (cbxAnimateur.Text == "" || cbxAtelierAnimateur.Text == "")
             {
-                lblAffectation.Text = "Veuillez choisir un animateur, un atelier";
+                lblAffectation.Text = "Veuillez choisir un animateur et un atelier";
                 lblAffectation.ForeColor = Color.Red;
             }
             else
@@ -293,51 +301,47 @@ namespace PPE
 
                 DAOParticipant.affecterAnimateurBDD(idAtelier, idAnimateur);
 
-                if (cbxIntervenant1.Text != "1er Intervenant")
+                if (cbxIntervenant1.Text != "")
                 {
                     int idParticipant = cbxIntervenant1.SelectedIndex + 1;
 
                     DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
                 }
 
-                if (cbxIntervenant2.Text != "2eme Intervenant")
+                if (cbxIntervenant2.Text != "")
                 {
                     int idParticipant = cbxIntervenant2.SelectedIndex + 1;
 
                     DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
                 }
 
-                if (cbxIntervenant3.Text != "3eme Intervenant")
+                if (cbxIntervenant3.Text != "")
                 {
                     int idParticipant = cbxIntervenant3.SelectedIndex + 1;
 
                     DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
                 }
 
-                if (cbxIntervenant4.Text != "4eme Intervenant")
+                if (cbxIntervenant4.Text != "")
                 {
                     int idParticipant = cbxIntervenant4.SelectedIndex + 1;
 
                     DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
                 }
 
-                lblAffectation.Text = "Animateur et intervenant(s) bien affecté(s)";
-                lblAffectation.ForeColor = Color.Green;
-                
                 this.Controls.Clear();
                 this.InitializeComponent();
-
                 Reload();
             }
         }
         private void btnAnnuler_Click(object sender, EventArgs e)
                 {
-                    cbxAtelierAnimateur.Text = "Choisir un atelier";
-                    cbxAnimateur.Text = "Choisir un animateur";
-                    cbxIntervenant1.Text = "1er Intervenant";
-                    cbxIntervenant2.Text = "2eme Intervenant";
-                    cbxIntervenant3.Text = "3eme Intervenant";
-                    cbxIntervenant4.Text = "4eme Intervenant";
+                    cbxAtelierAnimateur.SelectedIndex = -1;
+                    cbxAnimateur.SelectedIndex = -1;
+                    cbxIntervenant1.SelectedIndex = -1;
+                    cbxIntervenant2.SelectedIndex = -1;
+                    cbxIntervenant3.SelectedIndex = -1;
+                    cbxIntervenant4.SelectedIndex = -1;
                 }
         
         #endregion
@@ -347,19 +351,18 @@ namespace PPE
         private void cbxAtelierAll_SelectedIndexChanged(object sender, EventArgs e)
         {
             int i = cbxAtelierAll.SelectedIndex;
-            Atelier unAtelier;
-            unAtelier = mesAteliers.ElementAt(i);
-            txbAtelier.Text = unAtelier.Libelle;
-            txbAnimateur.Text = unAtelier.Animateur;
+            AtelierWithAnimateur unAtelierWithAnimateur;
+            unAtelierWithAnimateur = lesAteliersWithAnimateur.ElementAt(i);
+            txbAtelier.Text = unAtelierWithAnimateur.Libelle;
+            txbAnimateur.Text = unAtelierWithAnimateur.Animateur;
+
 
             int idAtelier = cbxAtelierAll.SelectedIndex + 1;
-            
-            dgvIntervenant.DataSource = null;
+            mesIntervenants = DAOIntervenant.getIntervenantByAtelier(idAtelier);
             dgvIntervenant.DataSource = mesIntervenants;
             dgvIntervenant.AutoResizeColumns();
 
-            
-            dgvTheme.DataSource = null;
+            mesThemes = DAOTheme.getThemeByAtelier(idAtelier);
             dgvTheme.DataSource = mesThemes;
             dgvTheme.AutoResizeColumns();
         }
@@ -372,11 +375,38 @@ namespace PPE
         private void dgvTheme_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
+        
+        private void dtpDebut_ValueChanged(object sender, EventArgs e)
+        {
+        }
+        private void dtpFin_ValueChanged(object sender, EventArgs e)
+        {
+        }
+        private void btnHoraire_Click(object sender, EventArgs e)
+        {
+            if(dtpDebut.Value.Hour < dtpFin.Value.Hour && dtpDebut.Value.Date == dtpFin.Value.Date && cbxAtelier.Text != null)
+            {
+                int idAtelier = cbxAtelier.SelectedIndex + 1;
+
+                DAOAtelier.affecterHoraire(idAtelier, dtpDebut.Value, dtpFin.Value);
+
+                this.Controls.Clear();
+                this.InitializeComponent();
+                Reload();
+
+            }
+            else
+            {
+                MessageBox.Show("L'heure de début doit être supérieur à l'heure de fin et la date doit être la même");
+            }
+        }
         #endregion
         
         private void main_FormClosing(object sender, FormClosingEventArgs e)
         {
           Application.Exit();
         }
+
+        
     }
 }

@@ -10,7 +10,7 @@ namespace PPE
         public static List<InfoParticipant> GetInfoPartcipants()
         {
             List<InfoParticipant> lesInfoPartcipants = new List<InfoParticipant>();
-            string req = "Select nom, t.libelle,a.libelle from participant p inner join atelier a on p.id_atelier = a.id inner join typeParticipant t on p.type = t.id";
+            string req = "Select nom, t.libelle,a.libelle from participant p inner join atelier a on p.id_atelierParticipant = a.id inner join typeParticipant t on p.type = t.id";
             DAOFactory db = new DAOFactory();
             db.connecter();
 
@@ -29,7 +29,7 @@ namespace PPE
         public static void ajouterParticipant(string nom, string prenom, int type, string adresse, string mail, int portable, int idAtelier, int hreBenevole)
         {
             
-            string req = "insert into participant(nom, prenom, type, adresse, mail, numPortable, id_Atelier, hreBenevole) values('" + nom + "', '" + prenom + "', '" + type + "', '" + adresse + "', '" + mail + "', '" + portable + "', '" + idAtelier + "', '" + hreBenevole + "')";
+            string req = "insert into participant(nom, prenom, adresse, mail, numPortable, id_atelierParticipant, hreBenevole, type) values('" + nom + "', '" + prenom + "', '" + adresse + "', '" + mail + "', '" + portable + "', '" + idAtelier + "', '" + hreBenevole + "', '" + type + "')";
             DAOFactory db = new DAOFactory();
             db.connecter();
 
@@ -49,8 +49,7 @@ namespace PPE
 
             while (reader.Read())
             {
-                participant a = new participant(Convert.ToInt32(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(),
-                    Convert.ToInt32(reader[3].ToString()), reader[4].ToString(), reader[5].ToString(), Convert.ToInt32(reader[6].ToString()), Convert.ToInt32(reader[7].ToString()), Convert.ToInt32(reader[8].ToString()));
+                participant a = new participant(Convert.ToInt32(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(),reader[4].ToString(), Convert.ToInt32(reader[0].ToString()),Convert.ToInt32(reader[0].ToString()), Convert.ToInt32(reader[0].ToString()), Convert.ToInt32(reader[0].ToString()));
                 lesParticipants.Add(a);
             }
 

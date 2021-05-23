@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efb9377d-9703-46e1-89c1-11e37051c14c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PPE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Login.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animateur.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atelier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Atelier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAOAnimateur.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAOAtelier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAOAtelier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAOParticipant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAOParticipant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPE.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PPE.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/PPE.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PPE.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/PPE.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PPE.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/main.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/PPE.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PPE.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/participant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/participant.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +28,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DBC815-33D8-4EDC-819A-C50A274C0735/e1/5029cef2/Form.cs" root0="SKIP_HIGHLIGHTING" />
@@ -44,14 +58,14 @@
       <option value="$PROJECT_DIR$/Theme.cs" />
       <option value="$PROJECT_DIR$/DAOTheme.cs" />
       <option value="$PROJECT_DIR$/DAOIntervenant.cs" />
-      <option value="$PROJECT_DIR$/DAOAtelier.cs" />
-      <option value="$PROJECT_DIR$/Atelier.cs" />
       <option value="$PROJECT_DIR$/Intervenant.cs" />
       <option value="$PROJECT_DIR$/main.Designer.cs" />
-      <option value="$PROJECT_DIR$/DAOParticipant.cs" />
-      <option value="$PROJECT_DIR$/participant.cs" />
-      <option value="$PROJECT_DIR$/main.cs" />
       <option value="$PROJECT_DIR$/Login.cs" />
+      <option value="$PROJECT_DIR$/Atelier.cs" />
+      <option value="$PROJECT_DIR$/DAOAtelier.cs" />
+      <option value="$PROJECT_DIR$/main.cs" />
+      <option value="$PROJECT_DIR$/participant.cs" />
+      <option value="$PROJECT_DIR$/DAOParticipant.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lgrAhptgbJ9pu0oY3RoRYhnwOY" />
@@ -106,7 +120,8 @@
       <workItem from="1608029457132" duration="565000" />
       <workItem from="1620208910344" duration="7426000" />
       <workItem from="1621251728348" duration="15677000" />
-      <workItem from="1621351830228" duration="537000" />
+      <workItem from="1621351830228" duration="694000" />
+      <workItem from="1621804719001" duration="3491000" />
     </task>
     <task id="LOCAL-00001" summary="finito pipo">
       <created>1621271207464</created>

@@ -46,10 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animateur.cs" />
     <Compile Include="Atelier.cs" />
     <Compile Include="benevole.cs" />
-    <Compile Include="DAOAnimateur.cs" />
     <Compile Include="DAOAtelier.cs" />
     <Compile Include="DAOBenevole.cs" />
     <Compile Include="DAOFactory.cs" />

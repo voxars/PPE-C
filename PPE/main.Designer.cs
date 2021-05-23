@@ -31,6 +31,9 @@ namespace PPE
         {
             this.tabControlAtelier = new System.Windows.Forms.TabControl();
             this.tabPageHoraire = new System.Windows.Forms.TabPage();
+            this.btnHoraire = new System.Windows.Forms.Button();
+            this.dtpFin = new System.Windows.Forms.DateTimePicker();
+            this.dtpDebut = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.lblHoraireFin = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -111,6 +114,9 @@ namespace PPE
             // 
             // tabPageHoraire
             // 
+            this.tabPageHoraire.Controls.Add(this.btnHoraire);
+            this.tabPageHoraire.Controls.Add(this.dtpFin);
+            this.tabPageHoraire.Controls.Add(this.dtpDebut);
             this.tabPageHoraire.Controls.Add(this.label13);
             this.tabPageHoraire.Controls.Add(this.lblHoraireFin);
             this.tabPageHoraire.Controls.Add(this.label15);
@@ -127,6 +133,37 @@ namespace PPE
             this.tabPageHoraire.Text = "Afficher Horaire";
             this.tabPageHoraire.UseVisualStyleBackColor = true;
             this.tabPageHoraire.Enter += new System.EventHandler(this.tabPageHoraire_Enter);
+            // 
+            // btnHoraire
+            // 
+            this.btnHoraire.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnHoraire.Location = new System.Drawing.Point(50, 291);
+            this.btnHoraire.Name = "btnHoraire";
+            this.btnHoraire.Size = new System.Drawing.Size(187, 42);
+            this.btnHoraire.TabIndex = 17;
+            this.btnHoraire.Text = "Affecter Horaire";
+            this.btnHoraire.UseVisualStyleBackColor = true;
+            this.btnHoraire.Click += new System.EventHandler(this.btnHoraire_Click);
+            // 
+            // dtpFin
+            // 
+            this.dtpFin.CustomFormat = "ddMMMM yyyy  HH:mm";
+            this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFin.Location = new System.Drawing.Point(50, 235);
+            this.dtpFin.Name = "dtpFin";
+            this.dtpFin.Size = new System.Drawing.Size(187, 20);
+            this.dtpFin.TabIndex = 16;
+            this.dtpFin.ValueChanged += new System.EventHandler(this.dtpFin_ValueChanged);
+            // 
+            // dtpDebut
+            // 
+            this.dtpDebut.CustomFormat = "ddMMMM yyyy  HH:mm";
+            this.dtpDebut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDebut.Location = new System.Drawing.Point(50, 204);
+            this.dtpDebut.Name = "dtpDebut";
+            this.dtpDebut.Size = new System.Drawing.Size(187, 20);
+            this.dtpDebut.TabIndex = 15;
+            this.dtpDebut.ValueChanged += new System.EventHandler(this.dtpDebut_ValueChanged);
             // 
             // label13
             // 
@@ -692,6 +729,10 @@ namespace PPE
             ((System.ComponentModel.ISupportInitialize) (this.dgvIntervenant)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btnHoraire;
+        private System.Windows.Forms.DateTimePicker dtpFin;
+        private System.Windows.Forms.DateTimePicker dtpDebut;
 
         private System.Windows.Forms.Label lblAffectation;
 

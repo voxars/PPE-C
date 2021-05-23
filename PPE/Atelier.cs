@@ -11,21 +11,19 @@ namespace PPE
         private int id;
         private string libelle;
         private int capaciteMax;
-        private string debut;
-        private string fin;
-        private string animateur;
+        private DateTime debut;
+        private DateTime fin;
 
-        public Atelier(int id, string libelle, int capaciteMax, string debut, string fin, string animateur)
+        public Atelier(int id, string libelle, int capaciteMax, DateTime debut, DateTime fin)
         {
             this.Id = id;
             this.Libelle = libelle;
             this.CapaciteMax = capaciteMax;
             this.Debut = debut;
             this.Fin = fin;
-            this.Animateur = animateur;
         }
 
-        #region Getter Setter
+        
         public int Id 
         { 
             get => id; 
@@ -42,21 +40,23 @@ namespace PPE
             get => capaciteMax;
             set => capaciteMax = value; 
         }
-        public string Debut 
+        public DateTime Fin { get => fin; set => fin = value; }
+        public DateTime Debut { get => debut; set => debut = value; }
+    }
+    
+    class AtelierWithAnimateur : Atelier
+    {
+        private string animateur;
+
+        public AtelierWithAnimateur(int id, string libelle, int capaciteMax, DateTime debut, DateTime fin, string animateur) : base(id, libelle, capaciteMax, debut, fin)
         {
-            get => debut; 
-            set => debut = value; 
+            this.Animateur = animateur;
         }
-        public string Fin 
-        { 
-            get => fin; 
-            set => fin = value; 
-        }
+
+        #region Getter Setter
         public string Animateur { get => animateur; set => animateur = value; }
- 
+
         #endregion
-
-
 
     }
 }

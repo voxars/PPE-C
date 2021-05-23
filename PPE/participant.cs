@@ -14,7 +14,7 @@ namespace PPE
         private int idAtelier;
         private int hreBenevole;
 
-        public participant(int id, string nom, string prenom, int type, string adresse, string mail, int portable, int idAtelier, int hreBenevole)
+        public participant(int id, string nom, string prenom, string adresse, string mail, int portable, int idAtelier, int hreBenevole, int type)
         {
             this.id = id;
             this.nom = nom;
