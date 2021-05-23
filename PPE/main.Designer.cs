@@ -88,15 +88,20 @@ namespace PPE
             this.txbAtelier = new System.Windows.Forms.TextBox();
             this.lblAtelierAll = new System.Windows.Forms.Label();
             this.cbxAtelierAll = new System.Windows.Forms.ComboBox();
+            this.lblAtelierAnimateur = new System.Windows.Forms.Label();
+            this.lblChoisirIntervenant = new System.Windows.Forms.Label();
+            this.lblChoisirAnimateur = new System.Windows.Forms.Label();
+            this.lblChoisirAtelierAll = new System.Windows.Forms.Label();
+            this.btnActualiser = new System.Windows.Forms.Button();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
             this.inscription.SuspendLayout();
             this.tabParticipant.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.dataParticipants)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataParticipants)).BeginInit();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.dgvTheme)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dgvIntervenant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTheme)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIntervenant)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAtelier
@@ -169,7 +174,7 @@ namespace PPE
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(279, 30);
+            this.label13.Location = new System.Drawing.Point(270, 54);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(146, 17);
             this.label13.TabIndex = 8;
@@ -237,16 +242,19 @@ namespace PPE
             // 
             // cbxAtelier
             // 
+            this.cbxAtelier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAtelier.FormattingEnabled = true;
             this.cbxAtelier.Location = new System.Drawing.Point(276, 94);
             this.cbxAtelier.Name = "cbxAtelier";
             this.cbxAtelier.Size = new System.Drawing.Size(113, 21);
             this.cbxAtelier.TabIndex = 7;
-            this.cbxAtelier.Text = "Choisir un atelier";
             this.cbxAtelier.SelectedIndexChanged += new System.EventHandler(this.cbxAtelier_SelectedIndexChanged);
             // 
             // tabPageIntervenant
             // 
+            this.tabPageIntervenant.Controls.Add(this.lblChoisirAnimateur);
+            this.tabPageIntervenant.Controls.Add(this.lblChoisirIntervenant);
+            this.tabPageIntervenant.Controls.Add(this.lblAtelierAnimateur);
             this.tabPageIntervenant.Controls.Add(this.lblAffectation);
             this.tabPageIntervenant.Controls.Add(this.btnAnnuler);
             this.tabPageIntervenant.Controls.Add(this.cbxIntervenant4);
@@ -267,7 +275,7 @@ namespace PPE
             // lblAffectation
             // 
             this.lblAffectation.AutoSize = true;
-            this.lblAffectation.Location = new System.Drawing.Point(293, 228);
+            this.lblAffectation.Location = new System.Drawing.Point(302, 341);
             this.lblAffectation.Name = "lblAffectation";
             this.lblAffectation.Size = new System.Drawing.Size(0, 13);
             this.lblAffectation.TabIndex = 17;
@@ -275,7 +283,7 @@ namespace PPE
             // btnAnnuler
             // 
             this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAnnuler.Location = new System.Drawing.Point(365, 141);
+            this.btnAnnuler.Location = new System.Drawing.Point(421, 227);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(143, 42);
             this.btnAnnuler.TabIndex = 16;
@@ -285,58 +293,58 @@ namespace PPE
             // 
             // cbxIntervenant4
             // 
+            this.cbxIntervenant4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxIntervenant4.FormattingEnabled = true;
-            this.cbxIntervenant4.Location = new System.Drawing.Point(597, 31);
+            this.cbxIntervenant4.Location = new System.Drawing.Point(578, 176);
             this.cbxIntervenant4.Name = "cbxIntervenant4";
             this.cbxIntervenant4.Size = new System.Drawing.Size(106, 21);
             this.cbxIntervenant4.TabIndex = 15;
-            this.cbxIntervenant4.Text = "4eme Intervenant";
             this.cbxIntervenant4.SelectedIndexChanged += new System.EventHandler(this.cbxIntervenant4_SelectedIndexChanged);
             // 
             // cbxIntervenant3
             // 
+            this.cbxIntervenant3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxIntervenant3.FormattingEnabled = true;
-            this.cbxIntervenant3.Location = new System.Drawing.Point(468, 31);
+            this.cbxIntervenant3.Location = new System.Drawing.Point(449, 176);
             this.cbxIntervenant3.Name = "cbxIntervenant3";
             this.cbxIntervenant3.Size = new System.Drawing.Size(110, 21);
             this.cbxIntervenant3.TabIndex = 14;
-            this.cbxIntervenant3.Text = "3eme Intervenant";
             this.cbxIntervenant3.SelectedIndexChanged += new System.EventHandler(this.cbxIntervenant3_SelectedIndexChanged);
             // 
             // cbxIntervenant2
             // 
+            this.cbxIntervenant2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxIntervenant2.FormattingEnabled = true;
-            this.cbxIntervenant2.Location = new System.Drawing.Point(343, 31);
+            this.cbxIntervenant2.Location = new System.Drawing.Point(324, 176);
             this.cbxIntervenant2.Name = "cbxIntervenant2";
             this.cbxIntervenant2.Size = new System.Drawing.Size(109, 21);
             this.cbxIntervenant2.TabIndex = 13;
-            this.cbxIntervenant2.Text = "2eme Intervenant";
             this.cbxIntervenant2.SelectedIndexChanged += new System.EventHandler(this.cbxIntervenant2_SelectedIndexChanged);
             // 
             // cbxIntervenant1
             // 
+            this.cbxIntervenant1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxIntervenant1.FormattingEnabled = true;
-            this.cbxIntervenant1.Location = new System.Drawing.Point(225, 31);
+            this.cbxIntervenant1.Location = new System.Drawing.Point(206, 176);
             this.cbxIntervenant1.Name = "cbxIntervenant1";
             this.cbxIntervenant1.Size = new System.Drawing.Size(98, 21);
             this.cbxIntervenant1.TabIndex = 12;
-            this.cbxIntervenant1.Text = "1er Intervenant";
             this.cbxIntervenant1.SelectedIndexChanged += new System.EventHandler(this.cbxIntervenant1_SelectedIndexChanged);
             // 
             // cbxAtelierAnimateur
             // 
+            this.cbxAtelierAnimateur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAtelierAnimateur.FormattingEnabled = true;
-            this.cbxAtelierAnimateur.Location = new System.Drawing.Point(38, 75);
+            this.cbxAtelierAnimateur.Location = new System.Drawing.Point(206, 122);
             this.cbxAtelierAnimateur.Name = "cbxAtelierAnimateur";
             this.cbxAtelierAnimateur.Size = new System.Drawing.Size(143, 21);
             this.cbxAtelierAnimateur.TabIndex = 11;
-            this.cbxAtelierAnimateur.Text = "Choisir un atelier";
             this.cbxAtelierAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAnimateur_SelectedIndexChanged_1);
             // 
             // btnAffecter
             // 
             this.btnAffecter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAffecter.Location = new System.Drawing.Point(150, 141);
+            this.btnAffecter.Location = new System.Drawing.Point(206, 227);
             this.btnAffecter.Name = "btnAffecter";
             this.btnAffecter.Size = new System.Drawing.Size(143, 42);
             this.btnAffecter.TabIndex = 10;
@@ -346,16 +354,17 @@ namespace PPE
             // 
             // cbxAnimateur
             // 
+            this.cbxAnimateur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAnimateur.FormattingEnabled = true;
-            this.cbxAnimateur.Location = new System.Drawing.Point(38, 30);
+            this.cbxAnimateur.Location = new System.Drawing.Point(206, 67);
             this.cbxAnimateur.Name = "cbxAnimateur";
             this.cbxAnimateur.Size = new System.Drawing.Size(143, 21);
             this.cbxAnimateur.TabIndex = 9;
-            this.cbxAnimateur.Text = "Choisir un animateur";
             this.cbxAnimateur.SelectedIndexChanged += new System.EventHandler(this.cbxAnimateur_SelectedIndexChanged_1);
             // 
             // inscription
             // 
+            this.inscription.Controls.Add(this.btnActualiser);
             this.inscription.Controls.Add(this.label12);
             this.inscription.Controls.Add(this.label11);
             this.inscription.Controls.Add(this.cbbBenevole);
@@ -385,7 +394,7 @@ namespace PPE
             // 
             // label12
             // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(478, 236);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(230, 37);
@@ -394,7 +403,7 @@ namespace PPE
             // 
             // label11
             // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(166, 3);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(313, 40);
@@ -431,7 +440,7 @@ namespace PPE
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(327, 179);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 38);
@@ -440,7 +449,7 @@ namespace PPE
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(221, 179);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 38);
@@ -457,7 +466,7 @@ namespace PPE
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(378, 118);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(173, 38);
@@ -474,7 +483,7 @@ namespace PPE
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(272, 118);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(101, 38);
@@ -491,7 +500,7 @@ namespace PPE
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(166, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 38);
@@ -500,7 +509,7 @@ namespace PPE
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(378, 43);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 38);
@@ -517,7 +526,7 @@ namespace PPE
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(272, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 38);
@@ -534,7 +543,7 @@ namespace PPE
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(166, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 38);
@@ -543,7 +552,7 @@ namespace PPE
             // 
             // btnCreer
             // 
-            this.btnCreer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnCreer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreer.Location = new System.Drawing.Point(221, 254);
             this.btnCreer.Name = "btnCreer";
             this.btnCreer.Size = new System.Drawing.Size(207, 55);
@@ -566,7 +575,7 @@ namespace PPE
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(256, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(197, 23);
@@ -576,7 +585,10 @@ namespace PPE
             // dataParticipants
             // 
             this.dataParticipants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataParticipants.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.Nom, this.Type, this.Atelier});
+            this.dataParticipants.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nom,
+            this.Type,
+            this.Atelier});
             this.dataParticipants.Location = new System.Drawing.Point(3, 35);
             this.dataParticipants.Name = "dataParticipants";
             this.dataParticipants.Size = new System.Drawing.Size(705, 284);
@@ -603,6 +615,7 @@ namespace PPE
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblChoisirAtelierAll);
             this.tabPage1.Controls.Add(this.dgvTheme);
             this.tabPage1.Controls.Add(this.dgvIntervenant);
             this.tabPage1.Controls.Add(this.lblTheme);
@@ -660,7 +673,7 @@ namespace PPE
             // 
             // txbAnimateur
             // 
-            this.txbAnimateur.Location = new System.Drawing.Point(103, 137);
+            this.txbAnimateur.Location = new System.Drawing.Point(103, 237);
             this.txbAnimateur.Name = "txbAnimateur";
             this.txbAnimateur.Size = new System.Drawing.Size(186, 20);
             this.txbAnimateur.TabIndex = 13;
@@ -669,7 +682,7 @@ namespace PPE
             // 
             this.lblAnimateur.AutoSize = true;
             this.lblAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblAnimateur.Location = new System.Drawing.Point(6, 137);
+            this.lblAnimateur.Location = new System.Drawing.Point(6, 237);
             this.lblAnimateur.Name = "lblAnimateur";
             this.lblAnimateur.Size = new System.Drawing.Size(91, 17);
             this.lblAnimateur.TabIndex = 12;
@@ -677,7 +690,7 @@ namespace PPE
             // 
             // txbAtelier
             // 
-            this.txbAtelier.Location = new System.Drawing.Point(103, 80);
+            this.txbAtelier.Location = new System.Drawing.Point(103, 180);
             this.txbAtelier.Name = "txbAtelier";
             this.txbAtelier.Size = new System.Drawing.Size(186, 20);
             this.txbAtelier.TabIndex = 11;
@@ -687,7 +700,7 @@ namespace PPE
             // 
             this.lblAtelierAll.AutoSize = true;
             this.lblAtelierAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblAtelierAll.Location = new System.Drawing.Point(32, 80);
+            this.lblAtelierAll.Location = new System.Drawing.Point(32, 180);
             this.lblAtelierAll.Name = "lblAtelierAll";
             this.lblAtelierAll.Size = new System.Drawing.Size(65, 17);
             this.lblAtelierAll.TabIndex = 10;
@@ -695,13 +708,64 @@ namespace PPE
             // 
             // cbxAtelierAll
             // 
+            this.cbxAtelierAll.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAtelierAll.FormattingEnabled = true;
-            this.cbxAtelierAll.Location = new System.Drawing.Point(103, 22);
+            this.cbxAtelierAll.Location = new System.Drawing.Point(60, 103);
             this.cbxAtelierAll.Name = "cbxAtelierAll";
             this.cbxAtelierAll.Size = new System.Drawing.Size(186, 21);
             this.cbxAtelierAll.TabIndex = 9;
-            this.cbxAtelierAll.Text = "Choisir un atelier";
             this.cbxAtelierAll.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAll_SelectedIndexChanged);
+            // 
+            // lblAtelierAnimateur
+            // 
+            this.lblAtelierAnimateur.AutoSize = true;
+            this.lblAtelierAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblAtelierAnimateur.Location = new System.Drawing.Point(53, 126);
+            this.lblAtelierAnimateur.Name = "lblAtelierAnimateur";
+            this.lblAtelierAnimateur.Size = new System.Drawing.Size(142, 17);
+            this.lblAtelierAnimateur.TabIndex = 18;
+            this.lblAtelierAnimateur.Text = "Choisir un atelier :";
+            // 
+            // lblChoisirIntervenant
+            // 
+            this.lblChoisirIntervenant.AutoSize = true;
+            this.lblChoisirIntervenant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirIntervenant.Location = new System.Drawing.Point(6, 176);
+            this.lblChoisirIntervenant.Name = "lblChoisirIntervenant";
+            this.lblChoisirIntervenant.Size = new System.Drawing.Size(189, 17);
+            this.lblChoisirIntervenant.TabIndex = 19;
+            this.lblChoisirIntervenant.Text = "Choisir les intervenants :";
+            // 
+            // lblChoisirAnimateur
+            // 
+            this.lblChoisirAnimateur.AutoSize = true;
+            this.lblChoisirAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirAnimateur.Location = new System.Drawing.Point(27, 71);
+            this.lblChoisirAnimateur.Name = "lblChoisirAnimateur";
+            this.lblChoisirAnimateur.Size = new System.Drawing.Size(168, 17);
+            this.lblChoisirAnimateur.TabIndex = 20;
+            this.lblChoisirAnimateur.Text = "Choisir un animateur :";
+            // 
+            // lblChoisirAtelierAll
+            // 
+            this.lblChoisirAtelierAll.AutoSize = true;
+            this.lblChoisirAtelierAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirAtelierAll.Location = new System.Drawing.Point(78, 55);
+            this.lblChoisirAtelierAll.Name = "lblChoisirAtelierAll";
+            this.lblChoisirAtelierAll.Size = new System.Drawing.Size(142, 17);
+            this.lblChoisirAtelierAll.TabIndex = 19;
+            this.lblChoisirAtelierAll.Text = "Choisir un atelier :";
+            // 
+            // btnActualiser
+            // 
+            this.btnActualiser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualiser.Location = new System.Drawing.Point(482, 294);
+            this.btnActualiser.Name = "btnActualiser";
+            this.btnActualiser.Size = new System.Drawing.Size(207, 55);
+            this.btnActualiser.TabIndex = 22;
+            this.btnActualiser.Text = "Actualiser l\'application";
+            this.btnActualiser.UseVisualStyleBackColor = true;
+            this.btnActualiser.Click += new System.EventHandler(this.btnActualiser_Click);
             // 
             // main
             // 
@@ -722,12 +786,13 @@ namespace PPE
             this.inscription.ResumeLayout(false);
             this.inscription.PerformLayout();
             this.tabParticipant.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.dataParticipants)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataParticipants)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.dgvTheme)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dgvIntervenant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTheme)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIntervenant)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Button btnHoraire;
@@ -817,6 +882,11 @@ namespace PPE
         private System.Windows.Forms.TabPage tabPageIntervenant;
         private System.Windows.Forms.ComboBox cbxAtelierAnimateur;
         private System.Windows.Forms.ComboBox cbxAnimateur;
+        private System.Windows.Forms.Label lblChoisirAnimateur;
+        private System.Windows.Forms.Label lblChoisirIntervenant;
+        private System.Windows.Forms.Label lblAtelierAnimateur;
+        private System.Windows.Forms.Label lblChoisirAtelierAll;
+        private System.Windows.Forms.Button btnActualiser;
     }
 }
 

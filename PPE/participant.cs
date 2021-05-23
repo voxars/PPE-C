@@ -11,10 +11,8 @@ namespace PPE
         private string adresse;
         private string mail;
         private int portable;
-        private int idAtelier;
-        private int hreBenevole;
 
-        public participant(int id, string nom, string prenom, string adresse, string mail, int portable, int idAtelier, int hreBenevole, int type)
+        public participant(int id, string nom, string prenom, int type, string adresse, string mail, int portable)
         {
             this.id = id;
             this.nom = nom;
@@ -23,10 +21,8 @@ namespace PPE
             this.adresse = adresse;
             this.mail = mail;
             this.portable = portable;
-            this.idAtelier = idAtelier;
-            this.hreBenevole = hreBenevole;
         }
-
+        #region getter setter
         public int Id
         {
             get => id;
@@ -69,18 +65,21 @@ namespace PPE
             set => portable = value;
         }
 
-        public int IdAtelier
+        #endregion
+    }
+
+    class participantAll : participant
+    {
+        private int id_atelierParticipant;
+        private int hreBenevole;
+
+        public participantAll(int id, string nom, string prenom, int type, string adresse, string mail, int portable, int id_atelierParticipant, int hreBenevole) :base(id, nom, prenom, type, adresse, mail, portable)
         {
-            get => idAtelier;
-            set => idAtelier = value;
+            this.Id_atelierParticipant = id_atelierParticipant;
+            this.HreBenevole = hreBenevole;
         }
 
-        public int HreBenevole
-        {
-            get => hreBenevole;
-            set => hreBenevole = value;
-        }
-        
-
+        public int Id_atelierParticipant { get => id_atelierParticipant; set => id_atelierParticipant = value; }
+        public int HreBenevole { get => hreBenevole; set => hreBenevole = value; }
     }
 }

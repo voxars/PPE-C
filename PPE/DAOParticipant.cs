@@ -38,10 +38,10 @@ namespace PPE
 
         }
         
-         public static List<participant> getParticipant()
+         public static List<participant> getParticipantIntervenant()
         {
             List<participant> lesParticipants = new List<participant>();
-            string req = "Select * from participant";
+            string req = "Select id, nom, prenom, type, adresse, mail, numPortable from participant where type=2";
             DAOFactory db = new DAOFactory();
             db.connecter();
 
@@ -49,7 +49,8 @@ namespace PPE
 
             while (reader.Read())
             {
-                participant a = new participant(Convert.ToInt32(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(),reader[4].ToString(), Convert.ToInt32(reader[0].ToString()),Convert.ToInt32(reader[0].ToString()), Convert.ToInt32(reader[0].ToString()), Convert.ToInt32(reader[0].ToString()));
+                participant a = new participant(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(),
+                    int.Parse(reader[3].ToString()), reader[4].ToString(), reader[5].ToString(), int.Parse(reader[6].ToString()));
                 lesParticipants.Add(a);
             }
 

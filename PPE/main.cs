@@ -28,7 +28,7 @@ namespace PPE
             public void Reload()
             {
                 mesAteliers = DAOAtelier.getAtelier();
-                mesParticipants = DAOParticipant.getParticipant();
+                mesParticipants = DAOParticipant.getParticipantIntervenant();
                 lesAteliersWithAnimateur = DAOAtelier.getAtelierWithAnimateur();
                 mesType = DAOType.GetInfotypes();
                 mesHre = DAOBenevole.GetInfoJ();
@@ -38,7 +38,6 @@ namespace PPE
                 {
                     cbxAtelier.Items.Add(v.Libelle);
                     cbxAtelierAnimateur.Items.Add(v.Libelle);
-                    cbxAtelierAll.Items.Add(v.Libelle);
                     cbbAtelier.Items.Add(v.Libelle);
                 }
                 
@@ -84,6 +83,23 @@ namespace PPE
         }
 
         #region not use
+        private void txbAtelier_TextChanged(object sender, EventArgs e)
+        {
+        }
+        private void dgvIntervenant_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+        private void dgvTheme_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void dtpDebut_ValueChanged(object sender, EventArgs e)
+        {
+        }
+        private void dtpFin_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
         private void cbxAtelierAnimateur_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -147,11 +163,11 @@ namespace PPE
         {
             string nom = txbNom.Text;
             string prenom = txbPrenom.Text;
-            int type = cbbType.SelectedIndex;
+            int type = cbbType.SelectedIndex + 1;
             string adresse = txbAdresse.Text;
             string mail = txbMail.Text;
             string portable = txbPortable.Text;
-            int idAtelier = cbbAtelier.SelectedIndex+1;
+            int idAtelier = cbbAtelier.SelectedIndex + 1;
             int hreBene = cbbBenevole.SelectedIndex;
             if (txbNom.Text.Length != 0 || txbPrenom.Text.Length != 0 || txbAdresse.Text.Length != 0 || txbMail.Text.Length != 0)
             {
@@ -208,7 +224,7 @@ namespace PPE
                                 txbNom.Clear();
                                 txbPortable.Clear();
                                 txbPrenom.Clear();
-                                
+
                                 cbbAtelier.SelectedIndex = 0;
                                 cbbBenevole.SelectedIndex = 0;
                                 cbbType.SelectedIndex = 0;
@@ -229,7 +245,7 @@ namespace PPE
                 {
                     MessageBox.Show("Un numero de telephone doit contenir 10 chiffres");
                 }
-                    
+
             }
             else
             {
@@ -237,7 +253,7 @@ namespace PPE
             }
 
         }
-        
+
         #endregion
 
         #region ListeParticipants
@@ -366,22 +382,6 @@ namespace PPE
             dgvTheme.DataSource = mesThemes;
             dgvTheme.AutoResizeColumns();
         }
-        private void txbAtelier_TextChanged(object sender, EventArgs e)
-        {
-        }
-        private void dgvIntervenant_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-        private void dgvTheme_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-        
-        private void dtpDebut_ValueChanged(object sender, EventArgs e)
-        {
-        }
-        private void dtpFin_ValueChanged(object sender, EventArgs e)
-        {
-        }
         private void btnHoraire_Click(object sender, EventArgs e)
         {
             if(dtpDebut.Value.Hour < dtpFin.Value.Hour && dtpDebut.Value.Date == dtpFin.Value.Date && cbxAtelier.Text != null)
@@ -407,6 +407,11 @@ namespace PPE
           Application.Exit();
         }
 
-        
+        private void btnActualiser_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            this.InitializeComponent();
+            Reload();
+        }
     }
 }
