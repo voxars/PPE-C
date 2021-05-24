@@ -83,6 +83,24 @@ namespace PPE
         }
 
         #region not use
+        private void cbxAnimateur_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+        }
+        private void cbxAtelierAnimateur_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+        }
+        private void cbxIntervenant1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+        private void cbxIntervenant2_SelectedIndexChanged(object sender, EventArgs e)
+        { }
+        private void cbxIntervenant3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+        private void cbxIntervenant4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
         private void txbAtelier_TextChanged(object sender, EventArgs e)
         {
         }
@@ -167,7 +185,7 @@ namespace PPE
             string adresse = txbAdresse.Text;
             string mail = txbMail.Text;
             string portable = txbPortable.Text;
-            int idAtelier = cbbAtelier.SelectedIndex + 1;
+            int idAtelier = cbbAtelier.SelectedIndex+1;
             int hreBene = cbbBenevole.SelectedIndex;
             if (txbNom.Text.Length != 0 || txbPrenom.Text.Length != 0 || txbAdresse.Text.Length != 0 || txbMail.Text.Length != 0)
             {
@@ -224,7 +242,7 @@ namespace PPE
                                 txbNom.Clear();
                                 txbPortable.Clear();
                                 txbPrenom.Clear();
-
+                                
                                 cbbAtelier.SelectedIndex = 0;
                                 cbbBenevole.SelectedIndex = 0;
                                 cbbType.SelectedIndex = 0;
@@ -245,7 +263,7 @@ namespace PPE
                 {
                     MessageBox.Show("Un numero de telephone doit contenir 10 chiffres");
                 }
-
+                    
             }
             else
             {
@@ -253,7 +271,7 @@ namespace PPE
             }
 
         }
-
+        
         #endregion
 
         #region ListeParticipants
@@ -286,23 +304,6 @@ namespace PPE
         #endregion
 
         #region AffecterAnimateur
-        private void cbxAnimateur_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-        }
-        private void cbxAtelierAnimateur_SelectedIndexChanged_1(object sender, EventArgs e)
-                {
-                }
-        private void cbxIntervenant1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-        private void cbxIntervenant2_SelectedIndexChanged(object sender, EventArgs e)
-                { }
-        private void cbxIntervenant3_SelectedIndexChanged(object sender, EventArgs e)
-                {
-                }
-        private void cbxIntervenant4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
         private void btnAffecter_Click(object sender, EventArgs e)
         {
             if (cbxAnimateur.Text == "" || cbxAtelierAnimateur.Text == "")
@@ -313,34 +314,50 @@ namespace PPE
             else
             {
                 int idAtelier = cbxAtelierAnimateur.SelectedIndex + 1;
-                int idAnimateur = cbxAnimateur.SelectedIndex + 1;
+
+                int a = cbxAnimateur.SelectedIndex;
+                participant unParticipant;
+                unParticipant = mesParticipants.ElementAt(a);
+                int idAnimateur = unParticipant.Id;
 
                 DAOParticipant.affecterAnimateurBDD(idAtelier, idAnimateur);
 
                 if (cbxIntervenant1.Text != "")
                 {
-                    int idParticipant = cbxIntervenant1.SelectedIndex + 1;
+                    int i = cbxIntervenant1.SelectedIndex;
+                    participant unParticipant1;
+                    unParticipant1 = mesParticipants.ElementAt(i);
+                    int idParticipant = unParticipant1.Id;
 
                     DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
                 }
 
                 if (cbxIntervenant2.Text != "")
                 {
-                    int idParticipant = cbxIntervenant2.SelectedIndex + 1;
+                    int i = cbxIntervenant2.SelectedIndex;
+                    participant unParticipant1;
+                    unParticipant1 = mesParticipants.ElementAt(i);
+                    int idParticipant = unParticipant1.Id;
 
                     DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
                 }
 
                 if (cbxIntervenant3.Text != "")
                 {
-                    int idParticipant = cbxIntervenant3.SelectedIndex + 1;
+                    int i = cbxIntervenant3.SelectedIndex;
+                    participant unParticipant1;
+                    unParticipant1 = mesParticipants.ElementAt(i);
+                    int idParticipant = unParticipant1.Id;
 
                     DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
                 }
 
                 if (cbxIntervenant4.Text != "")
                 {
-                    int idParticipant = cbxIntervenant4.SelectedIndex + 1;
+                    int i = cbxIntervenant4.SelectedIndex;
+                    participant unParticipant1;
+                    unParticipant1 = mesParticipants.ElementAt(i);
+                    int idParticipant = unParticipant1.Id;
 
                     DAOParticipant.affecterIntervenantBDD(idAtelier, idParticipant);
                 }

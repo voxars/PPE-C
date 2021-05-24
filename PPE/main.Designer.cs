@@ -43,6 +43,9 @@ namespace PPE
             this.label19 = new System.Windows.Forms.Label();
             this.cbxAtelier = new System.Windows.Forms.ComboBox();
             this.tabPageIntervenant = new System.Windows.Forms.TabPage();
+            this.lblChoisirAnimateur = new System.Windows.Forms.Label();
+            this.lblChoisirIntervenant = new System.Windows.Forms.Label();
+            this.lblAtelierAnimateur = new System.Windows.Forms.Label();
             this.lblAffectation = new System.Windows.Forms.Label();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.cbxIntervenant4 = new System.Windows.Forms.ComboBox();
@@ -53,6 +56,7 @@ namespace PPE
             this.btnAffecter = new System.Windows.Forms.Button();
             this.cbxAnimateur = new System.Windows.Forms.ComboBox();
             this.inscription = new System.Windows.Forms.TabPage();
+            this.btnActualiser = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.cbbBenevole = new System.Windows.Forms.ComboBox();
@@ -79,6 +83,7 @@ namespace PPE
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Atelier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblChoisirAtelierAll = new System.Windows.Forms.Label();
             this.dgvTheme = new System.Windows.Forms.DataGridView();
             this.dgvIntervenant = new System.Windows.Forms.DataGridView();
             this.lblTheme = new System.Windows.Forms.Label();
@@ -88,11 +93,6 @@ namespace PPE
             this.txbAtelier = new System.Windows.Forms.TextBox();
             this.lblAtelierAll = new System.Windows.Forms.Label();
             this.cbxAtelierAll = new System.Windows.Forms.ComboBox();
-            this.lblAtelierAnimateur = new System.Windows.Forms.Label();
-            this.lblChoisirIntervenant = new System.Windows.Forms.Label();
-            this.lblChoisirAnimateur = new System.Windows.Forms.Label();
-            this.lblChoisirAtelierAll = new System.Windows.Forms.Label();
-            this.btnActualiser = new System.Windows.Forms.Button();
             this.tabControlAtelier.SuspendLayout();
             this.tabPageHoraire.SuspendLayout();
             this.tabPageIntervenant.SuspendLayout();
@@ -272,6 +272,36 @@ namespace PPE
             this.tabPageIntervenant.Text = "Affecter un animateur";
             this.tabPageIntervenant.UseVisualStyleBackColor = true;
             // 
+            // lblChoisirAnimateur
+            // 
+            this.lblChoisirAnimateur.AutoSize = true;
+            this.lblChoisirAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirAnimateur.Location = new System.Drawing.Point(27, 71);
+            this.lblChoisirAnimateur.Name = "lblChoisirAnimateur";
+            this.lblChoisirAnimateur.Size = new System.Drawing.Size(168, 17);
+            this.lblChoisirAnimateur.TabIndex = 20;
+            this.lblChoisirAnimateur.Text = "Choisir un animateur :";
+            // 
+            // lblChoisirIntervenant
+            // 
+            this.lblChoisirIntervenant.AutoSize = true;
+            this.lblChoisirIntervenant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirIntervenant.Location = new System.Drawing.Point(6, 176);
+            this.lblChoisirIntervenant.Name = "lblChoisirIntervenant";
+            this.lblChoisirIntervenant.Size = new System.Drawing.Size(189, 17);
+            this.lblChoisirIntervenant.TabIndex = 19;
+            this.lblChoisirIntervenant.Text = "Choisir les intervenants :";
+            // 
+            // lblAtelierAnimateur
+            // 
+            this.lblAtelierAnimateur.AutoSize = true;
+            this.lblAtelierAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblAtelierAnimateur.Location = new System.Drawing.Point(53, 126);
+            this.lblAtelierAnimateur.Name = "lblAtelierAnimateur";
+            this.lblAtelierAnimateur.Size = new System.Drawing.Size(142, 17);
+            this.lblAtelierAnimateur.TabIndex = 18;
+            this.lblAtelierAnimateur.Text = "Choisir un atelier :";
+            // 
             // lblAffectation
             // 
             this.lblAffectation.AutoSize = true;
@@ -391,6 +421,17 @@ namespace PPE
             this.inscription.TabIndex = 2;
             this.inscription.Text = "Inscription participant";
             this.inscription.UseVisualStyleBackColor = true;
+            // 
+            // btnActualiser
+            // 
+            this.btnActualiser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualiser.Location = new System.Drawing.Point(482, 294);
+            this.btnActualiser.Name = "btnActualiser";
+            this.btnActualiser.Size = new System.Drawing.Size(207, 55);
+            this.btnActualiser.TabIndex = 22;
+            this.btnActualiser.Text = "Actualiser l\'application";
+            this.btnActualiser.UseVisualStyleBackColor = true;
+            this.btnActualiser.Click += new System.EventHandler(this.btnActualiser_Click);
             // 
             // label12
             // 
@@ -633,6 +674,16 @@ namespace PPE
             this.tabPage1.Text = "Afficher les ateliers";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // lblChoisirAtelierAll
+            // 
+            this.lblChoisirAtelierAll.AutoSize = true;
+            this.lblChoisirAtelierAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChoisirAtelierAll.Location = new System.Drawing.Point(78, 55);
+            this.lblChoisirAtelierAll.Name = "lblChoisirAtelierAll";
+            this.lblChoisirAtelierAll.Size = new System.Drawing.Size(142, 17);
+            this.lblChoisirAtelierAll.TabIndex = 19;
+            this.lblChoisirAtelierAll.Text = "Choisir un atelier :";
+            // 
             // dgvTheme
             // 
             this.dgvTheme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -715,57 +766,6 @@ namespace PPE
             this.cbxAtelierAll.Size = new System.Drawing.Size(186, 21);
             this.cbxAtelierAll.TabIndex = 9;
             this.cbxAtelierAll.SelectedIndexChanged += new System.EventHandler(this.cbxAtelierAll_SelectedIndexChanged);
-            // 
-            // lblAtelierAnimateur
-            // 
-            this.lblAtelierAnimateur.AutoSize = true;
-            this.lblAtelierAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblAtelierAnimateur.Location = new System.Drawing.Point(53, 126);
-            this.lblAtelierAnimateur.Name = "lblAtelierAnimateur";
-            this.lblAtelierAnimateur.Size = new System.Drawing.Size(142, 17);
-            this.lblAtelierAnimateur.TabIndex = 18;
-            this.lblAtelierAnimateur.Text = "Choisir un atelier :";
-            // 
-            // lblChoisirIntervenant
-            // 
-            this.lblChoisirIntervenant.AutoSize = true;
-            this.lblChoisirIntervenant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblChoisirIntervenant.Location = new System.Drawing.Point(6, 176);
-            this.lblChoisirIntervenant.Name = "lblChoisirIntervenant";
-            this.lblChoisirIntervenant.Size = new System.Drawing.Size(189, 17);
-            this.lblChoisirIntervenant.TabIndex = 19;
-            this.lblChoisirIntervenant.Text = "Choisir les intervenants :";
-            // 
-            // lblChoisirAnimateur
-            // 
-            this.lblChoisirAnimateur.AutoSize = true;
-            this.lblChoisirAnimateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblChoisirAnimateur.Location = new System.Drawing.Point(27, 71);
-            this.lblChoisirAnimateur.Name = "lblChoisirAnimateur";
-            this.lblChoisirAnimateur.Size = new System.Drawing.Size(168, 17);
-            this.lblChoisirAnimateur.TabIndex = 20;
-            this.lblChoisirAnimateur.Text = "Choisir un animateur :";
-            // 
-            // lblChoisirAtelierAll
-            // 
-            this.lblChoisirAtelierAll.AutoSize = true;
-            this.lblChoisirAtelierAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblChoisirAtelierAll.Location = new System.Drawing.Point(78, 55);
-            this.lblChoisirAtelierAll.Name = "lblChoisirAtelierAll";
-            this.lblChoisirAtelierAll.Size = new System.Drawing.Size(142, 17);
-            this.lblChoisirAtelierAll.TabIndex = 19;
-            this.lblChoisirAtelierAll.Text = "Choisir un atelier :";
-            // 
-            // btnActualiser
-            // 
-            this.btnActualiser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualiser.Location = new System.Drawing.Point(482, 294);
-            this.btnActualiser.Name = "btnActualiser";
-            this.btnActualiser.Size = new System.Drawing.Size(207, 55);
-            this.btnActualiser.TabIndex = 22;
-            this.btnActualiser.Text = "Actualiser l\'application";
-            this.btnActualiser.UseVisualStyleBackColor = true;
-            this.btnActualiser.Click += new System.EventHandler(this.btnActualiser_Click);
             // 
             // main
             // 
