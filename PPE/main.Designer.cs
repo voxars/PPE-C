@@ -154,7 +154,7 @@ namespace PPE
             // 
             this.dtpFin.CustomFormat = "ddMMMM yyyy  HH:mm";
             this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFin.Location = new System.Drawing.Point(50, 235);
+            this.dtpFin.Location = new System.Drawing.Point(50, 206);
             this.dtpFin.Name = "dtpFin";
             this.dtpFin.Size = new System.Drawing.Size(187, 20);
             this.dtpFin.TabIndex = 16;
@@ -164,7 +164,7 @@ namespace PPE
             // 
             this.dtpDebut.CustomFormat = "ddMMMM yyyy  HH:mm";
             this.dtpDebut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDebut.Location = new System.Drawing.Point(50, 204);
+            this.dtpDebut.Location = new System.Drawing.Point(50, 175);
             this.dtpDebut.Name = "dtpDebut";
             this.dtpDebut.Size = new System.Drawing.Size(187, 20);
             this.dtpDebut.TabIndex = 15;
