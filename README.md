@@ -9,6 +9,6 @@ URL: https://lyceeicof-my.sharepoint.com/:w:/g/personal/arthur_montesinos_icof_f
 
 ## Appli
 ```
-id: test
-mdp: test
+id: admin
+mdp: admin
 ```
