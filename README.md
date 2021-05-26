@@ -12,3 +12,7 @@ URL: https://lyceeicof-my.sharepoint.com/:w:/g/personal/arthur_montesinos_icof_f
 id: admin
 mdp: admin
 ```
+## Documentation utilisateur
+https://lyceeicof-my.sharepoint.com/:w:/g/personal/leo_poidras_icof_fr/EUJOF-b_JrFGkpVY32hKiHEBfuEcIZ1NbNtzC7udMrFh_A?e=m9BEt7
+## Documentation technique
+https://lyceeicof-my.sharepoint.com/:w:/g/personal/leo_poidras_icof_fr/EbbeCEST_6JMjfW9DHfIAFEBFv0yZ_7BCjZz7BoK2fO82A?e=a97uAa
